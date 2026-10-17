@@ -36,7 +36,7 @@ Existing V7 applicant, overview, assessment/SHAP and fairness screenshots are re
 | Validation trade-off | [v7-validation-policy-investigation.json](../reports/v7-validation-policy-investigation.json) | Validation only, 300 cases / 98 positives; active 84.69% recall, candidate90.82% and73.67% workload; provisional70% capacity remains an assumption |
 | Team allocation | Human-supplied request, 18 October 2026 | 60% Advaith Ganesh,20% Abdul Malik,20% Ishaant Verma; not independently audited or inferred from commits |
 
-Figures use navy, teal, slate and muted amber. Metric bars start at zero, rates use percentage units, direct labels retain counts/denominators, and SVG uses a responsive viewBox without scripts, external images or fonts. Sources and material limitations appear beside each figure in the README. No ML evaluation artifact is modified.
+Figures use navy, teal, slate and muted amber. Metric bars start at zero, rates use percentage units, direct labels retain counts/denominators, and SVG uses a responsive viewBox and outlined vector lettering without scripts, external images or font dependencies. Sources and material limitations appear beside each figure in the README. No ML evaluation artifact is modified.
 
 ## Verification results
 
@@ -45,7 +45,7 @@ Figures use navy, teal, slate and muted amber. Metric bars start at zero, rates 
 | Existing README validator | **PASS:**58 exact-case local assets/links and5 bash examples parsed; historical result restored byte-for-byte |
 | Extended showcase validator | **PASS:**84 local links/fragments across README and this report,7 safe SVGs,10 protected artifact hashes; documentation-only tracked diff |
 | Chart validation | **PASS:**all plotted values read from saved reports; both benchmark series checked against confusion-matrix arithmetic; split counts checked against CSVs; repeated generation is byte-reproducible |
-| Chart visual inspection | **PASS:**all7 figures inspected as rendered PNGs; fixed a clipped candidate label and converted the confusion matrix into pure vector cells |
+| Chart visual inspection | **PASS:**all7 figures inspected as rendered PNGs; fixed a clipped candidate label, converted the confusion matrix into pure vector cells and outlined lettering for consistent GitHub typography |
 | GitHub Markdown API | **PASS:**GitHub GFM render returned HTTP200; no placeholder renderer used |
 | Python tests rerun for this documentation task | **PASS:**111 tests,15 dependency deprecation warnings,2.09s |
 | ESLint / TypeScript / production build rerun | **PASS** |

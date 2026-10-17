@@ -9,13 +9,13 @@
     "reports/v7-validation-policy-investigation.json": "b0ddab8bb8247f6ef221262e268dc3b2760c90570f3e6da324126ec3522cbc22"
   },
   "figures": {
-    "confusion-matrix.svg": "dc3678958e838debe0aa35ce8788acb386d1ff2fb70ccf4bd57a22e101774654",
-    "dataset-split.svg": "5521e1e898fcab7caed1eadce85b3386d02c1dd09ff9fef695e76c66506c326d",
-    "fairness-fnr.svg": "b0ac40dfbc1a7c2d51da2ec22ddfb493bff498a4e0306b9d8575cfbdcb35fca0",
-    "model-comparison.svg": "d86f77ffa159755daddb0a2aafccfc0959f898bd0f246272a2643165c6998230",
-    "team-contributions.svg": "40631ed5f5d32d56f5700f65613c3d67a7ab7d9f3db1a18c17947eacbbf38578",
-    "uncertainty-workload.svg": "f7e8402b593fbb26b86f6aac4e9c3036e0cc5be12334d14a3704ca16cff8a477",
-    "validation-tradeoff.svg": "f2b2fe9200fab0c467a003efad1ff945258ed52ee722438574fc2f6d3944406a"
+    "confusion-matrix.svg": "6417e96f1da6521fb5cf13f1c66fa02f8468d301b32103f1a06c662eca8614c2",
+    "dataset-split.svg": "fef0edffa0faffd60f83df16035aa7c3a012309c1f1761a7aabf590e8b50b6d4",
+    "fairness-fnr.svg": "1bd5ffa5c091fccfa650fcee8a2c8d234209b79d10565d13230596be0b239383",
+    "model-comparison.svg": "39dd2439e9f6cbc9d1cfe43a3e071d376b1d1540f719dadda42d3c06c7521bee",
+    "team-contributions.svg": "49163a02d4a4c379e2e6e749533d074a31ea57ff4cf7b37d88611d2ad3746f36",
+    "uncertainty-workload.svg": "b179062c4b2bb9ffa36a76f5d36c8389324ed9efa5193ffbbdc9376023e68256",
+    "validation-tradeoff.svg": "6965094f1a28e1abbc8587ceb97c1608a08fe127bac00b85a98eb84f4fadb7d5"
   },
   "team_graphic_source": "Human-supplied brief, 18 October 2026; self-reported allocation 60/20/20, not commit statistics.",
   "plotted_values": {

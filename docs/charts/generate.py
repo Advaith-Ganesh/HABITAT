@@ -22,7 +22,7 @@ NAVY, TEAL, SLATE, AMBER = '#203247', '#357779', '#637588', '#A7772F'
 plt.rcParams.update({'font.family': 'sans-serif', 'font.sans-serif': ['DejaVu Sans', 'Arial', 'sans-serif'], 'font.size': 12, 'text.color': NAVY,
     'axes.labelcolor': NAVY, 'xtick.color': SLATE, 'ytick.color': SLATE,
     'axes.spines.top': False, 'axes.spines.right': False, 'axes.edgecolor': '#CBD3DA',
-    'figure.facecolor': 'white', 'axes.facecolor': 'white', 'svg.fonttype': 'none',
+    'figure.facecolor': 'white', 'axes.facecolor': 'white', 'svg.fonttype': 'path',
     'svg.hashsalt': 'habitat-readme-showcase', 'savefig.facecolor': 'white'})
 SOURCES = ['reports/evaluation.json', 'reports/model_comparison.json', 'reports/fairness.json',
     'reports/v5-safeguard.json', 'reports/splits.json', 'reports/v7-validation-policy-investigation.json']
