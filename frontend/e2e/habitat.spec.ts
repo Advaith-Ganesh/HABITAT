@@ -327,8 +327,10 @@ for (const width of [375, 768, 1280])
         await page.getByRole("button",{name:"Continue",exact:true}).click();
         await expect(page.getByRole("alert")).toContainText("Household members");
         await page.getByRole("spinbutton",{name:"Household members",exact:true}).fill("2");
-        for (let step=0;step<4;step++) {
+        await expect(page.getByRole("spinbutton",{name:"Household members",exact:true})).toHaveValue("2");
+        for (const title of ["Housing & income","Evidence","Support & clarification","Check & submit"]) {
           await page.getByRole("button",{name:"Continue",exact:true}).click();
+          await expect(page.getByRole("heading",{name:title,exact:true,level:2})).toBeVisible();
           expect(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth)).toBeTruthy();
         }
         await expect(page.getByRole("checkbox",{name:"I confirm all values are synthetic.",exact:true})).toBeVisible();

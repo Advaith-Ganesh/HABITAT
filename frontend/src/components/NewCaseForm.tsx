@@ -112,7 +112,7 @@ export default function NewCaseForm({
         <form
           ref={ref}
           onInvalid={(e) => { const field = e.target as HTMLInputElement; setInvalidId(field.id); setValidationError(`${field.getAttribute("aria-label") || "Confirmation"}: ${field.validationMessage}`); }}
-          onInputCapture={() => { setValidationError(""); setInvalidId(""); }}
+          onChange={() => { setValidationError(""); setInvalidId(""); }}
           onSubmit={(e) => {
             e.preventDefault();
             if (step < 4) move(step + 1);
