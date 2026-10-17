@@ -19,7 +19,7 @@ parser.add_argument('--preview-dir', type=Path, help='Optional PNG inspection co
 args = parser.parse_args()
 if args.preview_dir: args.preview_dir.mkdir(parents=True, exist_ok=True)
 NAVY, TEAL, SLATE, AMBER = '#203247', '#357779', '#637588', '#A7772F'
-plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 12, 'text.color': NAVY,
+plt.rcParams.update({'font.family': 'sans-serif', 'font.sans-serif': ['DejaVu Sans', 'Arial', 'sans-serif'], 'font.size': 12, 'text.color': NAVY,
     'axes.labelcolor': NAVY, 'xtick.color': SLATE, 'ytick.color': SLATE,
     'axes.spines.top': False, 'axes.spines.right': False, 'axes.edgecolor': '#CBD3DA',
     'figure.facecolor': 'white', 'axes.facecolor': 'white', 'svg.fonttype': 'none',

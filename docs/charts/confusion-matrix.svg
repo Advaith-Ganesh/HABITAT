@@ -81,7 +81,7 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #637588" x="358.632" y="323.918125" transform="rotate(-0 358.632 323.918125)">Routine</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #637588" x="358.632" y="323.918125" transform="rotate(-0 358.632 323.918125)">Routine</text>
      </g>
     </g>
     <g id="xtick_2">
@@ -91,12 +91,12 @@ L 0 3.5
       </g>
      </g>
      <g id="text_2">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #637588" transform="translate(427.007062 323.918125)">Additional</text>
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #637588" transform="translate(437.287688 337.3555)">review</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #637588" transform="translate(427.007062 323.918125)">Additional</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #637588" transform="translate(437.287688 337.3555)">review</text>
      </g>
     </g>
     <g id="text_3">
-     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #203247" x="407.88" y="352.96925" transform="rotate(-0 407.88 352.96925)">Predicted class</text>
+     <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #203247" x="407.88" y="352.96925" transform="rotate(-0 407.88 352.96925)">Predicted class</text>
     </g>
    </g>
    <g id="matplotlib.axis_2">
@@ -112,7 +112,7 @@ L -3.5 0
       </g>
      </g>
      <g id="text_4">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #637588" x="302.384" y="164.615062" transform="rotate(-0 302.384 164.615062)">Routine</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: end; fill: #637588" x="302.384" y="164.615062" transform="rotate(-0 302.384 164.615062)">Routine</text>
      </g>
     </g>
     <g id="ytick_2">
@@ -122,11 +122,11 @@ L -3.5 0
       </g>
      </g>
      <g id="text_5">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #637588" x="302.384" y="263.111063" transform="rotate(-0 302.384 263.111063)">Additional review</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: end; fill: #637588" x="302.384" y="263.111063" transform="rotate(-0 302.384 263.111063)">Additional review</text>
      </g>
     </g>
     <g id="text_6">
-     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #203247" x="192.152125" y="209.304" transform="rotate(-90 192.152125 209.304)">Actual synthetic label</text>
+     <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #203247" x="192.152125" y="209.304" transform="rotate(-90 192.152125 209.304)">Actual synthetic label</text>
     </g>
    </g>
    <g id="patch_7">
@@ -140,30 +140,30 @@ L 506.376 307.8
 " style="fill: none; stroke: #cbd3da; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_7">
-    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(314.3345 156.364609)">True negative</text>
-    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(325.830359 170.921766)">163 cases</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #ffffff" transform="translate(314.3345 156.364609)">True negative</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #ffffff" transform="translate(325.830359 170.921766)">163 cases</text>
    </g>
    <g id="text_8">
-    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #203247" transform="translate(413.245891 156.364609)">False positive</text>
-    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #203247" transform="translate(428.461984 170.921766)">41 cases</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #203247" transform="translate(413.245891 156.364609)">False positive</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #203247" transform="translate(428.461984 170.921766)">41 cases</text>
    </g>
    <g id="text_9">
-    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #203247" transform="translate(311.816766 254.860609)">False negative</text>
-    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #203247" transform="translate(329.965984 269.417766)">26 cases</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #203247" transform="translate(311.816766 254.860609)">False negative</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #203247" transform="translate(329.965984 269.417766)">26 cases</text>
    </g>
    <g id="text_10">
-    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #203247" transform="translate(415.763625 254.860609)">True positive</text>
-    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #203247" transform="translate(428.461984 269.417766)">70 cases</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #203247" transform="translate(415.763625 254.860609)">True positive</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #203247" transform="translate(428.461984 269.417766)">70 cases</text>
    </g>
   </g>
   <g id="text_11">
-   <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #203247" x="43.56" y="39.820875" transform="rotate(-0 43.56 39.820875)">Where the model gets cases wrong</text>
+   <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #203247" x="43.56" y="39.820875" transform="rotate(-0 43.56 39.820875)">Where the model gets cases wrong</text>
   </g>
   <g id="text_12">
-   <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #637588" x="43.56" y="69.918281" transform="rotate(-0 43.56 69.918281)">Random Forest · held-out synthetic test · n = 300 · positive = additional review</text>
+   <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #637588" x="43.56" y="69.918281" transform="rotate(-0 43.56 69.918281)">Random Forest · held-out synthetic test · n = 300 · positive = additional review</text>
   </g>
   <g id="text_13">
-   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #637588" x="43.56" y="385.748313" transform="rotate(-0 43.56 385.748313)">26 of 96 positive cases missed by classification; uncertainty routing is a separate policy.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #637588" x="43.56" y="385.748313" transform="rotate(-0 43.56 385.748313)">26 of 96 positive cases missed by classification; uncertainty routing is a separate policy.</text>
   </g>
  </g>
  <defs>

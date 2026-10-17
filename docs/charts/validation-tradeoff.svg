@@ -54,7 +54,7 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #637588" x="126.72" y="341.846125" transform="rotate(-0 126.72 341.846125)">0%</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #637588" x="126.72" y="341.846125" transform="rotate(-0 126.72 341.846125)">0%</text>
      </g>
     </g>
     <g id="xtick_2">
@@ -69,7 +69,7 @@ L 247.104 108.576
       </g>
      </g>
      <g id="text_2">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #637588" x="247.104" y="341.846125" transform="rotate(-0 247.104 341.846125)">20%</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #637588" x="247.104" y="341.846125" transform="rotate(-0 247.104 341.846125)">20%</text>
      </g>
     </g>
     <g id="xtick_3">
@@ -84,7 +84,7 @@ L 367.488 108.576
       </g>
      </g>
      <g id="text_3">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #637588" x="367.488" y="341.846125" transform="rotate(-0 367.488 341.846125)">40%</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #637588" x="367.488" y="341.846125" transform="rotate(-0 367.488 341.846125)">40%</text>
      </g>
     </g>
     <g id="xtick_4">
@@ -99,7 +99,7 @@ L 487.872 108.576
       </g>
      </g>
      <g id="text_4">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #637588" x="487.872" y="341.846125" transform="rotate(-0 487.872 341.846125)">60%</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #637588" x="487.872" y="341.846125" transform="rotate(-0 487.872 341.846125)">60%</text>
      </g>
     </g>
     <g id="xtick_5">
@@ -114,7 +114,7 @@ L 608.256 108.576
       </g>
      </g>
      <g id="text_5">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #637588" x="608.256" y="341.846125" transform="rotate(-0 608.256 341.846125)">80%</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #637588" x="608.256" y="341.846125" transform="rotate(-0 608.256 341.846125)">80%</text>
      </g>
     </g>
     <g id="xtick_6">
@@ -129,11 +129,11 @@ L 728.64 108.576
       </g>
      </g>
      <g id="text_6">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #637588" x="728.64" y="341.846125" transform="rotate(-0 728.64 341.846125)">100%</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #637588" x="728.64" y="341.846125" transform="rotate(-0 728.64 341.846125)">100%</text>
      </g>
     </g>
     <g id="text_7">
-     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #203247" x="427.68" y="357.459875" transform="rotate(-0 427.68 357.459875)">Validation rate (%)</text>
+     <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #203247" x="427.68" y="357.459875" transform="rotate(-0 427.68 357.459875)">Validation rate (%)</text>
     </g>
    </g>
    <g id="matplotlib.axis_2">
@@ -149,7 +149,7 @@ L -3.5 0
       </g>
      </g>
      <g id="text_8">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #637588" x="119.72" y="161.52481" transform="rotate(-0 119.72 161.52481)">Retained policy</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: end; fill: #637588" x="119.72" y="161.52481" transform="rotate(-0 119.72 161.52481)">Retained policy</text>
      </g>
     </g>
     <g id="ytick_2">
@@ -159,8 +159,8 @@ L -3.5 0
       </g>
      </g>
      <g id="text_9">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #637588" transform="translate(53.69375 276.09044)">Unadopted</text>
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #637588" transform="translate(60.15125 289.527815)">candidate</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #637588" transform="translate(53.69375 276.09044)">Unadopted</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #637588" transform="translate(60.15125 289.527815)">candidate</text>
      </g>
     </g>
    </g>
@@ -217,16 +217,16 @@ L 728.64 325.728
 " style="fill: none; stroke: #cbd3da; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_10">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #203247" x="640.509388" y="140.741459" transform="rotate(-0 640.509388 140.741459)">84.69%</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #203247" x="640.509388" y="140.741459" transform="rotate(-0 640.509388 140.741459)">84.69%</text>
    </g>
    <g id="text_11">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #203247" x="677.361633" y="261.113964" transform="rotate(-0 677.361633 261.113964)">90.82%</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #203247" x="677.361633" y="261.113964" transform="rotate(-0 677.361633 261.113964)">90.82%</text>
    </g>
    <g id="text_12">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #203247" x="513.9424" y="179.260661" transform="rotate(-0 513.9424 179.260661)">63.67%</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #203247" x="513.9424" y="179.260661" transform="rotate(-0 513.9424 179.260661)">63.67%</text>
    </g>
    <g id="text_13">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #203247" x="574.1344" y="299.633166" transform="rotate(-0 574.1344 299.633166)">73.67%</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #203247" x="574.1344" y="299.633166" transform="rotate(-0 574.1344 299.633166)">73.67%</text>
    </g>
    <g id="legend_1">
     <g id="patch_9">
@@ -238,7 +238,7 @@ z
 " style="fill: #357779"/>
     </g>
     <g id="text_14">
-     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #203247" x="167.42" y="89.873784" transform="rotate(-0 167.42 89.873784)">Routing recall</text>
+     <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #203247" x="167.42" y="89.873784" transform="rotate(-0 167.42 89.873784)">Routing recall</text>
     </g>
     <g id="patch_10">
      <path d="M 265.032969 89.873784 
@@ -249,18 +249,18 @@ z
 " style="fill: url(#had8d2218ab)"/>
     </g>
     <g id="text_15">
-     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #203247" x="295.832969" y="89.873784" transform="rotate(-0 295.832969 89.873784)">Extra-review workload</text>
+     <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #203247" x="295.832969" y="89.873784" transform="rotate(-0 295.832969 89.873784)">Extra-review workload</text>
     </g>
    </g>
   </g>
   <g id="text_16">
-   <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #203247" x="43.56" y="40.252875" transform="rotate(-0 43.56 40.252875)">Why the original routing policy stays active</text>
+   <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #203247" x="43.56" y="40.252875" transform="rotate(-0 43.56 40.252875)">Why the original routing policy stays active</text>
   </g>
   <g id="text_17">
-   <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #637588" x="43.56" y="70.998281" transform="rotate(-0 43.56 70.998281)">Validation only · n = 300, including 98 positives · candidate not evaluated on final test</text>
+   <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #637588" x="43.56" y="70.998281" transform="rotate(-0 43.56 70.998281)">Validation only · n = 300, including 98 positives · candidate not evaluated on final test</text>
   </g>
   <g id="text_18">
-   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #637588" x="43.56" y="392.552312" transform="rotate(-0 43.56 392.552312)">Dashed: 90% recall target. Dotted: provisional 70% workload ceiling; buyer capacity is unvalidated.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #637588" x="43.56" y="392.552312" transform="rotate(-0 43.56 392.552312)">Dashed: 90% recall target. Dotted: provisional 70% workload ceiling; buyer capacity is unvalidated.</text>
   </g>
  </g>
  <defs>

@@ -22,7 +22,7 @@ Advaith Ganesh · Abdul Malik · Ishaant Verma<br />
 
 ![Actual V7 administrator Overview with persisted activity and counts](docs/screenshots/v7-live-overview.png)
 
-> **Sandbox · Synthetic Data.** A working local demonstration, with openly published generated data. HABITAT AI recommends intake-review routes; it does not approve housing, rank applicant worthiness or determine statutory eligibility. No hosted product or video demonstration is currently advertised.
+> **Sandbox · Synthetic Data.** A working local demonstration, with openly published generated data. HABITAT AI recommends intake-review routes; it does not approve housing, rank applicant worthiness or determine statutory eligibility.
 
 | Built for | Working capability | Evidence boundary |
 |---|---|---|
@@ -45,15 +45,23 @@ The [Local Government and Social Care Ombudsman’s housing-applications fact sh
 A connected journey in the local application; “live” describes the working workflow, not a public deployment.
 
 ```mermaid
-flowchart TD
-    A["Applicant submits structured synthetic intake"] --> B["FastAPI validates every required field"]
-    B --> C[("SQLite persists application + reference")]
-    C --> D["Administrator receives saved case"]
-    D --> E["Random Forest assesses on explicit action"]
-    E --> F["Tree SHAP explains the actual model score"]
-    F --> G["Human reviews, requests evidence or escalates"]
-    G --> H[("SQLite saves reason + timestamp + history")]
-    H --> I["Applicant tracks the updated status"]
+flowchart TB
+    subgraph Intake["01 · Intake"]
+        direction LR
+        A["Applicant submits"] --> B["FastAPI validates"]
+        B --> C[("SQLite persists")]
+        C --> D["Administrator receives"]
+    end
+    subgraph Review["02 · Assessment and human review"]
+        direction LR
+        E["Random Forest assesses"] --> F["SHAP explains"]
+        F --> G["Human reviews"]
+    end
+    subgraph FollowUp["03 · Follow-up"]
+        direction LR
+        H[("Reason + timestamp saved")] --> I["Applicant tracks status"]
+    end
+    Intake --> Review --> FollowUp
 ```
 
 Three applicant items—**Apply for Housing**, **My Applications**, **Help & Transparency**—connect to five administrator tabs: **Overview**, **Applications**, **AI Assessment**, **Fairness & Sandbox**, **Human Review**. Both portals use the same API and SQLite database.
@@ -327,7 +335,7 @@ Developed by Advaith Ganesh, Abdul Malik and Ishaant Verma with AI-assisted deve
 
 ### Demonstration
 
-[Follow the actual two-minute demonstration](docs/DEMO_CHECKLIST.md). A genuine video URL has not been supplied; there is no placeholder video or fabricated live deployment link.
+[Follow the actual two-minute demonstration](docs/DEMO_CHECKLIST.md). Video demonstration: not yet supplied.
 
 ## Sources and licences
 

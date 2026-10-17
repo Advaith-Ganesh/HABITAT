@@ -73,7 +73,7 @@ L 0 3.5
       </g>
      </g>
      <g id="text_1">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #637588" x="126.72" y="229.526125" transform="rotate(-0 126.72 229.526125)">0</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #637588" x="126.72" y="229.526125" transform="rotate(-0 126.72 229.526125)">0</text>
      </g>
     </g>
     <g id="xtick_2">
@@ -83,7 +83,7 @@ L 0 3.5
       </g>
      </g>
      <g id="text_2">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #637588" x="277.2" y="229.526125" transform="rotate(-0 277.2 229.526125)">500</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #637588" x="277.2" y="229.526125" transform="rotate(-0 277.2 229.526125)">500</text>
      </g>
     </g>
     <g id="xtick_3">
@@ -93,7 +93,7 @@ L 0 3.5
       </g>
      </g>
      <g id="text_3">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #637588" x="427.68" y="229.526125" transform="rotate(-0 427.68 229.526125)">1000</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #637588" x="427.68" y="229.526125" transform="rotate(-0 427.68 229.526125)">1000</text>
      </g>
     </g>
     <g id="xtick_4">
@@ -103,7 +103,7 @@ L 0 3.5
       </g>
      </g>
      <g id="text_4">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #637588" x="578.16" y="229.526125" transform="rotate(-0 578.16 229.526125)">1500</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #637588" x="578.16" y="229.526125" transform="rotate(-0 578.16 229.526125)">1500</text>
      </g>
     </g>
     <g id="xtick_5">
@@ -113,11 +113,11 @@ L 0 3.5
       </g>
      </g>
      <g id="text_5">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #637588" x="728.64" y="229.526125" transform="rotate(-0 728.64 229.526125)">2000</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #637588" x="728.64" y="229.526125" transform="rotate(-0 728.64 229.526125)">2000</text>
      </g>
     </g>
     <g id="text_6">
-     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #203247" x="427.68" y="245.139875" transform="rotate(-0 427.68 245.139875)">Records</text>
+     <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: middle; fill: #203247" x="427.68" y="245.139875" transform="rotate(-0 427.68 245.139875)">Records</text>
     </g>
    </g>
    <g id="matplotlib.axis_2"/>
@@ -132,26 +132,26 @@ L 728.64 213.408
 " style="fill: none; stroke: #cbd3da; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_7">
-    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(322.9995 138.864562)">Train</text>
-    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(301.158563 152.301938)">1,400 · 70%</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #ffffff" transform="translate(322.9995 138.864562)">Train</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #ffffff" transform="translate(301.158563 152.301938)">1,400 · 70%</text>
    </g>
    <g id="text_8">
-    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(563.57925 138.864562)">Validation</text>
-    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(562.698937 152.301938)">300 · 15%</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #ffffff" transform="translate(563.57925 138.864562)">Validation</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #ffffff" transform="translate(562.698937 152.301938)">300 · 15%</text>
    </g>
    <g id="text_9">
-    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(671.681625 138.864562)">Test</text>
-    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(652.986937 152.301938)">300 · 15%</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #ffffff" transform="translate(671.681625 138.864562)">Test</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Arial', sans-serif; fill: #ffffff" transform="translate(652.986937 152.301938)">300 · 15%</text>
    </g>
   </g>
   <g id="text_10">
-   <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #203247" x="43.56" y="31.612875" transform="rotate(-0 43.56 31.612875)">One source dataset, three isolated partitions</text>
+   <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #203247" x="43.56" y="31.612875" transform="rotate(-0 43.56 31.612875)">One source dataset, three isolated partitions</text>
   </g>
   <g id="text_11">
-   <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #637588" x="43.56" y="49.398281" transform="rotate(-0 43.56 49.398281)">Original generated synthetic records · n = 2,000 · related scenarios stay in one partition</text>
+   <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #637588" x="43.56" y="49.398281" transform="rotate(-0 43.56 49.398281)">Original generated synthetic records · n = 2,000 · related scenarios stay in one partition</text>
   </g>
   <g id="text_12">
-   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #637588" x="43.56" y="256.472312" transform="rotate(-0 43.56 256.472312)">Separate fairness fixture: 200 paired scenarios / 400 rows; excluded from the 2,000-record total.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Arial', sans-serif; text-anchor: start; fill: #637588" x="43.56" y="256.472312" transform="rotate(-0 43.56 256.472312)">Separate fairness fixture: 200 paired scenarios / 400 rows; excluded from the 2,000-record total.</text>
   </g>
  </g>
  <defs>
