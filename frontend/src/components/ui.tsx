@@ -235,6 +235,7 @@ export function ProgressIndicator({
               i === current ? "current" : i < current ? "complete" : ""
             }
             onClick={() => onStep(i)}
+            aria-label={`${i + 1}. ${step}${i < current ? " (completed)" : ""}`}
             aria-current={i === current ? "step" : undefined}
           >
             <span>{i < current ? <Check size={13} /> : i + 1}</span>
