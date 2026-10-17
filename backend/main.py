@@ -263,7 +263,7 @@ def document_summary(payload):
         "percentage": 100 * len(present) / len(DOCUMENT_REQUIREMENTS),
         "present": present,
         "missing": missing,
-        "basis": "Three document categories in the demo intake protocol; declarations only, no uploads or legal sufficiency checks.",
+        "basis": "Three document categories in the project-defined intake framework; declarations only, no uploads or legal sufficiency checks.",
     }
 
 
@@ -591,7 +591,7 @@ def create(body: Submission, response: Response, x_sandbox_session: str | None =
                 raise HTTPException(409, "Idempotency key was already used with different application data")
             response.headers["Idempotency-Replayed"] = "true"
             return serialize(require(db, previous.application_id), latest_reviews(db).get(previous.application_id))
-        aid = "DEMO-" + uuid.uuid4().hex[:8]
+        aid = "HAB-" + uuid.uuid4().hex[:8].upper()
         a = Application(id=aid, payload=body.model_dump_json(), status="unassessed")
         db.add(a)
         db.flush()
@@ -764,7 +764,7 @@ def policies():
     return [pack] + [
         {
             "id": x.lower(),
-            "name": x + " · placeholder",
+            "name": x + " · not implemented",
             "functional": False,
             "rule_description": "No country-specific eligibility rules implemented.",
         }

@@ -1,0 +1,192 @@
+[
+  {
+    "file": "backend/main.py",
+    "before": "Three document categories in the demo intake protocol; declarations only, no uploads or legal sufficiency checks.",
+    "after": "Three document categories in the project-defined intake framework; declarations only, no uploads or legal sufficiency checks."
+  },
+  {
+    "file": "backend/main.py",
+    "before": "aid = \"DEMO-\" + uuid.uuid4().hex[:8]",
+    "after": "aid = \"HAB-\" + uuid.uuid4().hex[:8].upper()"
+  },
+  {
+    "file": "backend/main.py",
+    "before": "\"name\": x + \" \u00b7 placeholder\"",
+    "after": "\"name\": x + \" \u00b7 not implemented\""
+  },
+  {
+    "file": "backend/policy.py",
+    "before": "Ask a human to clarify missing evidence under the fictional intake protocol.",
+    "after": "Ask a human to clarify missing evidence under the project-defined intake framework."
+  },
+  {
+    "file": "backend/policy.py",
+    "before": "Fictional demo assumptions; these prompts are not extracted statutory rules.",
+    "after": "Project-defined intake assumptions; these prompts are not extracted statutory rules."
+  },
+  {
+    "file": "backend/policy.py",
+    "before": "Jurisdiction placeholder is not implemented",
+    "after": "Jurisdiction integration is not implemented"
+  },
+  {
+    "file": "policy_packs/england-demo.json",
+    "before": "England \u00b7 fictional intake protocol",
+    "after": "England Intake Framework"
+  },
+  {
+    "file": "policy_packs/england-demo.json",
+    "before": "Fictional intake routing only; not an allocation scheme or eligibility determination.",
+    "after": "Project-defined intake routing only; not an allocation scheme or eligibility determination."
+  },
+  {
+    "file": "policy_packs/england-demo.json",
+    "before": "Missing evidence, conflicting information and unclear circumstances prompt human follow-up. These are demo assumptions, not statutory requirements.",
+    "after": "Missing evidence, conflicting information and unclear circumstances prompt human follow-up. These are project-defined intake assumptions, not statutory requirements."
+  },
+  {
+    "file": "frontend/src/components/AppShell.tsx",
+    "before": "No real housing decisions. Portal switching is a demo, not access\n            control.",
+    "after": "No real housing decisions. Portal switching does not provide access\n            control."
+  },
+  {
+    "file": "frontend/src/components/AppShell.tsx",
+    "before": "SotonShip 2026 \u00b7 Synthetic demonstration",
+    "after": "SotonShip 2026 \u00b7 Synthetic data sandbox"
+  },
+  {
+    "file": "frontend/src/components/ui.tsx",
+    "before": "Demo intake prompts are fictional assumptions. They are not statutory\n          eligibility rules.",
+    "after": "Intake prompts use project-defined assumptions. They are not statutory\n          eligibility rules."
+  },
+  {
+    "file": "frontend/src/components/ui.tsx",
+    "before": "Source linked \u00b7 demo rules only",
+    "after": "Source linked \u00b7 project-defined intake prompts"
+  },
+  {
+    "file": "frontend/src/components/ui.tsx",
+    "before": "Fictional intake protocol \u00b7",
+    "after": "Project-defined intake framework \u00b7"
+  },
+  {
+    "file": "frontend/src/main.tsx",
+    "before": "is a synthetic demonstration, not a live housing service.",
+    "after": "is a synthetic-data sandbox, not a live housing service."
+  },
+  {
+    "file": "frontend/src/main.tsx",
+    "before": "placeholder={sessionId || \"DEMO-\u2026\"}",
+    "after": "placeholder={sessionId || \"HAB-XXXXXXXX\"}"
+  },
+  {
+    "file": "frontend/src/main.tsx",
+    "before": "Functional demo prompts are fictional. General English",
+    "after": "Intake prompts are project-defined. General English"
+  },
+  {
+    "file": "frontend/src/pages/OverviewPage.tsx",
+    "before": "Actual event counts by UTC calendar date. A single-day demo may show",
+    "after": "Actual event counts by UTC calendar date. A single-day workspace may show"
+  },
+  {
+    "file": "frontend/src/pages/AuditPages.tsx",
+    "before": "One fictional intake protocol is functional. The reference guidance",
+    "after": "One project-defined intake framework is functional. The reference guidance"
+  },
+  {
+    "file": "frontend/src/pages/AuditPages.tsx",
+    "before": "a fictional probabilistic intake protocol. This is a circular",
+    "after": "a project-defined probabilistic intake protocol. This is a circular"
+  },
+  {
+    "file": "frontend/src/pages/AuditPages.tsx",
+    "before": "published probabilistic fictional intake protocol with latent",
+    "after": "published project-defined probabilistic intake protocol with latent"
+  },
+  {
+    "file": "README.md",
+    "before": "A working local demonstration, with openly published generated data.",
+    "after": "A working local application, with openly published generated data."
+  },
+  {
+    "file": "README.md",
+    "before": "Two-minute demo script",
+    "after": "Two-minute product walkthrough"
+  },
+  {
+    "file": "README.md",
+    "before": "This is a university hackathon prototype.",
+    "after": "Created for the SotonShip 2026 Responsible AI submission."
+  },
+  {
+    "file": "README.md",
+    "before": "The prototype makes model evidence",
+    "after": "The application makes model evidence"
+  },
+  {
+    "file": "README.md",
+    "before": "are demo conveniences.",
+    "after": "are sandbox conveniences."
+  },
+  {
+    "file": "README.md",
+    "before": "A seeded fictional intake protocol",
+    "after": "A seeded project-defined intake protocol"
+  },
+  {
+    "file": "README.md",
+    "before": "an England reference with fictional intake prompts",
+    "after": "an England reference with project-defined intake prompts"
+  },
+  {
+    "file": "README.md",
+    "before": "same demonstration case",
+    "after": "same synthetic application"
+  },
+  {
+    "file": "README.md",
+    "before": "### Demonstration",
+    "after": "### Product walkthrough"
+  },
+  {
+    "file": "README.md",
+    "before": "Follow the actual two-minute demonstration",
+    "after": "Follow the actual two-minute product walkthrough"
+  },
+  {
+    "file": "docs/DEMO_CHECKLIST.md",
+    "before": "# V7 two-minute applicant-to-caseworker demonstration",
+    "after": "# Two-minute applicant-to-caseworker product walkthrough"
+  },
+  {
+    "file": "docs/DEMO_CHECKLIST.md",
+    "before": "Optional extended demo:",
+    "after": "Optional extended walkthrough:"
+  },
+  {
+    "file": "docs/DEMO_CHECKLIST.md",
+    "before": "Fresh/reset demo cases use",
+    "after": "The independent sandbox scenarios use"
+  },
+  {
+    "file": "frontend/src/main.tsx",
+    "before": "with people responsible for every housing decision.",
+    "after": "with people responsible for every housing decision. This project generated\n                the original, reproducible dataset of 2,000 synthetic housing\n                application records, published openly on GitHub."
+  },
+  {
+    "file": "frontend/src/main.tsx",
+    "before": "Synthetic-label tests do not establish real-world usefulness or\n                fairness.",
+    "after": "Evaluations use generated housing scenarios. Synthetic-label tests\n                do not establish real-world usefulness or fairness. Real-world\n                validation is not implemented."
+  },
+  {
+    "file": "frontend/src/main.tsx",
+    "before": "portal switching are not authentication. Production requires\n                authentication, role-based access control and privacy\n                safeguards.",
+    "after": "portal switching are not authentication. Production authentication\n                is not implemented. Operational use requires authentication,\n                role-based access control and privacy safeguards."
+  },
+  {
+    "file": "README.md",
+    "before": "Anonymous session IDs group records; they are **not authentication**.",
+    "after": "Anonymous session IDs group records; they are **not authentication**. New submissions use `HAB-XXXXXXXX` references; historical `DEMO-` references remain compatible."
+  }
+]

@@ -134,6 +134,8 @@ def test_policy_pack(client):
     assert pack["effective_date"] is None
     policies = client.get("/api/policies").json()
     assert sum(p["functional"] for p in policies) == 1
+    assert policies[0]["name"] == "England Intake Framework"
+    assert policies[0]["id"] == "england-demo"
 
 
 def test_policy_interface():
@@ -147,6 +149,7 @@ def test_policy_interface():
         }
     )
     assert len(result["prompts"]) == 3
-    assert "Fictional" in result["origin"]
+    assert "Project-defined" in result["origin"]
+    assert "not extracted statutory rules" in result["origin"]
     with pytest.raises(ValueError):
         load_policy("india")

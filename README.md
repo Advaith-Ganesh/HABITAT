@@ -22,7 +22,7 @@ Advaith Ganesh · Abdul Malik · Ishaant Verma<br />
 
 ![Actual V7 administrator Overview with persisted activity and counts](docs/screenshots/v7-live-overview.png)
 
-> **Sandbox · Synthetic Data.** A working local demonstration, with openly published generated data. HABITAT AI recommends intake-review routes; it does not approve housing, rank applicant worthiness or determine statutory eligibility.
+> **Sandbox · Synthetic Data.** A working local application, with openly published generated data. HABITAT AI recommends intake-review routes; it does not approve housing, rank applicant worthiness or determine statutory eligibility.
 
 | Built for | Working capability | Evidence boundary |
 |---|---|---|
@@ -30,13 +30,13 @@ Advaith Ganesh · Abdul Malik · Ishaant Verma<br />
 | Responsible AI reviewers | Fairlearn diagnostics, real Tree SHAP, uncertainty routing and saved review reasons | Subgroup disparities and a missed validation target remain visible |
 | Technical judges | Saved local Random Forest, reproducible data, inspectable reports and browser tests | No paid inference API required; production security is unfinished |
 
-[Two-minute demo script](docs/DEMO_CHECKLIST.md) · [Judge Q&A](docs/JUDGE_QA.md) · [V7 technical audit](docs/V7_FINAL_REMEDIATION_REPORT.md) · [README showcase verification](docs/FINAL_README_SHOWCASE_REPORT.md)
+[Two-minute product walkthrough](docs/DEMO_CHECKLIST.md) · [Judge Q&A](docs/JUDGE_QA.md) · [V7 technical audit](docs/V7_FINAL_REMEDIATION_REPORT.md) · [README showcase verification](docs/FINAL_README_SHOWCASE_REPORT.md)
 
 ## Why this project exists
 
 Incomplete evidence and unclear submissions create work for housing intake teams. HABITAT AI brings the structured application, missing-evidence declarations, model reasoning and caseworker response together. Applicants can see the actual saved status rather than an unexplained model score.
 
-The primary user is a **housing intake caseworker**. A **local authority or housing association** is a potential buyer, not an existing customer. This is a university hackathon prototype.
+The primary user is a **housing intake caseworker**. A **local authority or housing association** is a potential buyer, not an existing customer. Created for the SotonShip 2026 Responsible AI submission.
 
 The [Local Government and Social Care Ombudsman’s housing-applications fact sheet](https://www.lgo.org.uk/make-a-complaint/fact-sheets/housing/housing-applications) documents application-handling and delay complaints. Related [English homelessness assessment guidance](https://www.gov.uk/guidance/homelessness-code-of-guidance-for-local-authorities/chapter-11-assessments-and-personalised-plans) motivates individual assessment and review when circumstances change. Homelessness assistance and housing allocation are distinct processes. These sources establish context, not this model’s validity or measured service improvements.
 
@@ -68,7 +68,7 @@ Three applicant items—**Apply for Housing**, **My Applications**, **Help & Tra
 
 ### 1. Submit and track
 
-The applicant completes structured declarations, receives a reference and sees requests or completion in My Applications. No personal documents are uploaded. A stable retry key prevents repeated or concurrent submissions from creating duplicate records; the pending payload/key survives reload until success. Anonymous session IDs group records; they are **not authentication**.
+The applicant completes structured declarations, receives a reference and sees requests or completion in My Applications. No personal documents are uploaded. A stable retry key prevents repeated or concurrent submissions from creating duplicate records; the pending payload/key survives reload until success. Anonymous session IDs group records; they are **not authentication**. New submissions use `HAB-XXXXXXXX` references; historical `DEMO-` references remain compatible.
 
 ![Actual V7 applicant portal showing the saved application and completed review status](docs/screenshots/v7-live-applicant.png)
 
@@ -86,7 +86,7 @@ The audit screen exposes measured group errors, case mix and the limits of paire
 
 ![Actual V7 fairness investigation with group counts and explicit proxy-discrimination warning](docs/screenshots/v7-live-fairness.png)
 
-A human can challenge the recommendation, request evidence, continue review, escalate or complete the administrative review. Reasons and timestamps persist. The following is the actual history of the same demonstration case, captured from the running V7 application; completion never allocates housing.
+A human can challenge the recommendation, request evidence, continue review, escalate or complete the administrative review. Reasons and timestamps persist. The following is the actual history of the same synthetic application, captured from the running V7 application; completion never allocates housing.
 
 ![Actual V7 Human Review history: submission, model assessment, evidence request and reasoned completion](docs/screenshots/v7-showcase-human-review.png)
 
@@ -124,7 +124,7 @@ Rows are actual synthetic labels; columns are predicted classes. **26 of 96 posi
 
 ## Responsible AI
 
-**People remain responsible for every housing decision.** The prototype makes model evidence and its limits inspectable.
+**People remain responsible for every housing decision.** The application makes model evidence and its limits inspectable.
 
 | Safeguard | What actually happens | What it cannot establish |
 |---|---|---|
@@ -159,7 +159,7 @@ The separate **200-pair / 400-row** test changes only an excluded synthetic audi
 
 ### Sandbox boundaries
 
-Only structured synthetic declarations belong here: no names, addresses, government IDs, personal documents or government submissions. Portal switching and reference loading are demo conveniences. **No production authentication, RBAC, tenant isolation or verified reviewer identity exists. Keep services on loopback; never expose this sandbox publicly.** Local host/CORS checks and file permissions are bounded safeguards.
+Only structured synthetic declarations belong here: no names, addresses, government IDs, personal documents or government submissions. Portal switching and reference loading are sandbox conveniences. **No production authentication, RBAC, tenant isolation or verified reviewer identity exists. Keep services on loopback; never expose this sandbox publicly.** Local host/CORS checks and file permissions are bounded safeguards.
 
 Production housing use, expert-labelled validation, calibrated probabilities, real-world fairness, physical touch devices, screen readers and Safari/Firefox remain untested or unestablished. [Full PASS / FAIL / NOT TESTED report](docs/V7_FINAL_REMEDIATION_REPORT.md).
 
@@ -193,7 +193,7 @@ flowchart TD
 
 ## Dataset and reproducibility
 
-This is **original generated synthetic test data published openly on GitHub**, not historical housing records. A seeded fictional intake protocol generates noisy review labels from evidence and context. Related scenario variants stay in the same partition; train/validation/test application and scenario intersections are empty. Preprocessing fits training only.
+This is **original generated synthetic test data published openly on GitHub**, not historical housing records. A seeded project-defined intake protocol generates noisy review labels from evidence and context. Related scenario variants stay in the same partition; train/validation/test application and scenario intersections are empty. Preprocessing fits training only.
 
 ![Family-isolated dataset split: 1400 training, 300 validation and 300 test records](docs/charts/dataset-split.svg)
 
@@ -312,7 +312,7 @@ Playwright uses managed, version-matched Chromium. Linux CI installs OS dependen
 
 Cost arithmetic: `(1,000 × (20 + 10 × 0.60) / 60 × £25 + £100 + £299) / 1,000 = £11.23` rounded. The assumed 60% workload is a scenario, not the measured 57.33% test rate or the provisional 70% ceiling. Agree actual capacity with a buyer before selecting a replacement policy.
 
-Only an England reference with fictional intake prompts is functional; other country metadata are future integrations. Local rollout requires verified programme definitions and domain review. [Pitch and judging evidence](docs/PITCH_V7.md) · [Policy-pack schema](policy_packs/schema.json).
+Only an England reference with project-defined intake prompts is functional; other country metadata are future integrations. Local rollout requires verified programme definitions and domain review. [Pitch and judging evidence](docs/PITCH_V7.md) · [Policy-pack schema](policy_packs/schema.json).
 
 ## Meet the Team
 
@@ -332,9 +332,9 @@ These percentages are the **team’s self-reported contribution allocation**, no
 
 Developed by Advaith Ganesh, Abdul Malik and Ishaant Verma with AI-assisted development using OpenAI Codex. Codex supported implementation, testing, debugging and documentation. The team directed development and is responsible for the submitted project, evaluation evidence and limitations.
 
-### Demonstration
+### Product walkthrough
 
-[Follow the actual two-minute demonstration](docs/DEMO_CHECKLIST.md). Video demonstration: not yet supplied.
+[Follow the actual two-minute product walkthrough](docs/DEMO_CHECKLIST.md). Video demonstration: not yet supplied.
 
 ## Sources and licences
 

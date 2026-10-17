@@ -1,6 +1,7 @@
 """Independent remediation checks: retry safety, independent seeds, input alignment and local boundaries."""
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
+import re
 import json
 import os
 import stat
@@ -27,6 +28,8 @@ def test_lost_response_retry_conflict_and_restart(client):
     first=client.post('/api/applications',json=body,headers=h)
     assert first.status_code == 201 and first.headers['Idempotency-Replayed'] == 'false'
     aid=first.json()['id']  # response could be lost after this database commit
+    assert re.fullmatch(r'HAB-[0-9A-F]{8}', aid)
+    assert client.get('/api/applications/DEMO-SEED-001').status_code == 200
     engine.dispose()
     replay=client.post('/api/applications',json=body,headers=h)
     assert replay.status_code == 201 and replay.json()['id']==aid
