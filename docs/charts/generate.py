@@ -38,6 +38,8 @@ def save(fig, name, note):
     fig.text(.055,.055,note,fontsize=10,color=SLATE,va='bottom')
     fig.savefig(OUT/f'{name}.svg',metadata={'Date': None, 'Creator':'HABITAT AI · report-backed README figure'})
     if args.preview_dir: fig.savefig(args.preview_dir/f'{name}.png', dpi=130)
+    svg = OUT/f'{name}.svg'
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
     plt.close(fig)
 def percent(ax):
     ax.set_xlim(0,100); ax.xaxis.set_major_formatter(PercentFormatter(100));

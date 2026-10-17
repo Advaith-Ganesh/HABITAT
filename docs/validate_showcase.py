@@ -5,10 +5,19 @@ import hashlib
 import json
 import re
 import subprocess
+import sys
 import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'docs'
+# Reuse the established validator while preserving its historical V7 report.
+legacy=ROOT/'reports/v7-readme-validation.json'
+original_legacy=legacy.read_bytes()
+try:
+    subprocess.run([sys.executable,'-m','scripts.validate_readme_v7'],cwd=ROOT,check=True)
+    (OUT/'showcase-existing-readme-validation.json').write_bytes(legacy.read_bytes())
+finally:
+    legacy.write_bytes(original_legacy)
 def slug(s):
     s=re.sub(r'<[^>]+>','',s)
     s=re.sub(r'[^\w\- ]','',s.lower())

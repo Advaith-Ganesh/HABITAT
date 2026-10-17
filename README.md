@@ -277,7 +277,6 @@ For a backed-up reset of **only the default sandbox**, stop the backend first an
 ```bash
 MPLCONFIGDIR=/tmp/habitat-matplotlib .venv/bin/python -m pytest -q
 .venv/bin/python -m scripts.contrast_v7
-.venv/bin/python -m scripts.validate_readme_v7
 MPLCONFIGDIR=/tmp/habitat-matplotlib .venv/bin/python docs/charts/generate.py
 .venv/bin/python docs/validate_showcase.py
 cd frontend

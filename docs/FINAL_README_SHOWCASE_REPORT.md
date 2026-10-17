@@ -51,9 +51,9 @@ Figures use navy, teal, slate and muted amber. Metric bars start at zero, rates 
 | ESLint / TypeScript / production build rerun | **PASS** |
 | Runtime/data/model/evaluation preservation | **PASS:**all existing non-documentation tracked files match V7 publication82d4588; all10 protected SHA-256s match; no application, API or SHAP change |
 | Browser tests | **PASS historical V7 Linux evidence:**9 passed,0 skipped on[final source run39076409671](https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39076409671); not rerun locally for unchanged runtime |
-| GitHub page visual verification | Pending publication to a preview branch; result will be finalized after inspection |
+| Actual GitHub page and Mermaid rendering | **PASS:**preview commit[758d1cb](https://github.com/Advaith-Ganesh/HABITAT/tree/758d1cbf0f5a65db9304aded49be3a0d1d92aca4) inspected in a real browser: human credits, screenshots, benchmark/CM SVGs, team allocation, and both native Mermaid diagrams render. SVG lettering is outlined to avoid platform font substitution |
 
-Validation scripts resolve local targets case-sensitively and check Markdown fragments against headings. The original README validator also parses shell examples without executing them. Startup scripts and commands were exercised in V7; this task reran the Python suite and frontend checks/build, but did not reinstall Python/Node or replay a fresh Mac installation. Remote-link uptime is not monitored. Local URLs are labelled as local; no video or public app URL is fabricated.
+Validation scripts resolve local targets case-sensitively and check Markdown fragments against headings. The showcase validator runs the original README validator, saves its fresh result under docs/, and restores the historical reports/ result in a finally block. Shell examples are parsed without executing them. Startup scripts and commands were exercised in V7; this task reran the Python suite and frontend checks/build, but did not reinstall Python/Node or replay a fresh Mac installation. GitHub was inspected at desktop width; physical mobile GitHub, screen readers and a complete accessibility audit were not tested. Responsive SVG viewBoxes and normal GitHub Markdown tables are used. Remote-link uptime is not monitored. Local URLs are labelled as local; no video or public app URL is fabricated.
 
 ## Remaining limits
 
