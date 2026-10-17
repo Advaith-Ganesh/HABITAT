@@ -1,0 +1,92 @@
+[
+  {
+    "path": "/api/applications",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/api/applications/DEMO-849ed9ee",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/api/applications/DEMO-849ed9ee/explanation",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/api/dashboard",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/api/dataset/card",
+    "status": 200,
+    "content_type": "text/markdown; charset=utf-8"
+  },
+  {
+    "path": "/api/dataset/dictionary",
+    "status": 200,
+    "content_type": "text/markdown; charset=utf-8"
+  },
+  {
+    "path": "/api/dataset/download",
+    "status": 200,
+    "content_type": "text/csv; charset=utf-8"
+  },
+  {
+    "path": "/api/dataset/metadata",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/api/fairness/metrics",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/api/model/baseline",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/api/model/metadata",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/api/model/metrics",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/api/model/safeguard",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/api/policies",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/api/reviews",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/docs",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/health",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/openapi.json",
+    "status": 200,
+    "content_type": "application/json"
+  }
+]

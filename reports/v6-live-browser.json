@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-17",
+  "tool": "Real in-app browser automation (CUA)",
+  "references": [
+    "DEMO-41a21175",
+    "DEMO-cd4ec01f"
+  ],
+  "observations": {
+    "five_step_submission": true,
+    "two_server_saved_applications": true,
+    "admin_search_same_reference": true,
+    "run_ai_assessment": true,
+    "reassessment_same_score": true,
+    "displayed_probability": "53.1%",
+    "document_completeness": "66.7%",
+    "actual_shap_chart": true,
+    "request_evidence_reason_visible": true,
+    "completion_visible": true,
+    "applicant_reload": true,
+    "administrator_reload": true,
+    "backend_process_restart": true,
+    "outage_message": "Error: Service unavailable",
+    "retry_recovery": true,
+    "group_analysis_recomputed": true,
+    "paired_200_recomputed": true,
+    "comparison_audit_group": "14.9% → 14.9%",
+    "comparison_conflict": "14.9% → 65.1%",
+    "native_invalid_household_message": "Value must be greater than or equal to 1.",
+    "draft_save_reload_restore_value": "6",
+    "draft_reset": true,
+    "reference_lookup": true,
+    "dark_light_controls": true
+  },
+  "actual_width": {
+    "scrollWidth": 1280,
+    "width": 1280
+  },
+  "console_errors_new_applicant_tab": [],
+  "limitations": [
+    "375/768 viewport matrix NOT TESTED",
+    "Axe NOT TESTED",
+    "No production authentication or actual housing decisions tested"
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "groups": [
+    {
+      "group": "Audit A",
+      "selection_rate": 0.33076923076923076,
+      "accuracy": 0.7692307692307693,
+      "false_positive_rate": 0.1797752808988764,
+      "false_negative_rate": 0.34146341463414637,
+      "count": 130.0,
+      "positive_count": 41,
+      "negative_count": 89,
+      "status": "No concern detected in this test"
+    },
+    {
+      "group": "Audit B",
+      "selection_rate": 0.4411764705882353,
+      "accuracy": 0.8137254901960784,
+      "false_positive_rate": 0.22857142857142856,
+      "false_negative_rate": 0.09375,
+      "count": 102.0,
+      "positive_count": 32,
+      "negative_count": 70,
+      "status": "Potential concern"
+    },
+    {
+      "group": "Audit C",
+      "selection_rate": 0.3382352941176471,
+      "accuracy": 0.7352941176470589,
+      "false_positive_rate": 0.2,
+      "false_negative_rate": 0.391304347826087,
+      "count": 68.0,
+      "positive_count": 23,
+      "negative_count": 45,
+      "status": "Potential concern"
+    }
+  ],
+  "disparities": {
+    "selection_rate": 0.11040723981900452,
+    "accuracy": 0.07843137254901955,
+    "false_positive_rate": 0.048796147672552165,
+    "false_negative_rate": 0.297554347826087,
+    "count": 62.0
+  },
+  "counterfactual": {
+    "pairs": 200,
+    "rows": 400,
+    "differing_classifications": 0,
+    "average_score_difference": 0.0,
+    "maximum_score_difference": 0.0,
+    "failure_examples": [],
+    "attribute_is_feature": false,
+    "limitation": "Audit group is excluded, so equality is expected by construction. This does not test proxy discrimination.",
+    "examples": [
+      {
+        "pair_id": 0,
+        "attribute_a": "Audit A",
+        "attribute_b": "Audit B",
+        "score_a": 0.559305729506233,
+        "score_b": 0.559305729506233
+      },
+      {
+        "pair_id": 1,
+        "attribute_a": "Audit A",
+        "attribute_b": "Audit B",
+        "score_a": 0.38343928857027,
+        "score_b": 0.38343928857027
+      },
+      {
+        "pair_id": 2,
+        "attribute_a": "Audit A",
+        "attribute_b": "Audit B",
+        "score_a": 0.28587962638919573,
+        "score_b": 0.28587962638919573
+      },
+      {
+        "pair_id": 3,
+        "attribute_a": "Audit A",
+        "attribute_b": "Audit B",
+        "score_a": 0.1490228260450967,
+        "score_b": 0.1490228260450967
+      },
+      {
+        "pair_id": 4,
+        "attribute_a": "Audit A",
+        "attribute_b": "Audit B",
+        "score_a": 0.4092851380287929,
+        "score_b": 0.4092851380287929
+      }
+    ]
+  },
+  "proxy_correlations": [
+    {
+      "group": "Audit A",
+      "feature": "missing_document_count",
+      "correlation": -0.06325526237069086
+    },
+    {
+      "group": "Audit A",
+      "feature": "income_document_available",
+      "correlation": 0.006596099428558044
+    },
+    {
+      "group": "Audit A",
+      "feature": "identity_document_available",
+      "correlation": 0.07245498136166204
+    },
+    {
+      "group": "Audit A",
+      "feature": "housing_evidence_available",
+      "correlation": 0.03363363969981559
+    },
+    {
+      "group": "Audit A",
+      "feature": "conflicting_information",
+      "correlation": -0.023263329162588563
+    },
+    {
+      "group": "Audit A",
+      "feature": "application_completeness_score",
+      "correlation": 0.018214024786171783
+    },
+    {
+      "group": "Audit A",
+      "feature": "specialist_support_requested",
+      "correlation": -0.025291729617633173
+    },
+    {
+      "group": "Audit A",
+      "feature": "housing_insecurity_reported",
+      "correlation": 0.08537317904079725
+    },
+    {
+      "group": "Audit B",
+      "feature": "missing_document_count",
+      "correlation": 0.06633123485768895
+    },
+    {
+      "group": "Audit B",
+      "feature": "income_document_available",
+      "correlation": -0.09108032686966365
+    },
+    {
+      "group": "Audit B",
+      "feature": "identity_document_available",
+      "correlation": -0.05998971336397892
+    },
+    {
+      "group": "Audit B",
+      "feature": "housing_evidence_available",
+      "correlation": 0.02462835263704371
+    },
+    {
+      "group": "Audit B",
+      "feature": "conflicting_information",
+      "correlation": 0.05515983768803607
+    },
+    {
+      "group": "Audit B",
+      "feature": "application_completeness_score",
+      "correlation": -0.03740620350156163
+    },
+    {
+      "group": "Audit B",
+      "feature": "specialist_support_requested",
+      "correlation": 0.09718138882446657
+    },
+    {
+      "group": "Audit B",
+      "feature": "housing_insecurity_reported",
+      "correlation": -0.14779797675167264
+    },
+    {
+      "group": "Audit C",
+      "feature": "missing_document_count",
+      "correlation": -0.00018260408665888265
+    },
+    {
+      "group": "Audit C",
+      "feature": "income_document_available",
+      "correlation": 0.09524555399728128
+    },
+    {
+      "group": "Audit C",
+      "feature": "identity_document_available",
+      "correlation": -0.017881096825211627
+    },
+    {
+      "group": "Audit C",
+      "feature": "housing_evidence_available",
+      "correlation": -0.06767378650046371
+    },
+    {
+      "group": "Audit C",
+      "feature": "conflicting_information",
+      "correlation": -0.034876419731951075
+    },
+    {
+      "group": "Audit C",
+      "feature": "application_completeness_score",
+      "correlation": 0.020765379447328113
+    },
+    {
+      "group": "Audit C",
+      "feature": "specialist_support_requested",
+      "correlation": -0.08002080495891802
+    },
+    {
+      "group": "Audit C",
+      "feature": "housing_insecurity_reported",
+      "correlation": 0.06617958036090332
+    }
+  ],
+  "maximum_absolute_proxy_correlation": 0.14779797675167264,
+  "warning": "Small synthetic test; error differences are descriptive, unadjusted for multiple tests, and not proof of universal fairness."
+}

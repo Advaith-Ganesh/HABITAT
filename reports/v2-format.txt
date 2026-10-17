@@ -1,0 +1,14 @@
+src/components/AppShell.tsx 58ms
+src/components/Chart.tsx 2ms (unchanged)
+src/components/Charts.tsx 47ms
+src/components/NewCaseForm.tsx 47ms
+src/components/ui.tsx 37ms
+src/lib/api.ts 5ms (unchanged)
+src/lib/types.ts 2ms (unchanged)
+src/main.tsx 34ms
+src/pages/AuditPages.tsx 13ms (unchanged)
+src/pages/OverviewPage.tsx 5ms
+src/style.css 59ms
+e2e/habitat.spec.ts 19ms (unchanged)
+playwright.config.ts 1ms (unchanged)
+eslint.config.js 10ms (unchanged)

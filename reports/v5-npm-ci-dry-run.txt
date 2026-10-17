@@ -1,0 +1,50 @@
+add lightningcss-win32-x64-msvc 1.33.0
+add lightningcss-win32-arm64-msvc 1.33.0
+add lightningcss-linux-x64-musl 1.33.0
+add lightningcss-linux-x64-gnu 1.33.0
+add lightningcss-linux-arm64-musl 1.33.0
+add lightningcss-linux-arm64-gnu 1.33.0
+add lightningcss-linux-arm-gnueabihf 1.33.0
+add lightningcss-freebsd-x64 1.33.0
+add lightningcss-darwin-x64 1.33.0
+add lightningcss-android-arm64 1.33.0
+add @tailwindcss/oxide-win32-x64-msvc 4.3.3
+add @tailwindcss/oxide-win32-arm64-msvc 4.3.3
+add @tailwindcss/oxide-wasm32-wasi 4.3.3
+add @tailwindcss/oxide-linux-x64-musl 4.3.3
+add @tailwindcss/oxide-linux-x64-gnu 4.3.3
+add @tailwindcss/oxide-linux-arm64-musl 4.3.3
+add @tailwindcss/oxide-linux-arm64-gnu 4.3.3
+add @tailwindcss/oxide-linux-arm-gnueabihf 4.3.3
+add @tailwindcss/oxide-freebsd-x64 4.3.3
+add @tailwindcss/oxide-darwin-x64 4.3.3
+add @tailwindcss/oxide-android-arm64 4.3.3
+add @rolldown/binding-win32-x64-msvc 1.2.14
+add @rolldown/binding-win32-arm64-msvc 1.2.14
+add @rolldown/binding-openharmony-arm64 1.2.14
+add @rolldown/binding-linux-x64-musl 1.2.14
+add @rolldown/binding-linux-x64-gnu 1.2.14
+add @rolldown/binding-linux-s390x-gnu 1.2.14
+add @rolldown/binding-linux-ppc64-gnu 1.2.14
+add @rolldown/binding-linux-arm64-musl 1.2.14
+add @rolldown/binding-linux-arm64-gnu 1.2.14
+add @rolldown/binding-linux-arm-gnueabihf 1.2.14
+add @rolldown/binding-freebsd-x64 1.2.14
+add @rolldown/binding-darwin-x64 1.2.14
+add @rolldown/binding-android-arm64 1.2.14
+add @rolldown/binding-android-arm-eabi 1.2.14
+add lightningcss-win32-x64-msvc 1.32.0
+add lightningcss-win32-arm64-msvc 1.32.0
+add lightningcss-linux-x64-musl 1.32.0
+add lightningcss-linux-x64-gnu 1.32.0
+add lightningcss-linux-arm64-musl 1.32.0
+add lightningcss-linux-arm64-gnu 1.32.0
+add lightningcss-linux-arm-gnueabihf 1.32.0
+add lightningcss-freebsd-x64 1.32.0
+add lightningcss-darwin-x64 1.32.0
+add lightningcss-android-arm64 1.32.0
+
+added 45 packages in 354ms
+
+70 packages are looking for funding
+  run `npm fund` for details

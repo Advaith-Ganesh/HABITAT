@@ -1,0 +1,25 @@
+{
+  "executed": "2026-10-17",
+  "tool": "In-app browser UI automation",
+  "application_id": "DEMO-67cf1fcc",
+  "score": 0.7139935504559233,
+  "steps_passed": [
+    "open",
+    "submit fictional case",
+    "assess",
+    "inspect SHAP",
+    "fairness lab",
+    "rerun pairs",
+    "human queue",
+    "resolve with reason",
+    "view history",
+    "reopen persisted record",
+    "model performance"
+  ],
+  "recorded_reason": "Browser verification: checked contradictory fictional evidence; continue additional human follow-up.",
+  "screenshots": [
+    "docs/screenshots/overview.png",
+    "docs/screenshots/explanation.png",
+    "docs/screenshots/human-review.png"
+  ]
+}

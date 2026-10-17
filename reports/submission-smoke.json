@@ -1,0 +1,322 @@
+{
+  "date": "2026-10-17",
+  "status": "PASS",
+  "scope": "Synthetic local demo only; browser writes used a clone of the original database.",
+  "health": {
+    "status": "ok",
+    "sandbox": true,
+    "model": {
+      "ready": true,
+      "version": "rf-1.0",
+      "trees": 180,
+      "training_records": 1400
+    },
+    "database": "available",
+    "application_version": "2.0.0"
+  },
+  "browser_case": {
+    "id": "DEMO-ad65338b",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 4,
+      "monthly_income": 1500.0,
+      "monthly_housing_cost": 600.0,
+      "current_bedrooms": 1,
+      "housing_situation": "unclear",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 1,
+      "income_document_available": 1,
+      "identity_document_available": 1,
+      "housing_evidence_available": 0,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 1,
+      "application_completeness_score": 70.0
+    },
+    "assessment": {
+      "score": 0.7889516465798122,
+      "classification": 1,
+      "category": "Additional human review",
+      "uncertain": false,
+      "requires_review": true,
+      "threshold": 0.5000000000000002,
+      "failure": null,
+      "limitations": "Synthetic-label agreement only. Neither approval nor rejection; score is not a guarantee.",
+      "model_version": "rf-1.0",
+      "model_sha256": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+      "policy_evidence": {
+        "pack_id": "england-demo",
+        "version": "1.0.0",
+        "prompts": [
+          "Ask a human to clarify missing evidence under the fictional intake protocol.",
+          "Ask a human to reconcile contradictory information.",
+          "Ask a human to clarify reported housing circumstances."
+        ],
+        "source_url": "https://www.gov.uk/guidance/allocation-of-accommodation-guidance-for-local-authorities",
+        "applicability": "Fictional intake routing only; not an allocation scheme or eligibility determination.",
+        "warning": "Local authorities operate their own allocation schemes. A qualified human must verify applicable local policy.",
+        "origin": "Fictional demo assumptions; these prompts are not extracted statutory rules."
+      }
+    },
+    "status": "resolved",
+    "provenance": "Entirely synthetic; not real housing applicants",
+    "history": [
+      {
+        "timestamp": "2026-10-17T15:02:48.525926+00:00",
+        "action": "submitted",
+        "detail": {
+          "synthetic_only": true
+        }
+      },
+      {
+        "timestamp": "2026-10-17T15:02:48.544288+00:00",
+        "action": "assessed",
+        "detail": {
+          "score": 0.7889516465798122,
+          "classification": 1,
+          "category": "Additional human review",
+          "uncertain": false,
+          "requires_review": true,
+          "threshold": 0.5000000000000002,
+          "failure": null,
+          "limitations": "Synthetic-label agreement only. Neither approval nor rejection; score is not a guarantee.",
+          "model_version": "rf-1.0",
+          "model_sha256": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+          "policy_evidence": {
+            "pack_id": "england-demo",
+            "version": "1.0.0",
+            "prompts": [
+              "Ask a human to clarify missing evidence under the fictional intake protocol.",
+              "Ask a human to reconcile contradictory information.",
+              "Ask a human to clarify reported housing circumstances."
+            ],
+            "source_url": "https://www.gov.uk/guidance/allocation-of-accommodation-guidance-for-local-authorities",
+            "applicability": "Fictional intake routing only; not an allocation scheme or eligibility determination.",
+            "warning": "Local authorities operate their own allocation schemes. A qualified human must verify applicable local policy.",
+            "origin": "Fictional demo assumptions; these prompts are not extracted statutory rules."
+          }
+        }
+      },
+      {
+        "timestamp": "2026-10-17T15:05:24.216523+00:00",
+        "action": "human_override",
+        "detail": {
+          "outcome": "request_evidence",
+          "reason": "Final smoke test: request fictional evidence clarification.",
+          "workflow_status": "pending"
+        }
+      },
+      {
+        "timestamp": "2026-10-17T15:05:35.014443+00:00",
+        "action": "human_override",
+        "detail": {
+          "outcome": "routine",
+          "reason": "Final smoke test: fictional intake review completed by a human.",
+          "workflow_status": "resolved"
+        }
+      }
+    ]
+  },
+  "explanation": {
+    "base_value": 0.5003232628995747,
+    "score": 0.7889516465798122,
+    "attributions": [
+      {
+        "feature": "conflicting_information",
+        "value": 1,
+        "attribution": 0.1551800060703419,
+        "direction": "toward additional review"
+      },
+      {
+        "feature": "housing_situation",
+        "value": "unclear",
+        "attribution": 0.07622306004247033,
+        "direction": "toward additional review"
+      },
+      {
+        "feature": "missing_document_count",
+        "value": 1,
+        "attribution": 0.060134081561818785,
+        "direction": "toward additional review"
+      },
+      {
+        "feature": "application_completeness_score",
+        "value": 70.0,
+        "attribution": 0.03663069439853416,
+        "direction": "toward additional review"
+      },
+      {
+        "feature": "specialist_support_requested",
+        "value": 0,
+        "attribution": -0.017031695620259343,
+        "direction": "toward routine workflow"
+      },
+      {
+        "feature": "housing_evidence_available",
+        "value": 0,
+        "attribution": 0.014582442733902634,
+        "direction": "toward additional review"
+      },
+      {
+        "feature": "income_document_available",
+        "value": 1,
+        "attribution": -0.013748320858403659,
+        "direction": "toward routine workflow"
+      },
+      {
+        "feature": "identity_document_available",
+        "value": 1,
+        "attribution": -0.012842950929213125,
+        "direction": "toward routine workflow"
+      },
+      {
+        "feature": "housing_insecurity_reported",
+        "value": 0,
+        "attribution": -0.01049893371895926,
+        "direction": "toward routine workflow"
+      }
+    ],
+    "additivity_error": 4.9960036108132044e-15,
+    "summary": "conflicting information pushes toward additional review; housing situation pushes toward additional review; missing document count pushes toward additional review",
+    "warning": "Model attributions are associations, not causes, policy evidence or legal eligibility."
+  },
+  "stored_score_matches_loaded_model": true,
+  "api_metrics_match_saved_report": true,
+  "fairness_rerun_matches_saved_report": true,
+  "counterfactual": {
+    "pairs": 200,
+    "rows": 400,
+    "differing_classifications": 0,
+    "average_score_difference": 0.0,
+    "maximum_score_difference": 0.0,
+    "failure_examples": [],
+    "attribute_is_feature": false,
+    "limitation": "Audit group is excluded, so equality is expected by construction. This does not test proxy discrimination.",
+    "examples": [
+      {
+        "pair_id": 0,
+        "attribute_a": "Audit A",
+        "attribute_b": "Audit B",
+        "score_a": 0.559305729506233,
+        "score_b": 0.559305729506233
+      },
+      {
+        "pair_id": 1,
+        "attribute_a": "Audit A",
+        "attribute_b": "Audit B",
+        "score_a": 0.38343928857027,
+        "score_b": 0.38343928857027
+      },
+      {
+        "pair_id": 2,
+        "attribute_a": "Audit A",
+        "attribute_b": "Audit B",
+        "score_a": 0.28587962638919573,
+        "score_b": 0.28587962638919573
+      },
+      {
+        "pair_id": 3,
+        "attribute_a": "Audit A",
+        "attribute_b": "Audit B",
+        "score_a": 0.1490228260450967,
+        "score_b": 0.1490228260450967
+      },
+      {
+        "pair_id": 4,
+        "attribute_a": "Audit A",
+        "attribute_b": "Audit B",
+        "score_a": 0.4092851380287929,
+        "score_b": 0.4092851380287929
+      }
+    ]
+  },
+  "frontend_proxy_matches_backend": true,
+  "dashboard_counts_match_database": true,
+  "download_records": 2000,
+  "download_sha256": "196d2f715cbc959dac5c27e77d3db2edd31b6cafab1a0a296a9f445a8444f255",
+  "preserved_artifacts": {
+    "models/habitat_review_model.joblib": {
+      "sha256": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+      "unchanged": true
+    },
+    "models/config.json": {
+      "sha256": "8d9b47559e5debdc02083cab4fa5747db73437497804ab5b56a385d93d59dc0d",
+      "unchanged": true
+    },
+    "data/public/habitat_synthetic_2000.csv": {
+      "sha256": "196d2f715cbc959dac5c27e77d3db2edd31b6cafab1a0a296a9f445a8444f255",
+      "unchanged": true
+    },
+    "data/public/counterfactual_400.csv": {
+      "sha256": "e070599bfb6b2e8bacc5253dd8e50039d146fed92755c5451b6dc7242647a483",
+      "unchanged": true
+    },
+    "data/splits/train.csv": {
+      "sha256": "d1f2446c579bad6acc11561dec9bb1a63fc6484629f2c2dfc135a5ef85f36f08",
+      "unchanged": true
+    },
+    "data/splits/validation.csv": {
+      "sha256": "6bb28fee10d43cc589ee334f37f5bf878264e193ebb89e1dc83ced694eccab67",
+      "unchanged": true
+    },
+    "data/splits/test.csv": {
+      "sha256": "0a93a2a447bf418e4db4430e868ac0a25a56f201d063dac7d682d27a4d26c80a",
+      "unchanged": true
+    },
+    "reports/evaluation.json": {
+      "sha256": "59743690a0f51b0c7be0e7239f45127e504ec84542926af2a17a620a1752e4ef",
+      "unchanged": true
+    },
+    "reports/fairness.json": {
+      "sha256": "ff0fd65ca25b79c42f4b2083b76dd2e73aa894433fbccdab6b41f5659f0d93bb",
+      "unchanged": true
+    }
+  },
+  "original_database_unchanged": true,
+  "original_database_counts": {
+    "applications": 13,
+    "events": 27
+  },
+  "checkpoint_files_present": 69,
+  "missing_checkpoint_files": [],
+  "review_survives_backend_process_restart": true,
+  "built_frontend_served_by_backend": true,
+  "html_security_headers": {
+    "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "Referrer-Policy": "no-referrer"
+  },
+  "source_secret_pattern_scan": {
+    "files_scanned": 66,
+    "matching_files": [],
+    "scope": "Common key signatures only; not an exhaustive security audit."
+  },
+  "all_original_data_model_report_files_unchanged": [
+    "data/DATASET_CARD.md",
+    "data/DATA_DICTIONARY.md",
+    "data/LICENSE.md",
+    "data/__init__.py",
+    "data/generate_dataset.py",
+    "data/public/counterfactual_400.csv",
+    "data/public/habitat_synthetic_2000.csv",
+    "data/splits/test.csv",
+    "data/splits/train.csv",
+    "data/splits/validation.csv",
+    "models/config.json",
+    "models/habitat_review_model.joblib",
+    "reports/browser-e2e.json",
+    "reports/confusion_matrix.png",
+    "reports/evaluation.json",
+    "reports/failure_case.json",
+    "reports/fairness.json",
+    "reports/file_manifest.json",
+    "reports/frontend-build.txt",
+    "reports/model_comparison.json",
+    "reports/npm-audit-initial.json",
+    "reports/npm-audit.json",
+    "reports/production-smoke.json",
+    "reports/pytest.txt",
+    "reports/splits.json"
+  ]
+}

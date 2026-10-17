@@ -1,0 +1,33 @@
+{
+  "accuracy": 0.7766666666666666,
+  "precision": 0.6306306306306306,
+  "recall": 0.7291666666666666,
+  "f1": 0.6763285024154589,
+  "confusion_matrix": [
+    [
+      163,
+      41
+    ],
+    [
+      26,
+      70
+    ]
+  ],
+  "false_positive_rate": 0.20098039215686275,
+  "false_negative_rate": 0.2708333333333333,
+  "positive_support": 96,
+  "human_review_rate": 0.37,
+  "class_distribution": {
+    "0": 204,
+    "1": 96
+  },
+  "roc_auc": 0.8192912581699346,
+  "routing_review_rate": 0.5733333333333334,
+  "routing_recall": 0.875,
+  "validation_routing_recall": 0.8469387755102041,
+  "validation_routing_recall_target": 0.9,
+  "validation_target_met": false,
+  "uncertainty_margin": 0.16,
+  "test_records": 300,
+  "threshold": 0.5000000000000002
+}

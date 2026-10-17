@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-17",
+  "checkpoint": "7da5c66",
+  "protected_artifacts": {
+    "models/habitat_review_model.joblib": {
+      "sha256": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+      "unchanged": true
+    },
+    "models/config.json": {
+      "sha256": "8d9b47559e5debdc02083cab4fa5747db73437497804ab5b56a385d93d59dc0d",
+      "unchanged": true
+    },
+    "data/public/habitat_synthetic_2000.csv": {
+      "sha256": "196d2f715cbc959dac5c27e77d3db2edd31b6cafab1a0a296a9f445a8444f255",
+      "unchanged": true
+    },
+    "data/public/counterfactual_400.csv": {
+      "sha256": "e070599bfb6b2e8bacc5253dd8e50039d146fed92755c5451b6dc7242647a483",
+      "unchanged": true
+    },
+    "data/splits/train.csv": {
+      "sha256": "d1f2446c579bad6acc11561dec9bb1a63fc6484629f2c2dfc135a5ef85f36f08",
+      "unchanged": true
+    },
+    "data/splits/validation.csv": {
+      "sha256": "6bb28fee10d43cc589ee334f37f5bf878264e193ebb89e1dc83ced694eccab67",
+      "unchanged": true
+    },
+    "data/splits/test.csv": {
+      "sha256": "0a93a2a447bf418e4db4430e868ac0a25a56f201d063dac7d682d27a4d26c80a",
+      "unchanged": true
+    },
+    "reports/evaluation.json": {
+      "sha256": "59743690a0f51b0c7be0e7239f45127e504ec84542926af2a17a620a1752e4ef",
+      "unchanged": true
+    },
+    "reports/fairness.json": {
+      "sha256": "ff0fd65ca25b79c42f4b2083b76dd2e73aa894433fbccdab6b41f5659f0d93bb",
+      "unchanged": true
+    }
+  },
+  "original_database_unchanged": true,
+  "original_database_counts": {
+    "applications": 13,
+    "events": 27
+  },
+  "checkpoint_files_present": 120,
+  "missing_source_paths": [],
+  "retrained": false,
+  "browser_case": {
+    "id": "DEMO-92ed2c03",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 4,
+      "monthly_income": 1500.0,
+      "monthly_housing_cost": 600.0,
+      "current_bedrooms": 1,
+      "housing_situation": "unclear",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 1,
+      "income_document_available": 1,
+      "identity_document_available": 1,
+      "housing_evidence_available": 0,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 1,
+      "application_completeness_score": 66.66666666666667
+    },
+    "assessment": {
+      "score": 0.8111289016231379,
+      "classification": 1,
+      "category": "Additional human review",
+      "uncertain": false,
+      "requires_review": true,
+      "threshold": 0.5000000000000002,
+      "failure": null,
+      "limitations": "Synthetic-label agreement only. Neither approval nor rejection; score is not a guarantee.",
+      "model_version": "rf-1.0",
+      "model_sha256": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+      "policy_evidence": {
+        "pack_id": "england-demo",
+        "version": "1.0.0",
+        "prompts": [
+          "Ask a human to clarify missing evidence under the fictional intake protocol.",
+          "Ask a human to reconcile contradictory information.",
+          "Ask a human to clarify reported housing circumstances."
+        ],
+        "source_url": "https://www.gov.uk/guidance/allocation-of-accommodation-guidance-for-local-authorities",
+        "applicability": "Fictional intake routing only; not an allocation scheme or eligibility determination.",
+        "warning": "Local authorities operate their own allocation schemes. A qualified human must verify applicable local policy.",
+        "origin": "Fictional demo assumptions; these prompts are not extracted statutory rules."
+      }
+    },
+    "status": "resolved",
+    "provenance": "Entirely synthetic; not real housing applicants",
+    "history": [
+      {
+        "timestamp": "2026-10-17T16:09:59.974612+00:00",
+        "action": "submitted",
+        "detail": {
+          "synthetic_only": true
+        }
+      },
+      {
+        "timestamp": "2026-10-17T16:10:19.187450+00:00",
+        "action": "assessed",
+        "detail": {
+          "score": 0.8111289016231379,
+          "classification": 1,
+          "category": "Additional human review",
+          "uncertain": false,
+          "requires_review": true,
+          "threshold": 0.5000000000000002,
+          "failure": null,
+          "limitations": "Synthetic-label agreement only. Neither approval nor rejection; score is not a guarantee.",
+          "model_version": "rf-1.0",
+          "model_sha256": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+          "policy_evidence": {
+            "pack_id": "england-demo",
+            "version": "1.0.0",
+            "prompts": [
+              "Ask a human to clarify missing evidence under the fictional intake protocol.",
+              "Ask a human to reconcile contradictory information.",
+              "Ask a human to clarify reported housing circumstances."
+            ],
+            "source_url": "https://www.gov.uk/guidance/allocation-of-accommodation-guidance-for-local-authorities",
+            "applicability": "Fictional intake routing only; not an allocation scheme or eligibility determination.",
+            "warning": "Local authorities operate their own allocation schemes. A qualified human must verify applicable local policy.",
+            "origin": "Fictional demo assumptions; these prompts are not extracted statutory rules."
+          }
+        }
+      },
+      {
+        "timestamp": "2026-10-17T16:10:30.046123+00:00",
+        "action": "human_override",
+        "detail": {
+          "outcome": "request_evidence",
+          "reason": "Please clarify the missing current housing evidence for this demo application.",
+          "workflow_status": "pending"
+        }
+      },
+      {
+        "timestamp": "2026-10-17T16:10:56.836838+00:00",
+        "action": "human_override",
+        "detail": {
+          "outcome": "routine",
+          "reason": "Demo evidence has been clarified. Administrative intake review is complete.",
+          "workflow_status": "resolved"
+        }
+      }
+    ],
+    "documents": {
+      "required": 3,
+      "present_count": 2,
+      "percentage": 66.66666666666667,
+      "present": [
+        "Income evidence",
+        "Identity evidence"
+      ],
+      "missing": [
+        "Current housing evidence"
+      ],
+      "basis": "Three document categories in the demo intake protocol; declarations only, no uploads or legal sufficiency checks."
+    }
+  },
+  "direct_model_score_matches": true,
+  "shap_additivity_error": 5.10702591327572e-15,
+  "review_persists_after_backend_restart": true,
+  "final_health": {
+    "status": "ok",
+    "sandbox": true,
+    "model": {
+      "ready": true,
+      "version": "rf-1.0",
+      "trees": 180,
+      "training_records": 1400
+    },
+    "database": "available",
+    "application_version": "4.0.0"
+  },
+  "csv_download_matches_source": true,
+  "built_frontend_served": true,
+  "common_key_pattern_scan": {
+    "files": 82,
+    "matching_paths": [],
+    "scope": "Bounded key patterns, not a penetration test."
+  }
+}

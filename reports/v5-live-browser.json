@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-17",
+  "tool": "Codex in-app real browser automation",
+  "database": "Isolated V5 clone; original preserved",
+  "case": "DEMO-849ed9ee",
+  "live_counts": {
+    "before": [
+      "Total submitted applications13Saved in this workspace",
+      "Awaiting assessment0Ready for an administrator",
+      "Human review required5Cases in the review queue",
+      "Completed administrative reviews1Recorded caseworker completions",
+      "Information requests0Latest action requests more evidence"
+    ],
+    "after_submission_without_admin_refresh": [
+      "Total submitted applications14Saved in this workspace",
+      "Awaiting assessment1Ready for an administrator",
+      "Human review required5Cases in the review queue",
+      "Completed administrative reviews1Recorded caseworker completions",
+      "Information requests0Latest action requests more evidence"
+    ],
+    "after_information_request": [
+      "Total submitted applications14Saved in this workspace",
+      "Awaiting assessment0Ready for an administrator",
+      "Human review required6Cases in the review queue",
+      "Completed administrative reviews1Recorded caseworker completions",
+      "Information requests1Latest action requests more evidence"
+    ],
+    "after_completion": [
+      "Total submitted applications14Saved in this workspace",
+      "Awaiting assessment0Ready for an administrator",
+      "Human review required5Cases in the review queue",
+      "Completed administrative reviews2Recorded caseworker completions",
+      "Information requests0Latest action requests more evidence"
+    ]
+  },
+  "checks": {
+    "native_invalid_household_blocked": "PASS",
+    "applicant_submit_unassessed": "PASS",
+    "admin_finds_case": "PASS",
+    "real_probability": "53.1%",
+    "document_ratio": "2/3 = 66.7%",
+    "uncertain_escalation_visible": "PASS",
+    "genuine_shap": "PASS",
+    "reassessment_keeps_human_follow_up": "PASS",
+    "information_request_updates_applicant_without_manual_refresh": "PASS",
+    "completion_updates_applicant_without_manual_refresh": "PASS",
+    "completion_survives_reload_and_backend_restart": "PASS",
+    "latest_request_in_application_register": "PASS",
+    "evaluation_model_date_test_size_visible": "PASS",
+    "performance_tooltip": "PASS",
+    "group_rerun_filter": "PASS",
+    "paired_200_rerun": "PASS",
+    "pair_button_count_uses_real_value": "PASS",
+    "excluded_attribute_comparison": [
+      "14.9%",
+      "14.9%"
+    ],
+    "relevant_feature_comparison": [
+      "14.9%",
+      "65.1%"
+    ],
+    "theme_keyboard_persistence": "PASS",
+    "skip_link_keeps_overview": "PASS",
+    "pair_fifth_example_equal_40_9": "PASS",
+    "fairness_and_comparison_tooltips_keyboard": "PASS",
+    "draft_save_restore_and_reset": "PASS",
+    "transparency_full_form_visible": "PASS"
+  },
+  "viewports": {
+    "admin": {
+      "overflow": false,
+      "width": 986
+    },
+    "applicant": {
+      "overflow": false,
+      "width": 1280
+    }
+  },
+  "not_tested": [
+    "Standalone exact 375/768/1280 assertion matrix",
+    "axe",
+    "Full WCAG/screen-reader review",
+    "Production auth/RBAC"
+  ],
+  "console": []
+}

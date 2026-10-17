@@ -1,0 +1,48 @@
+ M README.md
+ M backend/main.py
+ M data/DATASET_CARD.md
+ M docs/DEMO_CHECKLIST.md
+ M docs/MODEL_CARD.md
+ M docs/SUBMISSION_READINESS.md
+ M docs/judge_qa.md
+ M frontend/e2e/habitat.spec.ts
+ M frontend/index.html
+ M frontend/package-lock.json
+ M frontend/package.json
+ M frontend/playwright.config.ts
+ M frontend/src/components/AppShell.tsx
+ M frontend/src/components/NewCaseForm.tsx
+ M frontend/src/components/ui.tsx
+ M frontend/src/lib/types.ts
+ M frontend/src/main.tsx
+ M frontend/src/style.css
+ M scripts/audit_v2.py
+?? docs/V4_COMPLETION_REPORT.md
+?? docs/screenshots/v4-applicant-completed.png
+?? docs/screenshots/v4-applicant-form.png
+?? docs/screenshots/v4-applicant-request.png
+?? docs/screenshots/v4-applicant-submitted.png
+?? docs/screenshots/v4-assessment.png
+?? docs/screenshots/v4-overview-dark.png
+?? docs/screenshots/v4-overview.png
+?? docs/screenshots/v4-sandbox.png
+?? frontend/public/favicon.svg
+?? frontend/public/habitat-logo.svg
+?? frontend/src/components/ReviewWorkspace.tsx
+?? ml/safeguard.py
+?? reports/v4-e2e-output.txt
+?? reports/v4-e2e.json
+?? reports/v4-frontend-build.txt
+?? reports/v4-integrity.json
+?? reports/v4-lint.txt
+?? reports/v4-live-browser.json
+?? reports/v4-lock-update.txt
+?? reports/v4-ml-audit-output.txt
+?? reports/v4-ml-audit.json
+?? reports/v4-ml-audit.txt
+?? reports/v4-npm-audit.json
+?? reports/v4-pytest.txt
+?? reports/v4-safeguard.json
+?? reports/v4-typecheck.txt
+?? scripts/audit_v4.py
+?? tests/test_v4_portals.py

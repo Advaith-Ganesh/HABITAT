@@ -1,0 +1,35 @@
+{
+  "train": {
+    "size": 1400,
+    "positive": 451,
+    "class_distribution": {
+      "0": 949,
+      "1": 451
+    },
+    "sha256": "d1f2446c579bad6acc11561dec9bb1a63fc6484629f2c2dfc135a5ef85f36f08"
+  },
+  "validation": {
+    "size": 300,
+    "positive": 98,
+    "class_distribution": {
+      "0": 202,
+      "1": 98
+    },
+    "sha256": "6bb28fee10d43cc589ee334f37f5bf878264e193ebb89e1dc83ced694eccab67"
+  },
+  "test": {
+    "size": 300,
+    "positive": 96,
+    "class_distribution": {
+      "0": 204,
+      "1": 96
+    },
+    "sha256": "0a93a2a447bf418e4db4430e868ac0a25a56f201d063dac7d682d27a4d26c80a"
+  },
+  "source_sha256": "196d2f715cbc959dac5c27e77d3db2edd31b6cafab1a0a296a9f445a8444f255",
+  "shared_scenarios": 0,
+  "shared_application_ids": 0,
+  "duplicate_rows": 0,
+  "generator": "1.0.0",
+  "seed": 42
+}

@@ -1,0 +1,19 @@
+{
+  "threshold": 0.5000000000000002,
+  "uncertainty_margin": 0.16,
+  "selection": "Validation F1 threshold; smallest candidate margin achieving 90% validation routing recall, otherwise maximum margin.",
+  "validation_f1": 0.6079295154185022,
+  "validation_routing_recall": 0.8469387755102041,
+  "training_records": 1400,
+  "features": [
+    "missing_document_count",
+    "income_document_available",
+    "identity_document_available",
+    "housing_evidence_available",
+    "conflicting_information",
+    "application_completeness_score",
+    "housing_situation",
+    "specialist_support_requested",
+    "housing_insecurity_reported"
+  ]
+}

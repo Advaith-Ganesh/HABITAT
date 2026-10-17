@@ -1,0 +1,25 @@
+
+> habitat-ai@4.0.0 build
+> tsc -b && vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 2199 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                              0.70 kB │ gzip:   0.41 kB
+dist/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2     10.25 kB
+dist/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2      11.23 kB
+dist/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2       18.74 kB
+dist/assets/inter-greek-wght-normal-CkhJZR-_.woff2          18.99 kB
+dist/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2   25.96 kB
+dist/assets/inter-latin-wght-normal-Dx4kXJAl.woff2          48.25 kB
+dist/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2      85.06 kB
+dist/assets/index-C1aozZYK.css                              45.23 kB │ gzip:  10.19 kB
+dist/assets/NewCaseForm-BB3cW4JM.js                          7.45 kB │ gzip:   2.76 kB
+dist/assets/types-D8q4dNKd.js                                8.59 kB │ gzip:   3.28 kB
+dist/assets/AuditPages-DpCRMQhO.js                          11.36 kB │ gzip:   3.72 kB
+dist/assets/index-BPMWffdT.js                              219.06 kB │ gzip:  69.12 kB
+dist/assets/Charts-CT3dwV2e.js                             410.87 kB │ gzip: 116.49 kB
+
+✓ built in 324ms

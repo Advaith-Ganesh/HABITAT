@@ -1,0 +1,189 @@
+{
+  "local_links_and_images": [
+    {
+      "target": "docs/brand/synthetic.svg",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/brand/license.svg",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/DEMO_CHECKLIST.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/FINAL_INTEGRATION_AUDIT.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/screenshots/v6-overview.png",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/screenshots/v6-explanation.png",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "requirements-lock.txt",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "frontend/package-lock.json",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "data/public/habitat_synthetic_2000.csv",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "data/DATASET_CARD.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "data/DATA_DICTIONARY.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "data/generate_dataset.py",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "data/public/counterfactual_400.csv",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "ml/train.py",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/MODEL_CARD.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "reports/evaluation_verification.json",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "reports/evaluation.json",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "reports/model_comparison.json",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "reports/v5-ml-audit.json",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "ml/explain.py",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "reports/fairness.json",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/screenshots/v5-comparison.png",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "reports/v5-safeguard.json",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": ".env.example",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/FINAL_INTEGRATION_AUDIT.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/DATA_VALUE_AUDIT_V5.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "policy_packs/schema.json",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "backend/policy.py",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "reports/v6-integrity.json",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/SUBMISSION_READINESS.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/DEMO_CHECKLIST.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/JUDGE_QA.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/MODEL_CARD.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "data/DATASET_CARD.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "LICENSE",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "data/LICENSE.md",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "docs/third_party/Inter-OFL.txt",
+      "exists_with_exact_case": true
+    },
+    {
+      "target": "frontend/public/habitat-logo.svg",
+      "exists_with_exact_case": true
+    }
+  ],
+  "shell_examples": [
+    {
+      "example": 1,
+      "shell_syntax_valid": true,
+      "executed": false
+    },
+    {
+      "example": 2,
+      "shell_syntax_valid": true,
+      "executed": false
+    },
+    {
+      "example": 3,
+      "shell_syntax_valid": true,
+      "executed": false
+    },
+    {
+      "example": 4,
+      "shell_syntax_valid": true,
+      "executed": false
+    },
+    {
+      "example": 5,
+      "shell_syntax_valid": true,
+      "executed": false
+    },
+    {
+      "example": 6,
+      "shell_syntax_valid": true,
+      "executed": false
+    }
+  ],
+  "scope": "Local target existence with exact filename case and bash parsing. Startup/test commands were separately executed; fresh installation and full retraining were not rerun. External docs were opened separately; remote link uptime is not monitored."
+}

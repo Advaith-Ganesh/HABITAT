@@ -1,0 +1,58 @@
+ M README.md
+ M backend/main.py
+ M docs/DEMO_CHECKLIST.md
+RM docs/judge_qa.md -> docs/JUDGE_QA.md
+ M docs/MODEL_CARD.md
+ M docs/SUBMISSION_READINESS.md
+ M frontend/e2e/habitat.spec.ts
+ M frontend/package-lock.json
+ M frontend/package.json
+ M frontend/playwright.config.ts
+ M frontend/public/favicon.svg
+ M frontend/public/habitat-logo.svg
+ M frontend/src/components/AppShell.tsx
+ M frontend/src/components/Charts.tsx
+ M frontend/src/components/ReviewWorkspace.tsx
+ M frontend/src/components/ui.tsx
+ M frontend/src/lib/types.ts
+ M frontend/src/main.tsx
+ M frontend/src/pages/AuditPages.tsx
+ M frontend/src/style.css
+ M ml/common.py
+ M ml/safeguard.py
+ M scripts/reproduce.sh
+?? docs/DATA_VALUE_AUDIT_V5.md
+?? docs/FINAL_AUDIT_V5.md
+?? docs/brand/license.svg
+?? docs/brand/synthetic.svg
+?? docs/screenshots/v5-applicant-completed.png
+?? docs/screenshots/v5-applicant-request.png
+?? docs/screenshots/v5-assessment.png
+?? docs/screenshots/v5-comparison.png
+?? docs/screenshots/v5-landing.png
+?? docs/screenshots/v5-overview-dark.png
+?? docs/screenshots/v5-overview.png
+?? docs/screenshots/v5-performance.png
+?? reports/evaluation_verification.json
+?? reports/v5-contrast-output.txt
+?? reports/v5-contrast.json
+?? reports/v5-e2e-output.txt
+?? reports/v5-e2e.json
+?? reports/v5-endpoints.json
+?? reports/v5-frontend-build.txt
+?? reports/v5-integrity.json
+?? reports/v5-lint.txt
+?? reports/v5-live-browser.json
+?? reports/v5-ml-audit-output.txt
+?? reports/v5-ml-audit.json
+?? reports/v5-npm-audit.json
+?? reports/v5-npm-ci-dry-run.txt
+?? reports/v5-pytest.txt
+?? reports/v5-readme-validation-output.txt
+?? reports/v5-readme-validation.json
+?? reports/v5-safeguard.json
+?? reports/v5-typecheck.txt
+?? scripts/audit_v5.py
+?? scripts/contrast_v5.py
+?? scripts/validate_readme_v5.py
+?? tests/test_v5_dynamic.py

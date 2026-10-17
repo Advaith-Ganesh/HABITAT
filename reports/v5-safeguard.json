@@ -1,0 +1,28 @@
+{
+  "test_records": 300,
+  "before_human_escalation": {
+    "routing_errors": 67,
+    "routing_error_rate": 0.22333333333333333,
+    "cases": 300
+  },
+  "threshold": 0.5000000000000002,
+  "uncertainty_margin": 0.16,
+  "selection": "Existing settings selected using validation only; no test tuning or retraining.",
+  "without_uncertainty": {
+    "human_escalation_count": 111,
+    "human_escalation_rate": 0.37,
+    "remaining_routed_count": 189,
+    "remaining_routing_errors": 26,
+    "remaining_routing_error_rate": 0.13756613756613756
+  },
+  "with_uncertainty": {
+    "human_escalation_count": 172,
+    "human_escalation_rate": 0.5733333333333334,
+    "remaining_routed_count": 128,
+    "remaining_routing_errors": 12,
+    "remaining_routing_error_rate": 0.09375
+  },
+  "additional_human_rate": 0.20333333333333337,
+  "remaining_error_rate_difference": -0.04381613756613756,
+  "limitation": "Simulated routing errors against synthetic labels among cases remaining in the routine route. Every real case still needs human handling. These are not measured housing outcomes or observed cost savings."
+}

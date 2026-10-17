@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "jurisdiction",
+    "version",
+    "reference_date",
+    "source_url",
+    "applicability",
+    "rule_description",
+    "human_review_warning",
+    "functional"
+  ],
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jurisdiction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reference_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "effective_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "functional": {
+      "type": "boolean"
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_updated": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "applicability": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rule_description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "human_review_warning": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reference_note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

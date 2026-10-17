@@ -1,0 +1,15 @@
+{
+  "id": "england-demo",
+  "name": "England \u00b7 fictional intake protocol",
+  "jurisdiction": "England",
+  "version": "1.0.0",
+  "reference_date": "2026-10-17",
+  "effective_date": null,
+  "functional": true,
+  "source_url": "https://www.gov.uk/guidance/allocation-of-accommodation-guidance-for-local-authorities",
+  "source_updated": "2026-04-01",
+  "applicability": "Fictional intake routing only; not an allocation scheme or eligibility determination.",
+  "rule_description": "Missing evidence, conflicting information and unclear circumstances prompt human follow-up. These are demo assumptions, not statutory requirements.",
+  "human_review_warning": "Local authorities operate their own allocation schemes. A qualified human must verify applicable local policy.",
+  "reference_note": "The linked GOV.UK manual is statutory guidance for local housing authorities in England. It is not a universal local allocation scheme."
+}

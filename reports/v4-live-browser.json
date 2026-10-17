@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-17",
+  "tool": "Codex real in-app browser automation",
+  "viewport": {
+    "height": 724,
+    "overflow": false,
+    "width": 986
+  },
+  "case": "DEMO-92ed2c03",
+  "checks": {
+    "applicant_three_tabs": "PASS",
+    "admin_five_tabs": "PASS",
+    "submission_saves_unassessed": "PASS",
+    "admin_receives_case": "PASS",
+    "real_assessment_probability_displayed": "81.1%",
+    "document_completeness_displayed": "66.7% (2/3)",
+    "genuine_shap": "PASS",
+    "evidence_request_visible_to_applicant_after_reload": "PASS",
+    "completed_review_visible_to_applicant_after_reload": "PASS",
+    "completion_survives_backend_process_restart": "PASS",
+    "group_audit_rerun": "PASS",
+    "paired_200_rerun": "PASS",
+    "excluded_audit_attribute_equal_outputs": "PASS",
+    "relevant_feature_change_actual_scores": [
+      "14.9%",
+      "65.1%"
+    ],
+    "search_exact_reference": "PASS",
+    "pagination_distinct_six_row_pages": "PASS",
+    "pending_filter_count": 5,
+    "theme_keyboard_and_reload": "PASS",
+    "skip_link_preserves_route": "PASS",
+    "latest_overview_cards_rendered": "PASS",
+    "draft_save_restore_4_to_7_to_4": "PASS",
+    "reset_restores_household_2": "PASS",
+    "help_transparency_page": "PASS",
+    "business_summary_expands": "PASS"
+  },
+  "not_tested": [
+    "Exact 375px viewport",
+    "Exact 768px viewport",
+    "Exact 1280px viewport",
+    "axe browser audit",
+    "Standalone Playwright browser assertions: Chrome launch aborted"
+  ],
+  "console": []
+}

@@ -1,0 +1,63 @@
+ M .gitignore
+ M README.md
+ M backend/main.py
+ M docs/VERIFICATION.md
+ M docs/judge_qa.md
+ M frontend/package-lock.json
+ M frontend/package.json
+ M frontend/src/main.tsx
+ M frontend/src/style.css
+ M frontend/tsconfig.tsbuildinfo
+ M ml/evaluate.py
+ M ml/explain.py
+ M ml/predict.py
+?? docs/DEMO_CHECKLIST.md
+?? docs/SUBMISSION_READINESS.md
+?? docs/V2_AUDIT_REPORT.md
+?? docs/screenshots/submission-assessment.png
+?? docs/screenshots/submission-fairness.png
+?? docs/screenshots/submission-human-review.png
+?? docs/screenshots/submission-overview.png
+?? docs/screenshots/v2-assessment.png
+?? docs/screenshots/v2-case-drawer.png
+?? docs/screenshots/v2-dataset.png
+?? docs/screenshots/v2-fairness.png
+?? docs/screenshots/v2-human-review.png
+?? docs/screenshots/v2-overview-dark.png
+?? docs/screenshots/v2-overview-light.png
+?? docs/screenshots/v2-performance.png
+?? docs/third_party/Inter-OFL.txt
+?? frontend/e2e/habitat.spec.ts
+?? frontend/eslint.config.js
+?? frontend/playwright.config.ts
+?? frontend/src/components/AppShell.tsx
+?? frontend/src/components/Chart.tsx
+?? frontend/src/components/Charts.tsx
+?? frontend/src/components/NewCaseForm.tsx
+?? frontend/src/components/ui.tsx
+?? frontend/src/lib/api.ts
+?? frontend/src/lib/types.ts
+?? frontend/src/pages/AuditPages.tsx
+?? frontend/src/pages/OverviewPage.tsx
+?? reports/submission-smoke.json
+?? reports/v2-baseline-tests.txt
+?? reports/v2-changed-files.txt
+?? reports/v2-contrast-output.txt
+?? reports/v2-contrast.json
+?? reports/v2-e2e-output.txt
+?? reports/v2-e2e.json
+?? reports/v2-format.txt
+?? reports/v2-frontend-build.txt
+?? reports/v2-lint-first.txt
+?? reports/v2-lint.txt
+?? reports/v2-live-browser.json
+?? reports/v2-ml-audit-output.txt
+?? reports/v2-ml-audit.json
+?? reports/v2-npm-audit.json
+?? reports/v2-pytest.txt
+?? reports/v2-tests-first.txt
+?? reports/v2-typecheck.txt
+?? scripts/audit_v2.py
+?? scripts/contrast_check.py
+?? scripts/prepare_e2e.py
+?? tests/test_v2_audit.py

@@ -1,0 +1,13 @@
+{
+  "retrained": false,
+  "model_sha256": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+  "source_records": 2000,
+  "split_sizes": {
+    "train": 1400,
+    "validation": 300,
+    "test": 300
+  },
+  "fitted_classifier": "RandomForestClassifier",
+  "fitted_trees": 180,
+  "fairness_recomputed_matches_saved": true
+}

@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-17",
+  "tool": "Codex in-app browser automation",
+  "final_frontend": "http://127.0.0.1:5173",
+  "final_backend": "http://127.0.0.1:8000",
+  "database": "Test clone; original database preserved",
+  "final_case": "DEMO-ad65338b",
+  "journey": {
+    "five_step_creation": "PASS",
+    "prediction_displayed": 0.7889516465798122,
+    "genuine_shap": "PASS",
+    "group_fairness_rerun": "PASS",
+    "paired_200_rerun": "PASS",
+    "request_evidence_remains_pending_after_reload": "PASS",
+    "routine_completion_resolved_after_reload": "PASS",
+    "history_has_both_reasons": "PASS",
+    "newest_case_first_after_order_fix": "PASS",
+    "fairness_axis_0_25_50_75_100_visible": "PASS"
+  },
+  "other_executed_checks": {
+    "draft_restore_and_reset": "PASS",
+    "search": "PASS",
+    "pending_filter": "PASS",
+    "sort_descending": "PASS",
+    "pagination_distinct_pages": "PASS",
+    "drawer_escape": "PASS",
+    "fairness_group_filter": "PASS",
+    "fifth_paired_example": "PASS",
+    "dataset_ui_download_sha256": "196d2f715cbc959dac5c27e77d3db2edd31b6cafab1a0a296a9f445a8444f255",
+    "policy_source_and_future_packs": "PASS",
+    "model_matrix": [
+      "163",
+      "41",
+      "26",
+      "70"
+    ],
+    "economics_zero_volume": "PASS",
+    "sidebar_widths": [
+      80,
+      248
+    ],
+    "theme_keyboard_and_reload_persistence": "PASS",
+    "observed_widths": [
+      1280,
+      986
+    ],
+    "horizontal_overflow": "None observed",
+    "latest_console_errors": []
+  },
+  "not_tested": [
+    "375px browser execution",
+    "768px browser execution",
+    "axe browser audit",
+    "Standalone Playwright assertions: Chrome launch SIGABRT"
+  ],
+  "screenshots": [
+    "submission-overview.png",
+    "submission-assessment.png",
+    "submission-fairness.png",
+    "submission-human-review.png",
+    "v2-overview-dark.png"
+  ]
+}

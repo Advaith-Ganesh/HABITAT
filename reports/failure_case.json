@@ -1,0 +1,12 @@
+{
+  "trigger": "Missing model features in an internal inference request. Public API rejects malformed cases before inference.",
+  "actual_result": {
+    "score": null,
+    "classification": null,
+    "category": "Human review fallback",
+    "uncertain": true,
+    "requires_review": true,
+    "failure": "KeyError",
+    "limitations": "Inference unavailable; a human must review this case."
+  }
+}

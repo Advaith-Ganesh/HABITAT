@@ -1,0 +1,29 @@
+{
+  "/health": {
+    "status": 200
+  },
+  "/": {
+    "status": 200,
+    "frontend_title_present": true
+  },
+  "/api/model/metrics": {
+    "status": 200
+  },
+  "/api/dataset/download": {
+    "status": 200,
+    "csv_records": 2000
+  },
+  "/api/applications/DEMO-67cf1fcc": {
+    "status": 200,
+    "persisted_status": "resolved",
+    "history_actions": [
+      "submitted",
+      "assessed",
+      "human_override"
+    ]
+  },
+  "vite_proxy": {
+    "status": 200,
+    "accuracy": 0.7766666666666666
+  }
+}
