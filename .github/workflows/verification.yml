@@ -22,18 +22,20 @@ jobs:
           node-version: '22'
           cache: npm
           cache-dependency-path: frontend/package-lock.json
+      - name: Clear prior checked-in browser outputs in this ephemeral checkout
+        run: rm -f reports/v7-e2e.json docs/screenshots/v7-runner-*.png
       - name: Install pinned dependencies
         run: |
           python -m venv .venv
           .venv/bin/python -m pip install -r requirements-lock.txt
           npm --prefix frontend ci
-      - name: Backend suite
-        run: .venv/bin/python -m pytest -q
       - name: Frontend checks and production build
         run: |
           npm --prefix frontend run lint
           npm --prefix frontend run typecheck
           npm --prefix frontend run build
+      - name: Backend suite (built entrypoint required for security-header checks)
+        run: .venv/bin/python -m pytest -q
       - name: Install supported Playwright Chromium and Linux dependencies
         run: npm --prefix frontend run browser:install -- --with-deps
       - name: Full browser suite and viewport/accessibility matrix
