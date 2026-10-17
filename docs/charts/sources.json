@@ -1,0 +1,94 @@
+{
+  "scope": "Static README charts; stored reports read only. No model imported, retrained or evaluated.",
+  "sources_sha256": {
+    "reports/evaluation.json": "59743690a0f51b0c7be0e7239f45127e504ec84542926af2a17a620a1752e4ef",
+    "reports/model_comparison.json": "66344350fb1dc1400a7b3e5e1a65018bcbe4c06e1fe07f69e1ad32ea8da0f670",
+    "reports/fairness.json": "ff0fd65ca25b79c42f4b2083b76dd2e73aa894433fbccdab6b41f5659f0d93bb",
+    "reports/v5-safeguard.json": "aae77f72cbd49fdb2003c324c4f30a3813f3cbe8c0a5a973fbccb93325cbfaac",
+    "reports/splits.json": "36fc49c183689f54facf75bb50d1e39e16faa64747243d3e242bea3578df8105",
+    "reports/v7-validation-policy-investigation.json": "b0ddab8bb8247f6ef221262e268dc3b2760c90570f3e6da324126ec3522cbc22"
+  },
+  "figures": {
+    "confusion-matrix.svg": "b013808b52de069c479e754983022d74e8bce34d4e6920f7397e9b5741467232",
+    "dataset-split.svg": "d3544408bbd00d5e3388796e18ec6a163ca7139b213173cf791d2efcfc848220",
+    "fairness-fnr.svg": "4be82eaf6bb9c7ea2963e688efa22f04bdd4517fed4395d1dbde6b0a7e44a833",
+    "model-comparison.svg": "3169b1f33336a6b3c8554a5d2f223b0975f6f70f98bd656c9a9009e2f7403801",
+    "team-contributions.svg": "3bdd7f51f8c1c30531b5d4278c5b52e355a4e4ce65caefa829b43c603336cda1",
+    "uncertainty-workload.svg": "809ce8e78fc43217994fdc181614b53baa59dc954e40d5e1b9ada0e99776f1b4",
+    "validation-tradeoff.svg": "ad28d85bcbf966a09cbb05efb07263237bab1c9c88be3143670174301ab1f910"
+  },
+  "team_graphic_source": "Human-supplied brief, 18 October 2026; self-reported allocation 60/20/20, not commit statistics.",
+  "plotted_values": {
+    "model_comparison": {
+      "random_forest": {
+        "accuracy": 0.7766666666666666,
+        "precision": 0.6306306306306306,
+        "recall": 0.7291666666666666,
+        "f1": 0.6763285024154589
+      },
+      "checklist": {
+        "accuracy": 0.64,
+        "precision": 0.46808510638297873,
+        "recall": 0.9166666666666666,
+        "f1": 0.6197183098591549
+      }
+    },
+    "confusion_matrix": [
+      [
+        163,
+        41
+      ],
+      [
+        26,
+        70
+      ]
+    ],
+    "extra_review_counts": [
+      111,
+      172
+    ],
+    "fairness": [
+      {
+        "group": "Audit A",
+        "n": 130.0,
+        "positive_n": 41,
+        "fnr": 0.34146341463414637
+      },
+      {
+        "group": "Audit B",
+        "n": 102.0,
+        "positive_n": 32,
+        "fnr": 0.09375
+      },
+      {
+        "group": "Audit C",
+        "n": 68.0,
+        "positive_n": 23,
+        "fnr": 0.391304347826087
+      }
+    ],
+    "split": [
+      1400,
+      300,
+      300
+    ],
+    "validation": {
+      "retained": {
+        "threshold": 0.5000000000000002,
+        "uncertainty_margin": 0.16,
+        "routing_recall": 0.8469387755102041,
+        "extra_review_rate": 0.6366666666666667
+      },
+      "candidate": {
+        "cutoff": 0.2622583782022477,
+        "uncertainty_margin": 0.23774162179775254,
+        "routing_recall": 0.9081632653061225,
+        "extra_review_rate": 0.7366666666666667,
+        "extra_review_count": 221,
+        "missed_positive_count": 9
+      },
+      "target": 0.9,
+      "provisional_workload_ceiling": 0.7
+    }
+  }
+}
