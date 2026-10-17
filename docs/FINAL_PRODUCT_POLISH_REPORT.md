@@ -30,7 +30,9 @@ The historical database remains13 applications/27 events; the default sandbox re
 | Existing README validator | **PASS:58 exact-case links/assets;5 shell examples parsed**; historical result preserved |
 | Extended README validation | **PASS:**links/fragments,7 safe SVGs,10 canonical protected artifact hashes; [result](final-polish-readme-validation.json) |
 | Real browser → API → SQLite → model/SHAP → human review → applicant → restart | **PASS**, as described above; no simulated success responses |
-| Supported Linux Playwright / GitHub Actions | Pending pull-request verification; merge remains conditional on success |
+| Supported Linux Playwright / GitHub Actions | **PASS:9 Playwright tests,0 skipped**, including the full applicant/admin journey, identical retries and 375/768/1280 accessibility matrix. [Successful source CI](https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39080435230), source commit `bb1f12e` |
+
+The CI run also passed clean dependency installation,111 Python tests, lint, TypeScript and production build. The final evidence-only follow-up changes this report and verification records; application code remains identical to the verified source. Merge is performed only after the pull-request checks succeed.
 
 ## Remaining limitations
 

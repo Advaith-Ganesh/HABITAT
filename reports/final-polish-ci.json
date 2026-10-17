@@ -1,0 +1,20 @@
+{
+  "source_commit": "bb1f12e6bc6f4bd8a749b5c19fc6c91baa564fde",
+  "run_id": 39080435230,
+  "url": "https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39080435230",
+  "conclusion": "success",
+  "python_tests_passed": 111,
+  "python_dependency_warnings": 15,
+  "playwright_passed": 9,
+  "playwright_seconds": 38.3,
+  "playwright_failed": 0,
+  "playwright_skipped": 0,
+  "lint": "PASS",
+  "typecheck": "PASS",
+  "production_build": "PASS",
+  "artifact": {
+    "id": 12118667596,
+    "github_reported_sha256": "5392883e5e34d93dacc85c53a4e25ee08abd6ebe24a75d54a3683a0b447ca099"
+  },
+  "scope": "Actual pull-request Actions result. Later evidence-only changes preserve the exact runtime and test source."
+}
