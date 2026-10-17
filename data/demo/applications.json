@@ -1,0 +1,254 @@
+[
+  {
+    "id": "DEMO-SEED-001",
+    "scenario": "Complete information",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 2,
+      "monthly_income": 1500,
+      "monthly_housing_cost": 600,
+      "current_bedrooms": 1,
+      "housing_situation": "stable",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 0,
+      "income_document_available": 1,
+      "identity_document_available": 1,
+      "housing_evidence_available": 1,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 0,
+      "application_completeness_score": 93.73
+    }
+  },
+  {
+    "id": "DEMO-SEED-002",
+    "scenario": "Missing income evidence",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 2,
+      "monthly_income": 1500,
+      "monthly_housing_cost": 600,
+      "current_bedrooms": 1,
+      "housing_situation": "stable",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 1,
+      "income_document_available": 0,
+      "identity_document_available": 1,
+      "housing_evidence_available": 1,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 0,
+      "application_completeness_score": 72.43
+    }
+  },
+  {
+    "id": "DEMO-SEED-003",
+    "scenario": "Unclear housing",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 2,
+      "monthly_income": 1500,
+      "monthly_housing_cost": 600,
+      "current_bedrooms": 1,
+      "housing_situation": "unclear",
+      "housing_insecurity_reported": 1,
+      "missing_document_count": 0,
+      "income_document_available": 1,
+      "identity_document_available": 1,
+      "housing_evidence_available": 1,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 0,
+      "application_completeness_score": 83.27
+    }
+  },
+  {
+    "id": "DEMO-SEED-004",
+    "scenario": "Conflicting details",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 2,
+      "monthly_income": 1500,
+      "monthly_housing_cost": 600,
+      "current_bedrooms": 1,
+      "housing_situation": "stable",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 0,
+      "income_document_available": 1,
+      "identity_document_available": 1,
+      "housing_evidence_available": 1,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 1,
+      "application_completeness_score": 88.31
+    }
+  },
+  {
+    "id": "DEMO-SEED-005",
+    "scenario": "Specialist requested",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 2,
+      "monthly_income": 1500,
+      "monthly_housing_cost": 600,
+      "current_bedrooms": 1,
+      "housing_situation": "stable",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 0,
+      "income_document_available": 1,
+      "identity_document_available": 1,
+      "housing_evidence_available": 1,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 1,
+      "conflicting_information": 0,
+      "application_completeness_score": 91.47
+    }
+  },
+  {
+    "id": "DEMO-SEED-006",
+    "scenario": "Temporary housing",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 2,
+      "monthly_income": 1500,
+      "monthly_housing_cost": 600,
+      "current_bedrooms": 1,
+      "housing_situation": "temporary",
+      "housing_insecurity_reported": 1,
+      "missing_document_count": 0,
+      "income_document_available": 1,
+      "identity_document_available": 1,
+      "housing_evidence_available": 1,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 0,
+      "application_completeness_score": 86.19
+    }
+  },
+  {
+    "id": "DEMO-SEED-007",
+    "scenario": "Two missing categories",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 2,
+      "monthly_income": 1500,
+      "monthly_housing_cost": 600,
+      "current_bedrooms": 1,
+      "housing_situation": "stable",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 2,
+      "income_document_available": 0,
+      "identity_document_available": 1,
+      "housing_evidence_available": 0,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 0,
+      "application_completeness_score": 57.29
+    }
+  },
+  {
+    "id": "DEMO-SEED-008",
+    "scenario": "Incomplete declarations",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 2,
+      "monthly_income": 1500,
+      "monthly_housing_cost": 600,
+      "current_bedrooms": 1,
+      "housing_situation": "stable",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 3,
+      "income_document_available": 0,
+      "identity_document_available": 0,
+      "housing_evidence_available": 0,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 0,
+      "application_completeness_score": 44.11
+    }
+  },
+  {
+    "id": "DEMO-SEED-009",
+    "scenario": "Clarification and evidence",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 2,
+      "monthly_income": 1500,
+      "monthly_housing_cost": 600,
+      "current_bedrooms": 1,
+      "housing_situation": "stable",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 1,
+      "income_document_available": 1,
+      "identity_document_available": 1,
+      "housing_evidence_available": 0,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 1,
+      "application_completeness_score": 71.23
+    }
+  },
+  {
+    "id": "DEMO-SEED-010",
+    "scenario": "Accessible intake support",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 2,
+      "monthly_income": 1500,
+      "monthly_housing_cost": 600,
+      "current_bedrooms": 1,
+      "housing_situation": "stable",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 0,
+      "income_document_available": 1,
+      "identity_document_available": 1,
+      "housing_evidence_available": 1,
+      "accessibility_support_requested": 1,
+      "specialist_support_requested": 0,
+      "conflicting_information": 0,
+      "application_completeness_score": 94.17
+    }
+  },
+  {
+    "id": "DEMO-SEED-011",
+    "scenario": "Larger household",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 6,
+      "monthly_income": 1500,
+      "monthly_housing_cost": 600,
+      "current_bedrooms": 1,
+      "housing_situation": "stable",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 0,
+      "income_document_available": 1,
+      "identity_document_available": 1,
+      "housing_evidence_available": 1,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 0,
+      "application_completeness_score": 92.59
+    }
+  },
+  {
+    "id": "DEMO-SEED-012",
+    "scenario": "Mixed follow-up",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 2,
+      "monthly_income": 1500,
+      "monthly_housing_cost": 600,
+      "current_bedrooms": 1,
+      "housing_situation": "unclear",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 1,
+      "income_document_available": 1,
+      "identity_document_available": 0,
+      "housing_evidence_available": 1,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 1,
+      "conflicting_information": 0,
+      "application_completeness_score": 63.41
+    }
+  }
+]

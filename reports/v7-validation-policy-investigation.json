@@ -1,0 +1,2030 @@
+{
+  "selection_data": "validation only; final test not loaded by this analysis",
+  "model_retrained": false,
+  "provisional_workload_ceiling": 0.7,
+  "target": 0.9,
+  "original": {
+    "routing_recall": 0.8469387755102041,
+    "extra_review_rate": 0.6366666666666667
+  },
+  "minimum_workload_target_policy": {
+    "cutoff": 0.2622583782022477,
+    "uncertainty_margin": 0.23774162179775254,
+    "routing_recall": 0.9081632653061225,
+    "extra_review_rate": 0.7366666666666667,
+    "extra_review_count": 221,
+    "missed_positive_count": 9
+  },
+  "feasible_within_ceiling": [],
+  "frontier": [
+    {
+      "cutoff": 0.9217428850960229,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.01020408163265306,
+      "extra_review_rate": 0.0033333333333333335,
+      "extra_review_count": 1,
+      "missed_positive_count": 97
+    },
+    {
+      "cutoff": 0.905428093128224,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.02040816326530612,
+      "extra_review_rate": 0.006666666666666667,
+      "extra_review_count": 2,
+      "missed_positive_count": 96
+    },
+    {
+      "cutoff": 0.9018551593765762,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.030612244897959183,
+      "extra_review_rate": 0.01,
+      "extra_review_count": 3,
+      "missed_positive_count": 95
+    },
+    {
+      "cutoff": 0.8983448637317007,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.04081632653061224,
+      "extra_review_rate": 0.013333333333333334,
+      "extra_review_count": 4,
+      "missed_positive_count": 94
+    },
+    {
+      "cutoff": 0.8918864927636574,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.05102040816326531,
+      "extra_review_rate": 0.016666666666666666,
+      "extra_review_count": 5,
+      "missed_positive_count": 93
+    },
+    {
+      "cutoff": 0.8800801236828865,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.05102040816326531,
+      "extra_review_rate": 0.02,
+      "extra_review_count": 6,
+      "missed_positive_count": 93
+    },
+    {
+      "cutoff": 0.8792949943197191,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.061224489795918366,
+      "extra_review_rate": 0.023333333333333334,
+      "extra_review_count": 7,
+      "missed_positive_count": 92
+    },
+    {
+      "cutoff": 0.8781508891735108,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.07142857142857142,
+      "extra_review_rate": 0.02666666666666667,
+      "extra_review_count": 8,
+      "missed_positive_count": 91
+    },
+    {
+      "cutoff": 0.8765919389267502,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.08163265306122448,
+      "extra_review_rate": 0.03,
+      "extra_review_count": 9,
+      "missed_positive_count": 90
+    },
+    {
+      "cutoff": 0.8733688828926575,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.09183673469387756,
+      "extra_review_rate": 0.03333333333333333,
+      "extra_review_count": 10,
+      "missed_positive_count": 89
+    },
+    {
+      "cutoff": 0.8721362383097342,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.10204081632653061,
+      "extra_review_rate": 0.03666666666666667,
+      "extra_review_count": 11,
+      "missed_positive_count": 88
+    },
+    {
+      "cutoff": 0.8703061388586041,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.10204081632653061,
+      "extra_review_rate": 0.04,
+      "extra_review_count": 12,
+      "missed_positive_count": 88
+    },
+    {
+      "cutoff": 0.8636487811193956,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.11224489795918367,
+      "extra_review_rate": 0.043333333333333335,
+      "extra_review_count": 13,
+      "missed_positive_count": 87
+    },
+    {
+      "cutoff": 0.8611485208956539,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.12244897959183673,
+      "extra_review_rate": 0.04666666666666667,
+      "extra_review_count": 14,
+      "missed_positive_count": 86
+    },
+    {
+      "cutoff": 0.8591896165185324,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.1326530612244898,
+      "extra_review_rate": 0.05,
+      "extra_review_count": 15,
+      "missed_positive_count": 85
+    },
+    {
+      "cutoff": 0.8591455102137345,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.14285714285714285,
+      "extra_review_rate": 0.05333333333333334,
+      "extra_review_count": 16,
+      "missed_positive_count": 84
+    },
+    {
+      "cutoff": 0.8585221994578944,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.15306122448979592,
+      "extra_review_rate": 0.056666666666666664,
+      "extra_review_count": 17,
+      "missed_positive_count": 83
+    },
+    {
+      "cutoff": 0.8535019261008407,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.15306122448979592,
+      "extra_review_rate": 0.06,
+      "extra_review_count": 18,
+      "missed_positive_count": 83
+    },
+    {
+      "cutoff": 0.8529795829778327,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.15306122448979592,
+      "extra_review_rate": 0.06333333333333334,
+      "extra_review_count": 19,
+      "missed_positive_count": 83
+    },
+    {
+      "cutoff": 0.8499629803090806,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.16326530612244897,
+      "extra_review_rate": 0.06666666666666667,
+      "extra_review_count": 20,
+      "missed_positive_count": 82
+    },
+    {
+      "cutoff": 0.8464847904113205,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.17346938775510204,
+      "extra_review_rate": 0.07,
+      "extra_review_count": 21,
+      "missed_positive_count": 81
+    },
+    {
+      "cutoff": 0.8439577498509863,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.1836734693877551,
+      "extra_review_rate": 0.07333333333333333,
+      "extra_review_count": 22,
+      "missed_positive_count": 80
+    },
+    {
+      "cutoff": 0.8324516164115786,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.19387755102040816,
+      "extra_review_rate": 0.07666666666666666,
+      "extra_review_count": 23,
+      "missed_positive_count": 79
+    },
+    {
+      "cutoff": 0.818376001435057,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.19387755102040816,
+      "extra_review_rate": 0.08,
+      "extra_review_count": 24,
+      "missed_positive_count": 79
+    },
+    {
+      "cutoff": 0.8163967494804418,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.20408163265306123,
+      "extra_review_rate": 0.08333333333333333,
+      "extra_review_count": 25,
+      "missed_positive_count": 78
+    },
+    {
+      "cutoff": 0.8065904786031391,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.21428571428571427,
+      "extra_review_rate": 0.08666666666666667,
+      "extra_review_count": 26,
+      "missed_positive_count": 77
+    },
+    {
+      "cutoff": 0.7979911593081394,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.22448979591836735,
+      "extra_review_rate": 0.09,
+      "extra_review_count": 27,
+      "missed_positive_count": 76
+    },
+    {
+      "cutoff": 0.7932519915887315,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.23469387755102042,
+      "extra_review_rate": 0.09333333333333334,
+      "extra_review_count": 28,
+      "missed_positive_count": 75
+    },
+    {
+      "cutoff": 0.7913866519202684,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.24489795918367346,
+      "extra_review_rate": 0.09666666666666666,
+      "extra_review_count": 29,
+      "missed_positive_count": 74
+    },
+    {
+      "cutoff": 0.7797224166555164,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.24489795918367346,
+      "extra_review_rate": 0.1,
+      "extra_review_count": 30,
+      "missed_positive_count": 74
+    },
+    {
+      "cutoff": 0.7732340063305247,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.25510204081632654,
+      "extra_review_rate": 0.10333333333333333,
+      "extra_review_count": 31,
+      "missed_positive_count": 73
+    },
+    {
+      "cutoff": 0.7708403040531054,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.2653061224489796,
+      "extra_review_rate": 0.10666666666666667,
+      "extra_review_count": 32,
+      "missed_positive_count": 72
+    },
+    {
+      "cutoff": 0.7697772428656281,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.2653061224489796,
+      "extra_review_rate": 0.11,
+      "extra_review_count": 33,
+      "missed_positive_count": 72
+    },
+    {
+      "cutoff": 0.7542441966011961,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.2755102040816326,
+      "extra_review_rate": 0.11333333333333333,
+      "extra_review_count": 34,
+      "missed_positive_count": 71
+    },
+    {
+      "cutoff": 0.7536244865134517,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.2857142857142857,
+      "extra_review_rate": 0.11666666666666667,
+      "extra_review_count": 35,
+      "missed_positive_count": 70
+    },
+    {
+      "cutoff": 0.7518420429187506,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.29591836734693877,
+      "extra_review_rate": 0.12,
+      "extra_review_count": 36,
+      "missed_positive_count": 69
+    },
+    {
+      "cutoff": 0.7504368891800339,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.29591836734693877,
+      "extra_review_rate": 0.12333333333333334,
+      "extra_review_count": 37,
+      "missed_positive_count": 69
+    },
+    {
+      "cutoff": 0.7490499107765906,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.30612244897959184,
+      "extra_review_rate": 0.12666666666666668,
+      "extra_review_count": 38,
+      "missed_positive_count": 68
+    },
+    {
+      "cutoff": 0.7488227888075015,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.30612244897959184,
+      "extra_review_rate": 0.13,
+      "extra_review_count": 39,
+      "missed_positive_count": 68
+    },
+    {
+      "cutoff": 0.7487471684829294,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.3163265306122449,
+      "extra_review_rate": 0.13333333333333333,
+      "extra_review_count": 40,
+      "missed_positive_count": 67
+    },
+    {
+      "cutoff": 0.74451520910349,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.3163265306122449,
+      "extra_review_rate": 0.13666666666666666,
+      "extra_review_count": 41,
+      "missed_positive_count": 67
+    },
+    {
+      "cutoff": 0.7422599068200658,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.32653061224489793,
+      "extra_review_rate": 0.14,
+      "extra_review_count": 42,
+      "missed_positive_count": 66
+    },
+    {
+      "cutoff": 0.7413263923152147,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.32653061224489793,
+      "extra_review_rate": 0.14333333333333334,
+      "extra_review_count": 43,
+      "missed_positive_count": 66
+    },
+    {
+      "cutoff": 0.7389876948320476,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.336734693877551,
+      "extra_review_rate": 0.14666666666666667,
+      "extra_review_count": 44,
+      "missed_positive_count": 65
+    },
+    {
+      "cutoff": 0.7364948353356777,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.3469387755102041,
+      "extra_review_rate": 0.15,
+      "extra_review_count": 45,
+      "missed_positive_count": 64
+    },
+    {
+      "cutoff": 0.7346998807399878,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.35714285714285715,
+      "extra_review_rate": 0.15333333333333332,
+      "extra_review_count": 46,
+      "missed_positive_count": 63
+    },
+    {
+      "cutoff": 0.7340200064132058,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.3673469387755102,
+      "extra_review_rate": 0.15666666666666668,
+      "extra_review_count": 47,
+      "missed_positive_count": 62
+    },
+    {
+      "cutoff": 0.733927695683958,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.3673469387755102,
+      "extra_review_rate": 0.16,
+      "extra_review_count": 48,
+      "missed_positive_count": 62
+    },
+    {
+      "cutoff": 0.7314618807050947,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.37755102040816324,
+      "extra_review_rate": 0.16333333333333333,
+      "extra_review_count": 49,
+      "missed_positive_count": 61
+    },
+    {
+      "cutoff": 0.7297423876693708,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.37755102040816324,
+      "extra_review_rate": 0.16666666666666666,
+      "extra_review_count": 50,
+      "missed_positive_count": 61
+    },
+    {
+      "cutoff": 0.7296364455448697,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.3877551020408163,
+      "extra_review_rate": 0.17,
+      "extra_review_count": 51,
+      "missed_positive_count": 60
+    },
+    {
+      "cutoff": 0.7176200519053473,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.3979591836734694,
+      "extra_review_rate": 0.17333333333333334,
+      "extra_review_count": 52,
+      "missed_positive_count": 59
+    },
+    {
+      "cutoff": 0.7140585467594232,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.3979591836734694,
+      "extra_review_rate": 0.17666666666666667,
+      "extra_review_count": 53,
+      "missed_positive_count": 59
+    },
+    {
+      "cutoff": 0.7139935504559233,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.3979591836734694,
+      "extra_review_rate": 0.18,
+      "extra_review_count": 54,
+      "missed_positive_count": 59
+    },
+    {
+      "cutoff": 0.7114380769803037,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.3979591836734694,
+      "extra_review_rate": 0.18333333333333332,
+      "extra_review_count": 55,
+      "missed_positive_count": 59
+    },
+    {
+      "cutoff": 0.7102490030468456,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.3979591836734694,
+      "extra_review_rate": 0.18666666666666668,
+      "extra_review_count": 56,
+      "missed_positive_count": 59
+    },
+    {
+      "cutoff": 0.7079468187902784,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.3979591836734694,
+      "extra_review_rate": 0.19,
+      "extra_review_count": 57,
+      "missed_positive_count": 59
+    },
+    {
+      "cutoff": 0.7065999925530317,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.40816326530612246,
+      "extra_review_rate": 0.19333333333333333,
+      "extra_review_count": 58,
+      "missed_positive_count": 58
+    },
+    {
+      "cutoff": 0.7062244869156675,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.40816326530612246,
+      "extra_review_rate": 0.19666666666666666,
+      "extra_review_count": 59,
+      "missed_positive_count": 58
+    },
+    {
+      "cutoff": 0.7031932475641025,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.41836734693877553,
+      "extra_review_rate": 0.2,
+      "extra_review_count": 60,
+      "missed_positive_count": 57
+    },
+    {
+      "cutoff": 0.6973740441704428,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.42857142857142855,
+      "extra_review_rate": 0.20333333333333334,
+      "extra_review_count": 61,
+      "missed_positive_count": 56
+    },
+    {
+      "cutoff": 0.6958968183443365,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.4387755102040816,
+      "extra_review_rate": 0.20666666666666667,
+      "extra_review_count": 62,
+      "missed_positive_count": 55
+    },
+    {
+      "cutoff": 0.6956141039283076,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.4387755102040816,
+      "extra_review_rate": 0.21,
+      "extra_review_count": 63,
+      "missed_positive_count": 55
+    },
+    {
+      "cutoff": 0.6931654717828793,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.4489795918367347,
+      "extra_review_rate": 0.21333333333333335,
+      "extra_review_count": 64,
+      "missed_positive_count": 54
+    },
+    {
+      "cutoff": 0.6817510572376875,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.4489795918367347,
+      "extra_review_rate": 0.22,
+      "extra_review_count": 66,
+      "missed_positive_count": 54
+    },
+    {
+      "cutoff": 0.6794276890574524,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.4489795918367347,
+      "extra_review_rate": 0.22333333333333333,
+      "extra_review_count": 67,
+      "missed_positive_count": 54
+    },
+    {
+      "cutoff": 0.6786451975020127,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.4489795918367347,
+      "extra_review_rate": 0.22666666666666666,
+      "extra_review_count": 68,
+      "missed_positive_count": 54
+    },
+    {
+      "cutoff": 0.6764710284157962,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.4489795918367347,
+      "extra_review_rate": 0.23,
+      "extra_review_count": 69,
+      "missed_positive_count": 54
+    },
+    {
+      "cutoff": 0.6742995471942322,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.45918367346938777,
+      "extra_review_rate": 0.23333333333333334,
+      "extra_review_count": 70,
+      "missed_positive_count": 53
+    },
+    {
+      "cutoff": 0.6724690348356006,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.45918367346938777,
+      "extra_review_rate": 0.23666666666666666,
+      "extra_review_count": 71,
+      "missed_positive_count": 53
+    },
+    {
+      "cutoff": 0.6714866605478571,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.45918367346938777,
+      "extra_review_rate": 0.24,
+      "extra_review_count": 72,
+      "missed_positive_count": 53
+    },
+    {
+      "cutoff": 0.6709676758116785,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.46938775510204084,
+      "extra_review_rate": 0.24333333333333335,
+      "extra_review_count": 73,
+      "missed_positive_count": 52
+    },
+    {
+      "cutoff": 0.6706050875722304,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.46938775510204084,
+      "extra_review_rate": 0.24666666666666667,
+      "extra_review_count": 74,
+      "missed_positive_count": 52
+    },
+    {
+      "cutoff": 0.6698489042164059,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.46938775510204084,
+      "extra_review_rate": 0.25,
+      "extra_review_count": 75,
+      "missed_positive_count": 52
+    },
+    {
+      "cutoff": 0.6679032674780547,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.46938775510204084,
+      "extra_review_rate": 0.25333333333333335,
+      "extra_review_count": 76,
+      "missed_positive_count": 52
+    },
+    {
+      "cutoff": 0.6658086357409947,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.46938775510204084,
+      "extra_review_rate": 0.25666666666666665,
+      "extra_review_count": 77,
+      "missed_positive_count": 52
+    },
+    {
+      "cutoff": 0.6581704880988123,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.47959183673469385,
+      "extra_review_rate": 0.2633333333333333,
+      "extra_review_count": 79,
+      "missed_positive_count": 51
+    },
+    {
+      "cutoff": 0.6552401095162584,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.4897959183673469,
+      "extra_review_rate": 0.26666666666666666,
+      "extra_review_count": 80,
+      "missed_positive_count": 50
+    },
+    {
+      "cutoff": 0.6517400583200125,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5,
+      "extra_review_rate": 0.27,
+      "extra_review_count": 81,
+      "missed_positive_count": 49
+    },
+    {
+      "cutoff": 0.6513169171628771,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5,
+      "extra_review_rate": 0.2733333333333333,
+      "extra_review_count": 82,
+      "missed_positive_count": 49
+    },
+    {
+      "cutoff": 0.6460411140602902,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5102040816326531,
+      "extra_review_rate": 0.27666666666666667,
+      "extra_review_count": 83,
+      "missed_positive_count": 48
+    },
+    {
+      "cutoff": 0.6439213928611625,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5204081632653061,
+      "extra_review_rate": 0.28,
+      "extra_review_count": 84,
+      "missed_positive_count": 47
+    },
+    {
+      "cutoff": 0.6430750395937913,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5204081632653061,
+      "extra_review_rate": 0.2833333333333333,
+      "extra_review_count": 85,
+      "missed_positive_count": 47
+    },
+    {
+      "cutoff": 0.6385574533619928,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5204081632653061,
+      "extra_review_rate": 0.2866666666666667,
+      "extra_review_count": 86,
+      "missed_positive_count": 47
+    },
+    {
+      "cutoff": 0.6316699688974435,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5306122448979592,
+      "extra_review_rate": 0.29,
+      "extra_review_count": 87,
+      "missed_positive_count": 46
+    },
+    {
+      "cutoff": 0.6308900136462909,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5306122448979592,
+      "extra_review_rate": 0.29333333333333333,
+      "extra_review_count": 88,
+      "missed_positive_count": 46
+    },
+    {
+      "cutoff": 0.6289248516347588,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5306122448979592,
+      "extra_review_rate": 0.2966666666666667,
+      "extra_review_count": 89,
+      "missed_positive_count": 46
+    },
+    {
+      "cutoff": 0.6273040649910618,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5306122448979592,
+      "extra_review_rate": 0.3,
+      "extra_review_count": 90,
+      "missed_positive_count": 46
+    },
+    {
+      "cutoff": 0.626632256060475,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5306122448979592,
+      "extra_review_rate": 0.30333333333333334,
+      "extra_review_count": 91,
+      "missed_positive_count": 46
+    },
+    {
+      "cutoff": 0.6256559941421315,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5408163265306123,
+      "extra_review_rate": 0.30666666666666664,
+      "extra_review_count": 92,
+      "missed_positive_count": 45
+    },
+    {
+      "cutoff": 0.6255585173347585,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5408163265306123,
+      "extra_review_rate": 0.31,
+      "extra_review_count": 93,
+      "missed_positive_count": 45
+    },
+    {
+      "cutoff": 0.6238647779161937,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5510204081632653,
+      "extra_review_rate": 0.31333333333333335,
+      "extra_review_count": 94,
+      "missed_positive_count": 44
+    },
+    {
+      "cutoff": 0.6209506514481113,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5510204081632653,
+      "extra_review_rate": 0.31666666666666665,
+      "extra_review_count": 95,
+      "missed_positive_count": 44
+    },
+    {
+      "cutoff": 0.6157907597497856,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5612244897959183,
+      "extra_review_rate": 0.32,
+      "extra_review_count": 96,
+      "missed_positive_count": 43
+    },
+    {
+      "cutoff": 0.6150829476015786,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5612244897959183,
+      "extra_review_rate": 0.3233333333333333,
+      "extra_review_count": 97,
+      "missed_positive_count": 43
+    },
+    {
+      "cutoff": 0.6147375563777917,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5612244897959183,
+      "extra_review_rate": 0.32666666666666666,
+      "extra_review_count": 98,
+      "missed_positive_count": 43
+    },
+    {
+      "cutoff": 0.6128000548574696,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5612244897959183,
+      "extra_review_rate": 0.33,
+      "extra_review_count": 99,
+      "missed_positive_count": 43
+    },
+    {
+      "cutoff": 0.6098897040445872,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5612244897959183,
+      "extra_review_rate": 0.3333333333333333,
+      "extra_review_count": 100,
+      "missed_positive_count": 43
+    },
+    {
+      "cutoff": 0.6078291805945096,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5714285714285714,
+      "extra_review_rate": 0.33666666666666667,
+      "extra_review_count": 101,
+      "missed_positive_count": 42
+    },
+    {
+      "cutoff": 0.6029963188328384,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5816326530612245,
+      "extra_review_rate": 0.34,
+      "extra_review_count": 102,
+      "missed_positive_count": 41
+    },
+    {
+      "cutoff": 0.602233013886883,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5816326530612245,
+      "extra_review_rate": 0.3433333333333333,
+      "extra_review_count": 103,
+      "missed_positive_count": 41
+    },
+    {
+      "cutoff": 0.5916992147391853,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5816326530612245,
+      "extra_review_rate": 0.3466666666666667,
+      "extra_review_count": 104,
+      "missed_positive_count": 41
+    },
+    {
+      "cutoff": 0.5852871500627299,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.5918367346938775,
+      "extra_review_rate": 0.35,
+      "extra_review_count": 105,
+      "missed_positive_count": 40
+    },
+    {
+      "cutoff": 0.578088367043596,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6020408163265306,
+      "extra_review_rate": 0.35333333333333333,
+      "extra_review_count": 106,
+      "missed_positive_count": 39
+    },
+    {
+      "cutoff": 0.5779184487174168,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6122448979591837,
+      "extra_review_rate": 0.3566666666666667,
+      "extra_review_count": 107,
+      "missed_positive_count": 38
+    },
+    {
+      "cutoff": 0.575769342836986,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6224489795918368,
+      "extra_review_rate": 0.36,
+      "extra_review_count": 108,
+      "missed_positive_count": 37
+    },
+    {
+      "cutoff": 0.5747713817035395,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6326530612244898,
+      "extra_review_rate": 0.36333333333333334,
+      "extra_review_count": 109,
+      "missed_positive_count": 36
+    },
+    {
+      "cutoff": 0.5730403228101971,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6428571428571429,
+      "extra_review_rate": 0.36666666666666664,
+      "extra_review_count": 110,
+      "missed_positive_count": 35
+    },
+    {
+      "cutoff": 0.5718920814711589,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6428571428571429,
+      "extra_review_rate": 0.37,
+      "extra_review_count": 111,
+      "missed_positive_count": 35
+    },
+    {
+      "cutoff": 0.5634938902744192,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6530612244897959,
+      "extra_review_rate": 0.37333333333333335,
+      "extra_review_count": 112,
+      "missed_positive_count": 34
+    },
+    {
+      "cutoff": 0.5596472090667367,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6530612244897959,
+      "extra_review_rate": 0.38333333333333336,
+      "extra_review_count": 115,
+      "missed_positive_count": 34
+    },
+    {
+      "cutoff": 0.552456749288058,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6632653061224489,
+      "extra_review_rate": 0.38666666666666666,
+      "extra_review_count": 116,
+      "missed_positive_count": 33
+    },
+    {
+      "cutoff": 0.5490422468014107,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6632653061224489,
+      "extra_review_rate": 0.39,
+      "extra_review_count": 117,
+      "missed_positive_count": 33
+    },
+    {
+      "cutoff": 0.5461135812015128,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6632653061224489,
+      "extra_review_rate": 0.3933333333333333,
+      "extra_review_count": 118,
+      "missed_positive_count": 33
+    },
+    {
+      "cutoff": 0.530595215028465,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6632653061224489,
+      "extra_review_rate": 0.4033333333333333,
+      "extra_review_count": 121,
+      "missed_positive_count": 33
+    },
+    {
+      "cutoff": 0.5222135138201084,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6632653061224489,
+      "extra_review_rate": 0.4066666666666667,
+      "extra_review_count": 122,
+      "missed_positive_count": 33
+    },
+    {
+      "cutoff": 0.5219902856354525,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.673469387755102,
+      "extra_review_rate": 0.41,
+      "extra_review_count": 123,
+      "missed_positive_count": 32
+    },
+    {
+      "cutoff": 0.5189345174658472,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6836734693877551,
+      "extra_review_rate": 0.41333333333333333,
+      "extra_review_count": 124,
+      "missed_positive_count": 31
+    },
+    {
+      "cutoff": 0.5188566032531766,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6938775510204082,
+      "extra_review_rate": 0.4166666666666667,
+      "extra_review_count": 125,
+      "missed_positive_count": 30
+    },
+    {
+      "cutoff": 0.5153375079419582,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.6938775510204082,
+      "extra_review_rate": 0.42,
+      "extra_review_count": 126,
+      "missed_positive_count": 30
+    },
+    {
+      "cutoff": 0.5088319992036973,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.7040816326530612,
+      "extra_review_rate": 0.4266666666666667,
+      "extra_review_count": 128,
+      "missed_positive_count": 29
+    },
+    {
+      "cutoff": 0.5019603521310361,
+      "uncertainty_margin": 0.0,
+      "routing_recall": 0.7040816326530612,
+      "extra_review_rate": 0.43,
+      "extra_review_count": 129,
+      "missed_positive_count": 29
+    },
+    {
+      "cutoff": 0.49892312239831477,
+      "uncertainty_margin": 0.0010768776016854553,
+      "routing_recall": 0.7040816326530612,
+      "extra_review_rate": 0.43333333333333335,
+      "extra_review_count": 130,
+      "missed_positive_count": 29
+    },
+    {
+      "cutoff": 0.4877640563139135,
+      "uncertainty_margin": 0.012235943686086714,
+      "routing_recall": 0.7040816326530612,
+      "extra_review_rate": 0.43666666666666665,
+      "extra_review_count": 131,
+      "missed_positive_count": 29
+    },
+    {
+      "cutoff": 0.4847496176206195,
+      "uncertainty_margin": 0.0152503823793807,
+      "routing_recall": 0.7040816326530612,
+      "extra_review_rate": 0.44,
+      "extra_review_count": 132,
+      "missed_positive_count": 29
+    },
+    {
+      "cutoff": 0.47930005468254094,
+      "uncertainty_margin": 0.02069994531745928,
+      "routing_recall": 0.7142857142857143,
+      "extra_review_rate": 0.45666666666666667,
+      "extra_review_count": 137,
+      "missed_positive_count": 28
+    },
+    {
+      "cutoff": 0.4775048242773936,
+      "uncertainty_margin": 0.02249517572260662,
+      "routing_recall": 0.7142857142857143,
+      "extra_review_rate": 0.46,
+      "extra_review_count": 138,
+      "missed_positive_count": 28
+    },
+    {
+      "cutoff": 0.477312382746444,
+      "uncertainty_margin": 0.022687617253556225,
+      "routing_recall": 0.7142857142857143,
+      "extra_review_rate": 0.4633333333333333,
+      "extra_review_count": 139,
+      "missed_positive_count": 28
+    },
+    {
+      "cutoff": 0.45884933606573075,
+      "uncertainty_margin": 0.04115066393426947,
+      "routing_recall": 0.7244897959183674,
+      "extra_review_rate": 0.4666666666666667,
+      "extra_review_count": 140,
+      "missed_positive_count": 27
+    },
+    {
+      "cutoff": 0.45669811312192793,
+      "uncertainty_margin": 0.04330188687807229,
+      "routing_recall": 0.7346938775510204,
+      "extra_review_rate": 0.47,
+      "extra_review_count": 141,
+      "missed_positive_count": 26
+    },
+    {
+      "cutoff": 0.45582034188180626,
+      "uncertainty_margin": 0.044179658118193965,
+      "routing_recall": 0.7346938775510204,
+      "extra_review_rate": 0.47333333333333333,
+      "extra_review_count": 142,
+      "missed_positive_count": 26
+    },
+    {
+      "cutoff": 0.44841689372836074,
+      "uncertainty_margin": 0.05158310627163948,
+      "routing_recall": 0.7346938775510204,
+      "extra_review_rate": 0.4766666666666667,
+      "extra_review_count": 143,
+      "missed_positive_count": 26
+    },
+    {
+      "cutoff": 0.44575023330579266,
+      "uncertainty_margin": 0.05424976669420756,
+      "routing_recall": 0.7448979591836735,
+      "extra_review_rate": 0.48333333333333334,
+      "extra_review_count": 145,
+      "missed_positive_count": 25
+    },
+    {
+      "cutoff": 0.4427929545810546,
+      "uncertainty_margin": 0.05720704541894561,
+      "routing_recall": 0.7448979591836735,
+      "extra_review_rate": 0.4866666666666667,
+      "extra_review_count": 146,
+      "missed_positive_count": 25
+    },
+    {
+      "cutoff": 0.4409216781378636,
+      "uncertainty_margin": 0.05907832186213663,
+      "routing_recall": 0.7448979591836735,
+      "extra_review_rate": 0.49,
+      "extra_review_count": 147,
+      "missed_positive_count": 25
+    },
+    {
+      "cutoff": 0.4395185923911023,
+      "uncertainty_margin": 0.06048140760889792,
+      "routing_recall": 0.7551020408163265,
+      "extra_review_rate": 0.49333333333333335,
+      "extra_review_count": 148,
+      "missed_positive_count": 24
+    },
+    {
+      "cutoff": 0.4390163291355044,
+      "uncertainty_margin": 0.0609836708644958,
+      "routing_recall": 0.7653061224489796,
+      "extra_review_rate": 0.49666666666666665,
+      "extra_review_count": 149,
+      "missed_positive_count": 23
+    },
+    {
+      "cutoff": 0.4389541729661123,
+      "uncertainty_margin": 0.061045827033887945,
+      "routing_recall": 0.7653061224489796,
+      "extra_review_rate": 0.5,
+      "extra_review_count": 150,
+      "missed_positive_count": 23
+    },
+    {
+      "cutoff": 0.43818366949614057,
+      "uncertainty_margin": 0.06181633050385965,
+      "routing_recall": 0.7653061224489796,
+      "extra_review_rate": 0.5033333333333333,
+      "extra_review_count": 151,
+      "missed_positive_count": 23
+    },
+    {
+      "cutoff": 0.43406655928510857,
+      "uncertainty_margin": 0.06593344071489166,
+      "routing_recall": 0.7653061224489796,
+      "extra_review_rate": 0.5066666666666667,
+      "extra_review_count": 152,
+      "missed_positive_count": 23
+    },
+    {
+      "cutoff": 0.4310596235975958,
+      "uncertainty_margin": 0.06894037640240441,
+      "routing_recall": 0.7653061224489796,
+      "extra_review_rate": 0.51,
+      "extra_review_count": 153,
+      "missed_positive_count": 23
+    },
+    {
+      "cutoff": 0.42949279866500106,
+      "uncertainty_margin": 0.07050720133499916,
+      "routing_recall": 0.7755102040816326,
+      "extra_review_rate": 0.5133333333333333,
+      "extra_review_count": 154,
+      "missed_positive_count": 22
+    },
+    {
+      "cutoff": 0.42126738809598163,
+      "uncertainty_margin": 0.07873261190401859,
+      "routing_recall": 0.7755102040816326,
+      "extra_review_rate": 0.5166666666666667,
+      "extra_review_count": 155,
+      "missed_positive_count": 22
+    },
+    {
+      "cutoff": 0.4191766831530586,
+      "uncertainty_margin": 0.0808233168469416,
+      "routing_recall": 0.7755102040816326,
+      "extra_review_rate": 0.52,
+      "extra_review_count": 156,
+      "missed_positive_count": 22
+    },
+    {
+      "cutoff": 0.4173311743698246,
+      "uncertainty_margin": 0.08266882563017564,
+      "routing_recall": 0.7857142857142857,
+      "extra_review_rate": 0.5233333333333333,
+      "extra_review_count": 157,
+      "missed_positive_count": 21
+    },
+    {
+      "cutoff": 0.4158352705939491,
+      "uncertainty_margin": 0.08416472940605113,
+      "routing_recall": 0.7857142857142857,
+      "extra_review_rate": 0.5266666666666666,
+      "extra_review_count": 158,
+      "missed_positive_count": 21
+    },
+    {
+      "cutoff": 0.4152966650501065,
+      "uncertainty_margin": 0.08470333494989374,
+      "routing_recall": 0.7857142857142857,
+      "extra_review_rate": 0.53,
+      "extra_review_count": 159,
+      "missed_positive_count": 21
+    },
+    {
+      "cutoff": 0.4120732894773847,
+      "uncertainty_margin": 0.08792671052261553,
+      "routing_recall": 0.7857142857142857,
+      "extra_review_rate": 0.5366666666666666,
+      "extra_review_count": 161,
+      "missed_positive_count": 21
+    },
+    {
+      "cutoff": 0.40856537857385417,
+      "uncertainty_margin": 0.09143462142614606,
+      "routing_recall": 0.7959183673469388,
+      "extra_review_rate": 0.54,
+      "extra_review_count": 162,
+      "missed_positive_count": 20
+    },
+    {
+      "cutoff": 0.4069569750455607,
+      "uncertainty_margin": 0.0930430249544395,
+      "routing_recall": 0.7959183673469388,
+      "extra_review_rate": 0.5466666666666666,
+      "extra_review_count": 164,
+      "missed_positive_count": 20
+    },
+    {
+      "cutoff": 0.3981188297220776,
+      "uncertainty_margin": 0.1018811702779226,
+      "routing_recall": 0.7959183673469388,
+      "extra_review_rate": 0.55,
+      "extra_review_count": 165,
+      "missed_positive_count": 20
+    },
+    {
+      "cutoff": 0.393266166956439,
+      "uncertainty_margin": 0.10673383304356121,
+      "routing_recall": 0.7959183673469388,
+      "extra_review_rate": 0.5533333333333333,
+      "extra_review_count": 166,
+      "missed_positive_count": 20
+    },
+    {
+      "cutoff": 0.38987493947642726,
+      "uncertainty_margin": 0.11012506052357296,
+      "routing_recall": 0.7959183673469388,
+      "extra_review_rate": 0.5566666666666666,
+      "extra_review_count": 167,
+      "missed_positive_count": 20
+    },
+    {
+      "cutoff": 0.38256719448729687,
+      "uncertainty_margin": 0.11743280551270335,
+      "routing_recall": 0.7959183673469388,
+      "extra_review_rate": 0.56,
+      "extra_review_count": 168,
+      "missed_positive_count": 20
+    },
+    {
+      "cutoff": 0.3783838819649327,
+      "uncertainty_margin": 0.1216161180350675,
+      "routing_recall": 0.7959183673469388,
+      "extra_review_rate": 0.5633333333333334,
+      "extra_review_count": 169,
+      "missed_positive_count": 20
+    },
+    {
+      "cutoff": 0.37542353676371626,
+      "uncertainty_margin": 0.12457646323628396,
+      "routing_recall": 0.8061224489795918,
+      "extra_review_rate": 0.5666666666666667,
+      "extra_review_count": 170,
+      "missed_positive_count": 19
+    },
+    {
+      "cutoff": 0.3739356022572412,
+      "uncertainty_margin": 0.12606439774275902,
+      "routing_recall": 0.8061224489795918,
+      "extra_review_rate": 0.57,
+      "extra_review_count": 171,
+      "missed_positive_count": 19
+    },
+    {
+      "cutoff": 0.37301388324676316,
+      "uncertainty_margin": 0.12698611675323707,
+      "routing_recall": 0.8061224489795918,
+      "extra_review_rate": 0.5733333333333334,
+      "extra_review_count": 172,
+      "missed_positive_count": 19
+    },
+    {
+      "cutoff": 0.3725617610224457,
+      "uncertainty_margin": 0.12743823897755452,
+      "routing_recall": 0.8061224489795918,
+      "extra_review_rate": 0.5766666666666667,
+      "extra_review_count": 173,
+      "missed_positive_count": 19
+    },
+    {
+      "cutoff": 0.37097697993450474,
+      "uncertainty_margin": 0.1290230200654955,
+      "routing_recall": 0.8061224489795918,
+      "extra_review_rate": 0.58,
+      "extra_review_count": 174,
+      "missed_positive_count": 19
+    },
+    {
+      "cutoff": 0.3698335241880207,
+      "uncertainty_margin": 0.13016647581197954,
+      "routing_recall": 0.8061224489795918,
+      "extra_review_rate": 0.5833333333333334,
+      "extra_review_count": 175,
+      "missed_positive_count": 19
+    },
+    {
+      "cutoff": 0.36886254942138313,
+      "uncertainty_margin": 0.1311374505786171,
+      "routing_recall": 0.8163265306122449,
+      "extra_review_rate": 0.5866666666666667,
+      "extra_review_count": 176,
+      "missed_positive_count": 18
+    },
+    {
+      "cutoff": 0.3662101107439978,
+      "uncertainty_margin": 0.13378988925600244,
+      "routing_recall": 0.8163265306122449,
+      "extra_review_rate": 0.59,
+      "extra_review_count": 177,
+      "missed_positive_count": 18
+    },
+    {
+      "cutoff": 0.3649768626034967,
+      "uncertainty_margin": 0.1350231373965035,
+      "routing_recall": 0.826530612244898,
+      "extra_review_rate": 0.5933333333333334,
+      "extra_review_count": 178,
+      "missed_positive_count": 17
+    },
+    {
+      "cutoff": 0.3646801232866033,
+      "uncertainty_margin": 0.1353198767133969,
+      "routing_recall": 0.826530612244898,
+      "extra_review_rate": 0.5966666666666667,
+      "extra_review_count": 179,
+      "missed_positive_count": 17
+    },
+    {
+      "cutoff": 0.3628902652923025,
+      "uncertainty_margin": 0.13710973470769772,
+      "routing_recall": 0.826530612244898,
+      "extra_review_rate": 0.6,
+      "extra_review_count": 180,
+      "missed_positive_count": 17
+    },
+    {
+      "cutoff": 0.3606738290500315,
+      "uncertainty_margin": 0.13932617094996874,
+      "routing_recall": 0.826530612244898,
+      "extra_review_rate": 0.6033333333333334,
+      "extra_review_count": 181,
+      "missed_positive_count": 17
+    },
+    {
+      "cutoff": 0.3604075721308707,
+      "uncertainty_margin": 0.1395924278691295,
+      "routing_recall": 0.826530612244898,
+      "extra_review_rate": 0.6066666666666667,
+      "extra_review_count": 182,
+      "missed_positive_count": 17
+    },
+    {
+      "cutoff": 0.3526115022910186,
+      "uncertainty_margin": 0.1473884977089816,
+      "routing_recall": 0.826530612244898,
+      "extra_review_rate": 0.61,
+      "extra_review_count": 183,
+      "missed_positive_count": 17
+    },
+    {
+      "cutoff": 0.3481322337031267,
+      "uncertainty_margin": 0.15186776629687354,
+      "routing_recall": 0.826530612244898,
+      "extra_review_rate": 0.6133333333333333,
+      "extra_review_count": 184,
+      "missed_positive_count": 17
+    },
+    {
+      "cutoff": 0.3476873511077981,
+      "uncertainty_margin": 0.15231264889220214,
+      "routing_recall": 0.826530612244898,
+      "extra_review_rate": 0.6166666666666667,
+      "extra_review_count": 185,
+      "missed_positive_count": 17
+    },
+    {
+      "cutoff": 0.3473644837965926,
+      "uncertainty_margin": 0.1526355162034076,
+      "routing_recall": 0.826530612244898,
+      "extra_review_rate": 0.62,
+      "extra_review_count": 186,
+      "missed_positive_count": 17
+    },
+    {
+      "cutoff": 0.3463158595660659,
+      "uncertainty_margin": 0.1536841404339343,
+      "routing_recall": 0.8367346938775511,
+      "extra_review_rate": 0.6266666666666667,
+      "extra_review_count": 188,
+      "missed_positive_count": 16
+    },
+    {
+      "cutoff": 0.3451703336807675,
+      "uncertainty_margin": 0.15482966631923273,
+      "routing_recall": 0.8367346938775511,
+      "extra_review_rate": 0.63,
+      "extra_review_count": 189,
+      "missed_positive_count": 16
+    },
+    {
+      "cutoff": 0.34156327222062133,
+      "uncertainty_margin": 0.1584367277793789,
+      "routing_recall": 0.8367346938775511,
+      "extra_review_rate": 0.6333333333333333,
+      "extra_review_count": 190,
+      "missed_positive_count": 16
+    },
+    {
+      "cutoff": 0.34070895680809166,
+      "uncertainty_margin": 0.15929104319190857,
+      "routing_recall": 0.8469387755102041,
+      "extra_review_rate": 0.6366666666666667,
+      "extra_review_count": 191,
+      "missed_positive_count": 15
+    },
+    {
+      "cutoff": 0.3388663373389064,
+      "uncertainty_margin": 0.1611336626610938,
+      "routing_recall": 0.8673469387755102,
+      "extra_review_rate": 0.6533333333333333,
+      "extra_review_count": 196,
+      "missed_positive_count": 13
+    },
+    {
+      "cutoff": 0.3373924905518942,
+      "uncertainty_margin": 0.16260750944810604,
+      "routing_recall": 0.8673469387755102,
+      "extra_review_rate": 0.6566666666666666,
+      "extra_review_count": 197,
+      "missed_positive_count": 13
+    },
+    {
+      "cutoff": 0.3373268387124965,
+      "uncertainty_margin": 0.1626731612875037,
+      "routing_recall": 0.8673469387755102,
+      "extra_review_rate": 0.66,
+      "extra_review_count": 198,
+      "missed_positive_count": 13
+    },
+    {
+      "cutoff": 0.3239654811314223,
+      "uncertainty_margin": 0.1760345188685779,
+      "routing_recall": 0.8673469387755102,
+      "extra_review_rate": 0.6633333333333333,
+      "extra_review_count": 199,
+      "missed_positive_count": 13
+    },
+    {
+      "cutoff": 0.3203276581128557,
+      "uncertainty_margin": 0.17967234188714454,
+      "routing_recall": 0.8673469387755102,
+      "extra_review_rate": 0.6666666666666666,
+      "extra_review_count": 200,
+      "missed_positive_count": 13
+    },
+    {
+      "cutoff": 0.3176601128977305,
+      "uncertainty_margin": 0.18233988710226973,
+      "routing_recall": 0.8673469387755102,
+      "extra_review_rate": 0.67,
+      "extra_review_count": 201,
+      "missed_positive_count": 13
+    },
+    {
+      "cutoff": 0.31353128304671174,
+      "uncertainty_margin": 0.18646871695328848,
+      "routing_recall": 0.8673469387755102,
+      "extra_review_rate": 0.6733333333333333,
+      "extra_review_count": 202,
+      "missed_positive_count": 13
+    },
+    {
+      "cutoff": 0.3104495340294529,
+      "uncertainty_margin": 0.1895504659705473,
+      "routing_recall": 0.8673469387755102,
+      "extra_review_rate": 0.6766666666666666,
+      "extra_review_count": 203,
+      "missed_positive_count": 13
+    },
+    {
+      "cutoff": 0.309652775578046,
+      "uncertainty_margin": 0.19034722442195423,
+      "routing_recall": 0.8673469387755102,
+      "extra_review_rate": 0.68,
+      "extra_review_count": 204,
+      "missed_positive_count": 13
+    },
+    {
+      "cutoff": 0.3057565904306385,
+      "uncertainty_margin": 0.1942434095693617,
+      "routing_recall": 0.8673469387755102,
+      "extra_review_rate": 0.6866666666666666,
+      "extra_review_count": 206,
+      "missed_positive_count": 13
+    },
+    {
+      "cutoff": 0.30298286114792805,
+      "uncertainty_margin": 0.19701713885207217,
+      "routing_recall": 0.8673469387755102,
+      "extra_review_rate": 0.69,
+      "extra_review_count": 207,
+      "missed_positive_count": 13
+    },
+    {
+      "cutoff": 0.2969888515338827,
+      "uncertainty_margin": 0.2030111484661175,
+      "routing_recall": 0.8775510204081632,
+      "extra_review_rate": 0.6933333333333334,
+      "extra_review_count": 208,
+      "missed_positive_count": 12
+    },
+    {
+      "cutoff": 0.2932784092598312,
+      "uncertainty_margin": 0.20672159074016905,
+      "routing_recall": 0.8775510204081632,
+      "extra_review_rate": 0.6966666666666667,
+      "extra_review_count": 209,
+      "missed_positive_count": 12
+    },
+    {
+      "cutoff": 0.29042178468407964,
+      "uncertainty_margin": 0.20957821531592058,
+      "routing_recall": 0.8775510204081632,
+      "extra_review_rate": 0.7,
+      "extra_review_count": 210,
+      "missed_positive_count": 12
+    },
+    {
+      "cutoff": 0.2899502686423606,
+      "uncertainty_margin": 0.2100497313576396,
+      "routing_recall": 0.8775510204081632,
+      "extra_review_rate": 0.7033333333333334,
+      "extra_review_count": 211,
+      "missed_positive_count": 12
+    },
+    {
+      "cutoff": 0.2882666566683246,
+      "uncertainty_margin": 0.21173334333167565,
+      "routing_recall": 0.8877551020408163,
+      "extra_review_rate": 0.7066666666666667,
+      "extra_review_count": 212,
+      "missed_positive_count": 11
+    },
+    {
+      "cutoff": 0.28039557581129076,
+      "uncertainty_margin": 0.21960442418870946,
+      "routing_recall": 0.8877551020408163,
+      "extra_review_rate": 0.71,
+      "extra_review_count": 213,
+      "missed_positive_count": 11
+    },
+    {
+      "cutoff": 0.27789271968039503,
+      "uncertainty_margin": 0.2221072803196052,
+      "routing_recall": 0.8877551020408163,
+      "extra_review_rate": 0.7133333333333334,
+      "extra_review_count": 214,
+      "missed_positive_count": 11
+    },
+    {
+      "cutoff": 0.2749452998179579,
+      "uncertainty_margin": 0.22505470018204232,
+      "routing_recall": 0.8877551020408163,
+      "extra_review_rate": 0.7166666666666667,
+      "extra_review_count": 215,
+      "missed_positive_count": 11
+    },
+    {
+      "cutoff": 0.27149560710946935,
+      "uncertainty_margin": 0.22850439289053087,
+      "routing_recall": 0.8877551020408163,
+      "extra_review_rate": 0.72,
+      "extra_review_count": 216,
+      "missed_positive_count": 11
+    },
+    {
+      "cutoff": 0.26665829465140356,
+      "uncertainty_margin": 0.23334170534859666,
+      "routing_recall": 0.8877551020408163,
+      "extra_review_rate": 0.7266666666666667,
+      "extra_review_count": 218,
+      "missed_positive_count": 11
+    },
+    {
+      "cutoff": 0.2622583782022477,
+      "uncertainty_margin": 0.23774162179775254,
+      "routing_recall": 0.9081632653061225,
+      "extra_review_rate": 0.7366666666666667,
+      "extra_review_count": 221,
+      "missed_positive_count": 9
+    },
+    {
+      "cutoff": 0.2557505999664903,
+      "uncertainty_margin": 0.24424940003350992,
+      "routing_recall": 0.9081632653061225,
+      "extra_review_rate": 0.74,
+      "extra_review_count": 222,
+      "missed_positive_count": 9
+    },
+    {
+      "cutoff": 0.2504322513200709,
+      "uncertainty_margin": 0.2495677486799293,
+      "routing_recall": 0.9183673469387755,
+      "extra_review_rate": 0.7433333333333333,
+      "extra_review_count": 223,
+      "missed_positive_count": 8
+    },
+    {
+      "cutoff": 0.23639734268544224,
+      "uncertainty_margin": 0.263602657314558,
+      "routing_recall": 0.9183673469387755,
+      "extra_review_rate": 0.7466666666666667,
+      "extra_review_count": 224,
+      "missed_positive_count": 8
+    },
+    {
+      "cutoff": 0.23522814311783857,
+      "uncertainty_margin": 0.26477185688216165,
+      "routing_recall": 0.9183673469387755,
+      "extra_review_rate": 0.75,
+      "extra_review_count": 225,
+      "missed_positive_count": 8
+    },
+    {
+      "cutoff": 0.2340870215655001,
+      "uncertainty_margin": 0.2659129784345001,
+      "routing_recall": 0.9183673469387755,
+      "extra_review_rate": 0.7533333333333333,
+      "extra_review_count": 226,
+      "missed_positive_count": 8
+    },
+    {
+      "cutoff": 0.23200371130626712,
+      "uncertainty_margin": 0.2679962886937331,
+      "routing_recall": 0.9183673469387755,
+      "extra_review_rate": 0.7566666666666667,
+      "extra_review_count": 227,
+      "missed_positive_count": 8
+    },
+    {
+      "cutoff": 0.23159688761284927,
+      "uncertainty_margin": 0.268403112387151,
+      "routing_recall": 0.9183673469387755,
+      "extra_review_rate": 0.7633333333333333,
+      "extra_review_count": 229,
+      "missed_positive_count": 8
+    },
+    {
+      "cutoff": 0.23017544873662685,
+      "uncertainty_margin": 0.26982455126337335,
+      "routing_recall": 0.9183673469387755,
+      "extra_review_rate": 0.7666666666666667,
+      "extra_review_count": 230,
+      "missed_positive_count": 8
+    },
+    {
+      "cutoff": 0.22872471329207364,
+      "uncertainty_margin": 0.27127528670792656,
+      "routing_recall": 0.9183673469387755,
+      "extra_review_rate": 0.77,
+      "extra_review_count": 231,
+      "missed_positive_count": 8
+    },
+    {
+      "cutoff": 0.22732513309422764,
+      "uncertainty_margin": 0.2726748669057726,
+      "routing_recall": 0.9285714285714286,
+      "extra_review_rate": 0.7733333333333333,
+      "extra_review_count": 232,
+      "missed_positive_count": 7
+    },
+    {
+      "cutoff": 0.22508774446493926,
+      "uncertainty_margin": 0.27491225553506093,
+      "routing_recall": 0.9285714285714286,
+      "extra_review_rate": 0.7766666666666666,
+      "extra_review_count": 233,
+      "missed_positive_count": 7
+    },
+    {
+      "cutoff": 0.21600763770913053,
+      "uncertainty_margin": 0.28399236229086966,
+      "routing_recall": 0.9285714285714286,
+      "extra_review_rate": 0.78,
+      "extra_review_count": 234,
+      "missed_positive_count": 7
+    },
+    {
+      "cutoff": 0.21428233142648215,
+      "uncertainty_margin": 0.2857176685735181,
+      "routing_recall": 0.9285714285714286,
+      "extra_review_rate": 0.7833333333333333,
+      "extra_review_count": 235,
+      "missed_positive_count": 7
+    },
+    {
+      "cutoff": 0.20696035820580427,
+      "uncertainty_margin": 0.29303964179419595,
+      "routing_recall": 0.9285714285714286,
+      "extra_review_rate": 0.7866666666666666,
+      "extra_review_count": 236,
+      "missed_positive_count": 7
+    },
+    {
+      "cutoff": 0.20492883608277457,
+      "uncertainty_margin": 0.29507116391722565,
+      "routing_recall": 0.9285714285714286,
+      "extra_review_rate": 0.79,
+      "extra_review_count": 237,
+      "missed_positive_count": 7
+    },
+    {
+      "cutoff": 0.1991007721051065,
+      "uncertainty_margin": 0.30089922789489376,
+      "routing_recall": 0.9285714285714286,
+      "extra_review_rate": 0.7933333333333333,
+      "extra_review_count": 238,
+      "missed_positive_count": 7
+    },
+    {
+      "cutoff": 0.19348572737282693,
+      "uncertainty_margin": 0.3065142726271733,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.7966666666666666,
+      "extra_review_count": 239,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.18633276615839445,
+      "uncertainty_margin": 0.3136672338416058,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.8,
+      "extra_review_count": 240,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.18117204655112956,
+      "uncertainty_margin": 0.31882795344887066,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.8033333333333333,
+      "extra_review_count": 241,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.17843727860399428,
+      "uncertainty_margin": 0.32156272139600595,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.8066666666666666,
+      "extra_review_count": 242,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.17387234318068617,
+      "uncertainty_margin": 0.32612765681931405,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.81,
+      "extra_review_count": 243,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.17059678314989402,
+      "uncertainty_margin": 0.3294032168501062,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.8133333333333334,
+      "extra_review_count": 244,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.16927846639938138,
+      "uncertainty_margin": 0.33072153360061884,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.8166666666666667,
+      "extra_review_count": 245,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.16774115127407968,
+      "uncertainty_margin": 0.33225884872592054,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.82,
+      "extra_review_count": 246,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.165687949277734,
+      "uncertainty_margin": 0.3343120507222662,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.8233333333333334,
+      "extra_review_count": 247,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.1602250930783738,
+      "uncertainty_margin": 0.33977490692162643,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.8266666666666667,
+      "extra_review_count": 248,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.15933200866877376,
+      "uncertainty_margin": 0.3406679913312265,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.83,
+      "extra_review_count": 249,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.15485992358486028,
+      "uncertainty_margin": 0.34514007641513994,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.8333333333333334,
+      "extra_review_count": 250,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.15339609472648782,
+      "uncertainty_margin": 0.34660390527351237,
+      "routing_recall": 0.9387755102040817,
+      "extra_review_rate": 0.8366666666666667,
+      "extra_review_count": 251,
+      "missed_positive_count": 6
+    },
+    {
+      "cutoff": 0.15114430928571362,
+      "uncertainty_margin": 0.34885569071428657,
+      "routing_recall": 0.9591836734693877,
+      "extra_review_rate": 0.8933333333333333,
+      "extra_review_count": 268,
+      "missed_positive_count": 4
+    },
+    {
+      "cutoff": 0.12616500077213444,
+      "uncertainty_margin": 0.3738349992278658,
+      "routing_recall": 0.9591836734693877,
+      "extra_review_rate": 0.8966666666666666,
+      "extra_review_count": 269,
+      "missed_positive_count": 4
+    },
+    {
+      "cutoff": 0.12497645409387038,
+      "uncertainty_margin": 0.37502354590612985,
+      "routing_recall": 0.9591836734693877,
+      "extra_review_rate": 0.9,
+      "extra_review_count": 270,
+      "missed_positive_count": 4
+    },
+    {
+      "cutoff": 0.12427921924240089,
+      "uncertainty_margin": 0.37572078075759935,
+      "routing_recall": 0.9591836734693877,
+      "extra_review_rate": 0.9033333333333333,
+      "extra_review_count": 271,
+      "missed_positive_count": 4
+    },
+    {
+      "cutoff": 0.1223224999426357,
+      "uncertainty_margin": 0.3776775000573645,
+      "routing_recall": 0.9693877551020408,
+      "extra_review_rate": 0.9066666666666666,
+      "extra_review_count": 272,
+      "missed_positive_count": 3
+    },
+    {
+      "cutoff": 0.11629061044033838,
+      "uncertainty_margin": 0.38370938955966183,
+      "routing_recall": 0.9693877551020408,
+      "extra_review_rate": 0.91,
+      "extra_review_count": 273,
+      "missed_positive_count": 3
+    },
+    {
+      "cutoff": 0.11397570635742997,
+      "uncertainty_margin": 0.38602429364257024,
+      "routing_recall": 0.9693877551020408,
+      "extra_review_rate": 0.92,
+      "extra_review_count": 276,
+      "missed_positive_count": 3
+    },
+    {
+      "cutoff": 0.11183230566092253,
+      "uncertainty_margin": 0.3881676943390777,
+      "routing_recall": 0.9693877551020408,
+      "extra_review_rate": 0.9233333333333333,
+      "extra_review_count": 277,
+      "missed_positive_count": 3
+    },
+    {
+      "cutoff": 0.11174638562852413,
+      "uncertainty_margin": 0.3882536143714761,
+      "routing_recall": 0.9693877551020408,
+      "extra_review_rate": 0.9266666666666666,
+      "extra_review_count": 278,
+      "missed_positive_count": 3
+    },
+    {
+      "cutoff": 0.10557499118623814,
+      "uncertainty_margin": 0.3944250088137621,
+      "routing_recall": 0.9693877551020408,
+      "extra_review_rate": 0.93,
+      "extra_review_count": 279,
+      "missed_positive_count": 3
+    },
+    {
+      "cutoff": 0.10232026708161646,
+      "uncertainty_margin": 0.39767973291838377,
+      "routing_recall": 0.9693877551020408,
+      "extra_review_rate": 0.9333333333333333,
+      "extra_review_count": 280,
+      "missed_positive_count": 3
+    },
+    {
+      "cutoff": 0.10054399483124699,
+      "uncertainty_margin": 0.39945600516875324,
+      "routing_recall": 0.9693877551020408,
+      "extra_review_rate": 0.9366666666666666,
+      "extra_review_count": 281,
+      "missed_positive_count": 3
+    },
+    {
+      "cutoff": 0.09846411665258455,
+      "uncertainty_margin": 0.4015358833474157,
+      "routing_recall": 0.9693877551020408,
+      "extra_review_rate": 0.94,
+      "extra_review_count": 282,
+      "missed_positive_count": 3
+    },
+    {
+      "cutoff": 0.09705948832604998,
+      "uncertainty_margin": 0.40294051167395023,
+      "routing_recall": 0.9693877551020408,
+      "extra_review_rate": 0.9433333333333334,
+      "extra_review_count": 283,
+      "missed_positive_count": 3
+    },
+    {
+      "cutoff": 0.09571820609616113,
+      "uncertainty_margin": 0.4042817939038391,
+      "routing_recall": 0.9795918367346939,
+      "extra_review_rate": 0.95,
+      "extra_review_count": 285,
+      "missed_positive_count": 2
+    },
+    {
+      "cutoff": 0.08040984939166895,
+      "uncertainty_margin": 0.41959015060833127,
+      "routing_recall": 0.9795918367346939,
+      "extra_review_rate": 0.9566666666666667,
+      "extra_review_count": 287,
+      "missed_positive_count": 2
+    },
+    {
+      "cutoff": 0.07828948892954819,
+      "uncertainty_margin": 0.42171051107045204,
+      "routing_recall": 0.9897959183673469,
+      "extra_review_rate": 0.9633333333333334,
+      "extra_review_count": 289,
+      "missed_positive_count": 1
+    },
+    {
+      "cutoff": 0.0737129355244954,
+      "uncertainty_margin": 0.4262870644755048,
+      "routing_recall": 1.0,
+      "extra_review_rate": 0.9666666666666667,
+      "extra_review_count": 290,
+      "missed_positive_count": 0
+    },
+    {
+      "cutoff": 0.05668362523886176,
+      "uncertainty_margin": 0.44331637476113844,
+      "routing_recall": 1.0,
+      "extra_review_rate": 0.97,
+      "extra_review_count": 291,
+      "missed_positive_count": 0
+    },
+    {
+      "cutoff": 0.04696655258993964,
+      "uncertainty_margin": 0.4530334474100606,
+      "routing_recall": 1.0,
+      "extra_review_rate": 0.9866666666666667,
+      "extra_review_count": 296,
+      "missed_positive_count": 0
+    },
+    {
+      "cutoff": 0.02530959525743651,
+      "uncertainty_margin": 0.4746904047425637,
+      "routing_recall": 1.0,
+      "extra_review_rate": 0.99,
+      "extra_review_count": 297,
+      "missed_positive_count": 0
+    },
+    {
+      "cutoff": 0.025235916841976205,
+      "uncertainty_margin": 0.47476408315802404,
+      "routing_recall": 1.0,
+      "extra_review_rate": 0.9933333333333333,
+      "extra_review_count": 298,
+      "missed_positive_count": 0
+    },
+    {
+      "cutoff": 0.024368650216890816,
+      "uncertainty_margin": 0.4756313497831094,
+      "routing_recall": 1.0,
+      "extra_review_rate": 0.9966666666666667,
+      "extra_review_count": 299,
+      "missed_positive_count": 0
+    },
+    {
+      "cutoff": 0.02371896255346063,
+      "uncertainty_margin": 0.4762810374465396,
+      "routing_recall": 1.0,
+      "extra_review_rate": 1.0,
+      "extra_review_count": 300,
+      "missed_positive_count": 0
+    }
+  ],
+  "validation_sha256": "6bb28fee10d43cc589ee334f37f5bf878264e193ebb89e1dc83ced694eccab67"
+}

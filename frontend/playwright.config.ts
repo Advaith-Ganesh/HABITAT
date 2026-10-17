@@ -9,19 +9,12 @@ export default defineConfig({
   retries: 0,
   timeout: 90000,
   expect: { timeout: 12000 },
-  reporter: [["list"], ["json", { outputFile: "../reports/v6-e2e.json" }]],
+  reporter: [["list"], ["json", { outputFile: "../reports/v7-e2e.json" }]],
   use: {
     baseURL: "http://127.0.0.1:8001",
     viewport: { width: 1440, height: 1000 },
     headless: true,
-    launchOptions:
-      process.platform === "darwin"
-        ? {
-            executablePath:
-              process.env.HABITAT_CHROME_PATH ??
-              "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-          }
-        : {},
+    browserName: "chromium",
     screenshot: "only-on-failure",
     trace: "retain-on-failure",
   },

@@ -1,0 +1,156 @@
+
+> habitat-ai@6.0.0 test:e2e
+> PLAYWRIGHT_BROWSERS_PATH=../.test-runtime/ms-playwright playwright test
+
+[WebServer] INFO:     Started server process [88246]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+
+Running 6 tests using 1 worker
+
+(node:88265) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:88265) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 e2e/habitat.spec.ts:4:1 › Applicant to administrator to applicant: persistent review (1ms)
+(node:88266) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:88266) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 e2e/habitat.spec.ts:153:1 › Merged audit and real sandbox comparisons (2ms)
+(node:88269) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:88269) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 e2e/habitat.spec.ts:191:1 › CSV and saved reports available (38ms)
+  ✘  4 e2e/habitat.spec.ts:202:3 › Viewport 375, full labels and accessibility (2ms)
+(node:88271) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:88271) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 e2e/habitat.spec.ts:202:3 › Viewport 768, full labels and accessibility (1ms)
+(node:88272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:88272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  6 e2e/habitat.spec.ts:202:3 › Viewport 1280, full labels and accessibility (2ms)
+
+
+  1) e2e/habitat.spec.ts:4:1 › Applicant to administrator to applicant: persistent review ──────────
+
+    Error: browserType.launch: Executable doesn't exist at $USER_HOME/Documents/Codex/2026-10-17/files-pasted-by-the-user-you/outputs/.test-runtime/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/habitat-Applicant-to-admin-fd65f-applicant-persistent-review/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/habitat-Applicant-to-admin-fd65f-applicant-persistent-review/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/habitat-Applicant-to-admin-fd65f-applicant-persistent-review/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) e2e/habitat.spec.ts:153:1 › Merged audit and real sandbox comparisons ─────────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at $USER_HOME/Documents/Codex/2026-10-17/files-pasted-by-the-user-you/outputs/.test-runtime/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/habitat-Merged-audit-and-real-sandbox-comparisons/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/habitat-Merged-audit-and-real-sandbox-comparisons/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/habitat-Merged-audit-and-real-sandbox-comparisons/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) e2e/habitat.spec.ts:202:3 › Viewport 375, full labels and accessibility ───────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at $USER_HOME/Documents/Codex/2026-10-17/files-pasted-by-the-user-you/outputs/.test-runtime/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/habitat-Viewport-375-full-labels-and-accessibility/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/habitat-Viewport-375-full-labels-and-accessibility/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/habitat-Viewport-375-full-labels-and-accessibility/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) e2e/habitat.spec.ts:202:3 › Viewport 768, full labels and accessibility ───────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at $USER_HOME/Documents/Codex/2026-10-17/files-pasted-by-the-user-you/outputs/.test-runtime/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/habitat-Viewport-768-full-labels-and-accessibility/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/habitat-Viewport-768-full-labels-and-accessibility/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/habitat-Viewport-768-full-labels-and-accessibility/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) e2e/habitat.spec.ts:202:3 › Viewport 1280, full labels and accessibility ──────────────────────
+
+    Error: browserType.launch: Executable doesn't exist at $USER_HOME/Documents/Codex/2026-10-17/files-pasted-by-the-user-you/outputs/.test-runtime/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/habitat-Viewport-1280-full-labels-and-accessibility/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/habitat-Viewport-1280-full-labels-and-accessibility/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/habitat-Viewport-1280-full-labels-and-accessibility/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5 failed
+    e2e/habitat.spec.ts:4:1 › Applicant to administrator to applicant: persistent review ───────────
+    e2e/habitat.spec.ts:153:1 › Merged audit and real sandbox comparisons ──────────────────────────
+    e2e/habitat.spec.ts:202:3 › Viewport 375, full labels and accessibility ────────────────────────
+    e2e/habitat.spec.ts:202:3 › Viewport 768, full labels and accessibility ────────────────────────
+    e2e/habitat.spec.ts:202:3 › Viewport 1280, full labels and accessibility ───────────────────────
+  1 passed (4.5s)

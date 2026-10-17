@@ -1,0 +1,305 @@
+{
+  "method": "Descriptive held-out group comparison under unchanged original policy; no test-based policy selection.",
+  "groups": [
+    {
+      "group": "Audit A",
+      "count": 130,
+      "positive_count": 41,
+      "negative_count": 89,
+      "positive_rate": 0.3153846153846154,
+      "false_negative_count": 14,
+      "false_negative_rate": 0.34146341463414637,
+      "uncertain_count": 35,
+      "uncertain_rate": 0.2692307692307692,
+      "extra_review_count": 66,
+      "extra_review_rate": 0.5076923076923077,
+      "routing_missed_positive_count": 9,
+      "routing_recall": 0.7804878048780488,
+      "characteristics": {
+        "mean_missing_categories": 0.38461538461538464,
+        "mean_information_completeness": 83.38923076923078,
+        "unclear_housing_rate": 0.13846153846153847,
+        "conflicting_information_rate": 0.13076923076923078,
+        "specialist_requested_rate": 0.14615384615384616
+      },
+      "false_negative_characteristics": {
+        "mean_missing_categories": 0.35714285714285715,
+        "mean_information_completeness": 86.95714285714284
+      }
+    },
+    {
+      "group": "Audit B",
+      "count": 102,
+      "positive_count": 32,
+      "negative_count": 70,
+      "positive_rate": 0.3137254901960784,
+      "false_negative_count": 3,
+      "false_negative_rate": 0.09375,
+      "uncertain_count": 34,
+      "uncertain_rate": 0.3333333333333333,
+      "extra_review_count": 65,
+      "extra_review_rate": 0.6372549019607843,
+      "routing_missed_positive_count": 1,
+      "routing_recall": 0.96875,
+      "characteristics": {
+        "mean_missing_categories": 0.4803921568627451,
+        "mean_information_completeness": 82.32843137254902,
+        "unclear_housing_rate": 0.13725490196078433,
+        "conflicting_information_rate": 0.16666666666666666,
+        "specialist_requested_rate": 0.20588235294117646
+      },
+      "false_negative_characteristics": {
+        "mean_missing_categories": 0.0,
+        "mean_information_completeness": 85.96666666666665
+      }
+    },
+    {
+      "group": "Audit C",
+      "count": 68,
+      "positive_count": 23,
+      "negative_count": 45,
+      "positive_rate": 0.3382352941176471,
+      "false_negative_count": 9,
+      "false_negative_rate": 0.391304347826087,
+      "uncertain_count": 28,
+      "uncertain_rate": 0.4117647058823529,
+      "extra_review_count": 41,
+      "extra_review_rate": 0.6029411764705882,
+      "routing_missed_positive_count": 2,
+      "routing_recall": 0.9130434782608695,
+      "characteristics": {
+        "mean_missing_categories": 0.4264705882352941,
+        "mean_information_completeness": 83.6441176470588,
+        "unclear_housing_rate": 0.17647058823529413,
+        "conflicting_information_rate": 0.11764705882352941,
+        "specialist_requested_rate": 0.10294117647058823
+      },
+      "false_negative_characteristics": {
+        "mean_missing_categories": 0.6666666666666666,
+        "mean_information_completeness": 86.77777777777777
+      }
+    }
+  ],
+  "proxy_correlations": [
+    {
+      "group": "Audit A",
+      "feature": "missing_document_count",
+      "correlation": -0.06325526237069086
+    },
+    {
+      "group": "Audit A",
+      "feature": "income_document_available",
+      "correlation": 0.006596099428558044
+    },
+    {
+      "group": "Audit A",
+      "feature": "identity_document_available",
+      "correlation": 0.07245498136166204
+    },
+    {
+      "group": "Audit A",
+      "feature": "housing_evidence_available",
+      "correlation": 0.03363363969981559
+    },
+    {
+      "group": "Audit A",
+      "feature": "conflicting_information",
+      "correlation": -0.023263329162588563
+    },
+    {
+      "group": "Audit A",
+      "feature": "application_completeness_score",
+      "correlation": 0.018214024786171783
+    },
+    {
+      "group": "Audit A",
+      "feature": "specialist_support_requested",
+      "correlation": -0.025291729617633173
+    },
+    {
+      "group": "Audit A",
+      "feature": "housing_insecurity_reported",
+      "correlation": 0.08537317904079725
+    },
+    {
+      "group": "Audit B",
+      "feature": "missing_document_count",
+      "correlation": 0.06633123485768895
+    },
+    {
+      "group": "Audit B",
+      "feature": "income_document_available",
+      "correlation": -0.09108032686966365
+    },
+    {
+      "group": "Audit B",
+      "feature": "identity_document_available",
+      "correlation": -0.05998971336397892
+    },
+    {
+      "group": "Audit B",
+      "feature": "housing_evidence_available",
+      "correlation": 0.02462835263704371
+    },
+    {
+      "group": "Audit B",
+      "feature": "conflicting_information",
+      "correlation": 0.05515983768803607
+    },
+    {
+      "group": "Audit B",
+      "feature": "application_completeness_score",
+      "correlation": -0.03740620350156163
+    },
+    {
+      "group": "Audit B",
+      "feature": "specialist_support_requested",
+      "correlation": 0.09718138882446657
+    },
+    {
+      "group": "Audit B",
+      "feature": "housing_insecurity_reported",
+      "correlation": -0.14779797675167264
+    },
+    {
+      "group": "Audit C",
+      "feature": "missing_document_count",
+      "correlation": -0.00018260408665888265
+    },
+    {
+      "group": "Audit C",
+      "feature": "income_document_available",
+      "correlation": 0.09524555399728128
+    },
+    {
+      "group": "Audit C",
+      "feature": "identity_document_available",
+      "correlation": -0.017881096825211627
+    },
+    {
+      "group": "Audit C",
+      "feature": "housing_evidence_available",
+      "correlation": -0.06767378650046371
+    },
+    {
+      "group": "Audit C",
+      "feature": "conflicting_information",
+      "correlation": -0.034876419731951075
+    },
+    {
+      "group": "Audit C",
+      "feature": "application_completeness_score",
+      "correlation": 0.020765379447328113
+    },
+    {
+      "group": "Audit C",
+      "feature": "specialist_support_requested",
+      "correlation": -0.08002080495891802
+    },
+    {
+      "group": "Audit C",
+      "feature": "housing_insecurity_reported",
+      "correlation": 0.06617958036090332
+    }
+  ],
+  "maximum_absolute_proxy_correlation": 0.14779797675167264,
+  "warning": "Subgroup errors differ. Small synthetic samples and case-mix differences do not establish a causal explanation or real-world housing fairness.",
+  "paired_warning": "Identical paired predictions do not establish absence of proxy discrimination.",
+  "input_consistency": {
+    "training_profile": {
+      "training_sha256": "d1f2446c579bad6acc11561dec9bb1a63fc6484629f2c2dfc135a5ef85f36f08",
+      "feature_order": [
+        "missing_document_count",
+        "income_document_available",
+        "identity_document_available",
+        "housing_evidence_available",
+        "conflicting_information",
+        "application_completeness_score",
+        "housing_situation",
+        "specialist_support_requested",
+        "housing_insecurity_reported"
+      ],
+      "numeric_ranges": {
+        "missing_document_count": {
+          "min": 0.0,
+          "max": 3.0
+        },
+        "income_document_available": {
+          "min": 0.0,
+          "max": 1.0
+        },
+        "identity_document_available": {
+          "min": 0.0,
+          "max": 1.0
+        },
+        "housing_evidence_available": {
+          "min": 0.0,
+          "max": 1.0
+        },
+        "conflicting_information": {
+          "min": 0.0,
+          "max": 1.0
+        },
+        "application_completeness_score": {
+          "min": 21.1,
+          "max": 100.0
+        },
+        "specialist_support_requested": {
+          "min": 0.0,
+          "max": 1.0
+        },
+        "housing_insecurity_reported": {
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "housing_categories": [
+        "stable",
+        "temporary",
+        "unclear"
+      ],
+      "limitation": "Training-range/category checks only. Novel combinations, measurement mismatch and real-world distribution shift may pass these checks."
+    },
+    "training_formula": "clip(100 - 18 * missing_document_count - Normal(8,12), 5,100), rounded to one decimal",
+    "previous_intake_mapping": "100 * present_document_categories / 3",
+    "mismatch": "Document availability and broader information completeness are different constructs. The V6 mapping collapses a noisy continuous training feature into four document percentages.",
+    "change": "V7 separately declares intake information completeness and calculates document completeness from evidence flags. A defensible real-world measurement protocol remains unvalidated.",
+    "conditional_training_completeness": [
+      {
+        "missing_categories": 0,
+        "count": 814,
+        "training_mean": 90.52285012285013,
+        "training_min": 55.9,
+        "training_max": 100.0,
+        "old_document_mapping": 100.0
+      },
+      {
+        "missing_categories": 1,
+        "count": 485,
+        "training_mean": 73.99134020618557,
+        "training_min": 36.7,
+        "training_max": 100.0,
+        "old_document_mapping": 66.66666666666667
+      },
+      {
+        "missing_categories": 2,
+        "count": 92,
+        "training_mean": 56.85108695652173,
+        "training_min": 24.7,
+        "training_max": 90.7,
+        "old_document_mapping": 33.333333333333336
+      },
+      {
+        "missing_categories": 3,
+        "count": 9,
+        "training_mean": 39.52222222222222,
+        "training_min": 21.1,
+        "training_max": 54.0,
+        "old_document_mapping": 0.0
+      }
+    ],
+    "imputation": "Training-only numeric median; housing most-frequent; unknown categories encoded with handle_unknown=ignore and now escalated by input checks.",
+    "encoding_feature_order_verified": true,
+    "training_numeric_medians_match_fitted_imputer": true
+  }
+}

@@ -3148,3 +3148,11 @@ summary {
 }
 
 .session-application { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-block: .75rem; }
+
+/* Preserve the visual system while making mobile controls easier to operate. */
+@media (max-width: 768px) {
+  button, input:not([type="checkbox"]), select { min-height: 44px; }
+  button { min-width: 44px; }
+  .checkbox { min-height: 44px; }
+  .info-tip summary { min-width: 24px; min-height: 24px; }
+}

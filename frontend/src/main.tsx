@@ -74,9 +74,17 @@ const initial: Json = {
   accessibility_support_requested: 0,
   specialist_support_requested: 0,
   conflicting_information: 0,
-  application_completeness_score: 100,
+  application_completeness_score: 95,
 };
+function pendingSubmission(): { key: string; payload: Json } | undefined {
+  try {
+    const saved = JSON.parse(stored("habitat.v7.pendingSubmission") || "null");
+    return saved && typeof saved.key === "string" && saved.payload?.synthetic_only === true ? saved : undefined;
+  } catch { return undefined; }
+}
 function App() {
+  const [restoredSubmission] = useState(pendingSubmission);
+  const pending = useRef(restoredSubmission);
   const [runningAudit, setRunningAudit] = useState<"fair" | "pairs" | null>(
     null,
   );
@@ -106,7 +114,7 @@ function App() {
     [outcome, setOutcome] = useState("routine"),
     [confirm, setConfirm] = useState(false),
     [policyOpen, setPolicyOpen] = useState(false);
-  const [form, setForm] = useState<Json>({ ...initial }),
+  const [form, setForm] = useState<Json>(() => restoredSubmission?.payload ?? { ...initial }),
     [draftExists, setDraftExists] = useState(
       () => !!stored("habitat.v4.draft"),
     );
@@ -208,7 +216,7 @@ function App() {
           if (active) setApplicantRecords(r);
         }
         if (admin && view.page === "Fairness & Sandbox") {
-          const [fair, metrics, comparison, safeguard, dataset, metadata] =
+          const [fair, metrics, comparison, safeguard, dataset, metadata, investigation] =
             await Promise.all([
               api("/api/fairness/metrics"),
               api("/api/model/metrics"),
@@ -216,6 +224,7 @@ function App() {
               api("/api/model/safeguard"),
               api("/api/dataset/metadata"),
               api("/api/model/metadata"),
+              api("/api/audit/investigation"),
             ]);
           if (active)
             setAudit({
@@ -225,6 +234,7 @@ function App() {
               safeguard,
               dataset,
               metadata,
+              investigation,
             });
         }
         if (
@@ -272,8 +282,6 @@ function App() {
         next.income_document_available -
         next.identity_document_available -
         next.housing_evidence_available;
-      next.application_completeness_score =
-        (100 * (3 - next.missing_document_count)) / 3;
       return next;
     });
   }
@@ -282,7 +290,13 @@ function App() {
     setBusy(true);
     setError("");
     try {
-      const saved = await api("/api/applications", form);
+      const previous = pending.current;
+      const key = previous && JSON.stringify(previous.payload) === JSON.stringify(form) ? previous.key : crypto.randomUUID();
+      pending.current = { key, payload: form };
+      persist("habitat.v7.pendingSubmission", JSON.stringify(pending.current));
+      const saved = await api("/api/applications", form, { idempotencyKey: key });
+      pending.current = undefined;
+      try { localStorage.removeItem("habitat.v7.pendingSubmission"); } catch { /* Stored submission remains safe. */ }
       announceChange();
       setSessionId(saved.id);
       setSelectedId(saved.id);
@@ -608,8 +622,8 @@ function App() {
             </Card>
             <Card title="Documents & privacy">
               <p>
-                Three document categories: income evidence, identity evidence and
-                current housing evidence. Declare availability only. Never enter
+                Document completeness uses three categories: income evidence, identity evidence and
+                current housing evidence. Information completeness is a separate synthetic estimate of the whole intake record; its real-world measurement is not validated. Declare availability only. Never enter
                 real names, government IDs or personal records.
               </p>
               <p>
@@ -886,6 +900,16 @@ function App() {
               </InfoTip>
             </div>
             <AuditPages page="Fairness Lab" {...auditProps} />
+            {audit.investigation && <Card title="Group routing and case-mix investigation" tag="DESCRIPTIVE · UNCHANGED POLICY">
+              <p className="warning">{audit.investigation.warning}</p>
+              <p><b>{audit.investigation.paired_warning}</b></p>
+              <div className="table-scroll"><table><caption>Classification misses and uncertainty escalation</caption><thead><tr><th>Group</th><th>Positive labels / cases</th><th>False negatives</th><th>Uncertain cases</th><th>Extra-review route</th><th>Misses after routing</th></tr></thead><tbody>
+                {audit.investigation.groups.map((g: Json) => <tr key={g.group}><td>{g.group}</td><td>{g.positive_count} / {g.count}</td><td>{g.false_negative_count} / {g.positive_count}</td><td>{g.uncertain_count} ({pct(g.uncertain_rate)})</td><td>{g.extra_review_count} ({pct(g.extra_review_rate)})</td><td>{g.routing_missed_positive_count}</td></tr>)}
+              </tbody></table></div>
+              <details><summary>Inspect differences in case characteristics</summary><div className="table-scroll"><table><thead><tr><th>Group</th><th>Mean missing categories</th><th>Mean information completeness</th><th>Unclear housing</th><th>Conflicting details</th><th>Specialist request</th></tr></thead><tbody>
+                {audit.investigation.groups.map((g: Json) => <tr key={g.group}><td>{g.group}</td><td>{g.characteristics.mean_missing_categories.toFixed(2)}</td><td>{g.characteristics.mean_information_completeness.toFixed(1)}</td><td>{pct(g.characteristics.unclear_housing_rate)}</td><td>{pct(g.characteristics.conflicting_information_rate)}</td><td>{pct(g.characteristics.specialist_requested_rate)}</td></tr>)}
+              </tbody></table></div><p>Observed case mix is not a causal explanation for the error gaps. These routing measurements use the original benchmark policy; live input-range escalation is an additional safeguard.</p></details>
+            </Card>}
             <div className="section-label">
               <InfoTip label="Explain application comparisons">
                 Two copies of one case change one input. Changing an excluded

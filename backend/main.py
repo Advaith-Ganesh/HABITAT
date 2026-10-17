@@ -7,10 +7,11 @@ from datetime import datetime, timezone
 from typing import Any, Literal
 from contextlib import asynccontextmanager
 import pandas as pd
-from fastapi import FastAPI, HTTPException, Header
+from fastapi import FastAPI, HTTPException, Header, Response
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 from sqlalchemy import create_engine, Column, String, Text, ForeignKey, event, func
 from sqlalchemy.exc import SQLAlchemyError
@@ -22,7 +23,7 @@ from backend.policy import load_policy
 
 engine = create_engine(
     os.getenv("HABITAT_DATABASE_URL", f"sqlite:///{ROOT/'habitat.db'}"),
-    connect_args={"check_same_thread": False},
+    connect_args={"check_same_thread": False, "timeout": 15},
 )
 Session = sessionmaker(bind=engine)
 Base = declarative_base()
@@ -40,6 +41,13 @@ class ApplicantSessionApplication(Base):
     __tablename__ = "applicant_session_applications"
     application_id = Column(String, ForeignKey("applications.id"), primary_key=True)
     session_id = Column(String, nullable=False, index=True)
+
+
+class SubmissionRequest(Base):
+    __tablename__ = "submission_requests"
+    key_hash = Column(String, primary_key=True)
+    payload_hash = Column(String, nullable=False)
+    application_id = Column(String, ForeignKey("applications.id"), nullable=False)
 
 
 class Event(Base):
@@ -70,6 +78,9 @@ def log(db, aid, action, detail):
 
 def init():
     Base.metadata.create_all(engine)
+    database_file = engine.url.database
+    if os.name == "posix" and database_file and database_file != ":memory:":
+        os.chmod(database_file, 0o600)
     with engine.begin() as conn:
         for verb in ["UPDATE", "DELETE"]:
             conn.exec_driver_sql(
@@ -77,26 +88,16 @@ def init():
             )
     with Session() as db:
         if not db.query(Application).first():
-            for row in (
-                pd.read_csv(ROOT / "data/splits/test.csv")
-                .head(12)
-                .to_dict(orient="records")
-            ):
-                payload = {k: v for k, v in row.items() if k in Case.model_fields}
-                aid = row["application_id"]
+            # Separate hand-authored UI scenarios. Never seed from evaluation data.
+            for row in json.loads((ROOT / "data/demo/applications.json").read_text()):
+                payload = Case.model_validate(row["payload"]).model_dump()
+                aid = row["id"]
                 assessment = predict(payload)
-                db.add(
-                    Application(
-                        id=aid,
-                        payload=json.dumps(payload),
-                        assessment=json.dumps(assessment),
-                        status=(
-                            "pending" if assessment["requires_review"] else "routine"
-                        ),
-                    )
-                )
+                assessment.update(model_version="rf-1.0", assessed_at=datetime.now(timezone.utc).isoformat())
+                db.add(Application(id=aid, payload=json.dumps(payload), assessment=json.dumps(assessment),
+                                   status="pending" if assessment["requires_review"] else "routine"))
                 db.flush()
-                log(db, aid, "seeded", {"provenance": "Synthetic held-out demo record"})
+                log(db, aid, "seeded", {"provenance": "Independent hand-authored sandbox scenario", "scenario": row["scenario"]})
                 log(db, aid, "assessed", assessment)
             db.commit()
 
@@ -107,13 +108,16 @@ async def lifespan(app):
     yield
 
 
-app = FastAPI(title="HABITAT AI Sandbox", version="6.0.0", lifespan=lifespan)
+app = FastAPI(title="HABITAT AI Sandbox", version="7.0.0", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
     allow_methods=["GET", "POST"],
-    allow_headers=["Content-Type", "X-Sandbox-Session"],
+    allow_headers=["Content-Type", "X-Sandbox-Session", "Idempotency-Key"],
+    expose_headers=["Idempotency-Replayed"],
 )
+
+app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "[::1]", "testserver"])
 
 
 @lru_cache(maxsize=1)
@@ -332,7 +336,7 @@ def health():
                 "training_records": cfg["training_records"],
             },
             "database": "available",
-            "application_version": "6.0.0",
+            "application_version": "7.0.0",
         }
     except (
         OSError,
@@ -394,6 +398,12 @@ def model_metadata():
         "fairness_method": {"minimum_positive_and_negative": 20, "fnr_gap_flag": 0.1},
         "baseline_method": {"completeness_below": 70, "missing_evidence_at_least": 1},
     }
+
+
+@app.get("/api/audit/investigation")
+def audit_investigation():
+    from ml.audit_v7 import investigate
+    return investigate()
 
 
 @app.get("/api/model/safeguard")
@@ -562,17 +572,33 @@ def dashboard():
     response_model=CaseResponse,
     response_model_exclude_none=True,
 )
-def create(body: Submission, x_sandbox_session: str | None = Header(default=None)):
+def create(body: Submission, response: Response, x_sandbox_session: str | None = Header(default=None), idempotency_key: str | None = Header(default=None)):
     session_id = sandbox_session(x_sandbox_session)
+    request_key = sandbox_session(idempotency_key)
+    key_hash = hashlib.sha256(f"{session_id or 'anonymous'}:{request_key}".encode()).hexdigest() if request_key else None
+    payload = body.model_dump()
+    payload_hash = hashlib.sha256(json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
     with Session() as db:
+        # Serialize the lookup + insert across SQLite connections, including simultaneous retries.
+        # No reservation is committed if validation/storage fails.
+        db.connection().exec_driver_sql("BEGIN IMMEDIATE")
+        previous = db.get(SubmissionRequest, key_hash) if key_hash else None
+        if previous:
+            if previous.payload_hash != payload_hash:
+                raise HTTPException(409, "Idempotency key was already used with different application data")
+            response.headers["Idempotency-Replayed"] = "true"
+            return serialize(require(db, previous.application_id), latest_reviews(db).get(previous.application_id))
         aid = "DEMO-" + uuid.uuid4().hex[:8]
         a = Application(id=aid, payload=body.model_dump_json(), status="unassessed")
         db.add(a)
         db.flush()
         if session_id:
             db.add(ApplicantSessionApplication(application_id=aid, session_id=session_id))
+        if key_hash:
+            db.add(SubmissionRequest(key_hash=key_hash, payload_hash=payload_hash, application_id=aid))
         log(db, aid, "submitted", {"synthetic_only": True})
         db.commit()
+        response.headers["Idempotency-Replayed"] = "false"
         return serialize(a)
 
 

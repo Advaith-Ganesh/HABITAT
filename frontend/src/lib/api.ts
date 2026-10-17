@@ -11,11 +11,12 @@ function sandboxSession() {
   return sessionKey;
 }
 
-async function request(path: string, body?: unknown): Promise<any> {
+type RequestOptions = { idempotencyKey?: string };
+async function request(path: string, body?: unknown, options?: RequestOptions): Promise<any> {
   try {
     const response = await fetch(path, {
       method: body === undefined ? "GET" : "POST",
-      headers: { "Content-Type": "application/json", "X-Sandbox-Session": sandboxSession() },
+      headers: { "Content-Type": "application/json", "X-Sandbox-Session": sandboxSession(), ...(options?.idempotencyKey ? {"Idempotency-Key": options.idempotencyKey} : {}) },
       body: body === undefined ? undefined : JSON.stringify(body),
       signal: AbortSignal.timeout(20000),
     });
@@ -49,8 +50,8 @@ async function request(path: string, body?: unknown): Promise<any> {
 }
 
 const inFlight = new Map<string, Promise<any>>();
-export function api(path: string, body?: unknown): Promise<any> {
-  if (body !== undefined) return request(path, body);
+export function api(path: string, body?: unknown, options?: RequestOptions): Promise<any> {
+  if (body !== undefined) return request(path, body, options);
   const existing = inFlight.get(path);
   if (existing) return existing;
   const promise = request(path);

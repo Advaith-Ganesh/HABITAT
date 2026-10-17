@@ -1,17 +1,7 @@
-"""Prepare a disposable browser-test clone; never alter the original demo database."""
-
-import sqlite3
+"""Reset ONLY the disposable E2E database; fresh startup uses independent UI fixtures."""
 from ml.common import ROOT
-
-folder = ROOT / ".test-runtime"
+folder = ROOT / '.test-runtime'
 folder.mkdir(exist_ok=True)
-target = folder / "browser.db"
-for suffix in ["", "-wal", "-shm"]:
-    p = folder / ("browser.db" + suffix)
-    if p.exists():
-        p.unlink()
-source = ROOT / "habitat.db"
-if source.exists():
-    with sqlite3.connect(source) as original, sqlite3.connect(target) as copy:
-        original.backup(copy)
-print("Disposable browser database ready; original workspace preserved.")
+for suffix in ['', '-wal', '-shm', '-journal']:
+    (folder / ('browser.db' + suffix)).unlink(missing_ok=True)
+print('Fresh disposable browser DB; no held-out fixture or original database copied.')

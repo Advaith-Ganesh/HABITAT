@@ -98,6 +98,7 @@ export function ApplicationDetails({ record }: { record: CaseRecord }) {
           <b>{humanize(record.payload.housing_situation)}</b>
         </div>
       </div>
+      <p className="field-hint">Declared intake information completeness: {Number(record.payload.application_completeness_score).toFixed(1)}%. A separate model input, not the document percentage.</p>
       <Documents record={record} />
     </>
   );
@@ -346,6 +347,7 @@ export function Assessment({
               complete this human action.
             </p>
           )}
+          {!!a?.input_validation?.warnings?.length && <div className="warning" role="status"><b>Input checks require human handling</b><ul>{a.input_validation.warnings.map((w: string) => <li key={w}>{w}</li>)}</ul><p>{a.input_validation.scope}</p></div>}
           {a && (
             <div className="callout">
               <b>

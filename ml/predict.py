@@ -3,6 +3,7 @@ import json
 import joblib
 import pandas as pd
 from ml.common import ROOT, FEATURES
+from ml.input_audit import check_inputs
 
 
 @lru_cache
@@ -16,6 +17,7 @@ def predict(record):
     try:
         pipe, cfg = artifacts()
         score = float(pipe.predict_proba(pd.DataFrame([record])[FEATURES])[0, 1])
+        input_check = check_inputs(record)
         uncertain = abs(score - cfg["threshold"]) <= cfg["uncertainty_margin"]
         additional = score >= cfg["threshold"]
         return dict(
@@ -27,7 +29,8 @@ def predict(record):
                 else "Routine human review workflow"
             ),
             uncertain=uncertain,
-            requires_review=bool(additional or uncertain),
+            requires_review=bool(additional or uncertain or input_check["out_of_distribution"]),
+            input_validation=input_check,
             threshold=cfg["threshold"],
             failure=None,
             limitations="Synthetic-label agreement only. Neither approval nor rejection; score is not a guarantee.",

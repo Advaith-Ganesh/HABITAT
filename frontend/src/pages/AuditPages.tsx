@@ -92,6 +92,7 @@ export default function AuditPages({
                 {(pairs ?? fair.counterfactual).maximum_score_difference}
               </p>
               <p className="muted">{fair.counterfactual.limitation}</p>
+              <p className="warning">Identical paired predictions do not establish absence of proxy discrimination.</p>
               <button
                 className="primary"
                 disabled={busy}

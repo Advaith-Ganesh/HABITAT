@@ -24,7 +24,7 @@ const labels: Record<string, string> = {
   accessibility_support_requested: "Accessibility support requested",
   specialist_support_requested: "Specialist review requested",
   conflicting_information: "Information needs clarification",
-  application_completeness_score: "Documentation completeness",
+  application_completeness_score: "Intake information completeness",
 };
 const steps = [
   "Household",
@@ -52,6 +52,8 @@ export default function NewCaseForm({
   restore: () => void;
   draftExists: boolean;
 }) {
+  const [validationError, setValidationError] = useState(""),
+    [invalidId, setInvalidId] = useState("");
   const [step, setStep] = useState(0),
     [confirmReset, setConfirmReset] = useState(false);
   const ref = useRef<HTMLFormElement>(null);
@@ -73,7 +75,8 @@ export default function NewCaseForm({
         type="number"
         id={key}
         aria-label={label}
-        aria-describedby={`${key}-help`}
+        aria-describedby={`${key}-help${invalidId === key ? " form-validation" : ""}`}
+        aria-invalid={invalidId === key || undefined}
         min={min}
         max={max}
         step={integer ? 1 : "any"}
@@ -108,6 +111,8 @@ export default function NewCaseForm({
       <div className="form-layout">
         <form
           ref={ref}
+          onInvalid={(e) => { const field = e.target as HTMLInputElement; setInvalidId(field.id); setValidationError(`${field.getAttribute("aria-label") || "Confirmation"}: ${field.validationMessage}`); }}
+          onInputCapture={() => { setValidationError(""); setInvalidId(""); }}
           onSubmit={(e) => {
             e.preventDefault();
             if (step < 4) move(step + 1);
@@ -115,6 +120,7 @@ export default function NewCaseForm({
           }}
         >
           <Card title={steps[step]} tag={`SECTION ${step + 1} OF 5`}>
+            {validationError && <p id="form-validation" className="warning" role="alert">{validationError}</p>}
             {step === 0 && (
               <>
                 <p className="muted">
@@ -211,6 +217,9 @@ export default function NewCaseForm({
             )}
             {step === 3 && (
               <>
+                {number("application_completeness_score", "Intake information completeness", 0, 100,
+                  "Synthetic estimate of completeness and clarity across all intake information. Separate from the document percentage. A real service needs a validated caseworker measurement protocol.")}
+
                 {checkbox(
                   "conflicting_information",
                   "Information needs clarification",
@@ -262,7 +271,7 @@ export default function NewCaseForm({
                     ))}
                 </div>
                 <label className="checkbox consent">
-                  <input required type="checkbox" />I confirm all values are
+                  <input required id="synthetic-consent" aria-invalid={invalidId === "synthetic-consent" || undefined} aria-describedby={invalidId === "synthetic-consent" ? "form-validation" : undefined} type="checkbox" />I confirm all values are
                   synthetic.
                 </label>
               </>
