@@ -21,8 +21,11 @@ from ml.predict import predict, artifacts
 from ml.explain import explain
 from backend.policy import load_policy
 
+sandbox_folder = ROOT / ".test-runtime"
+sandbox_folder.mkdir(mode=0o700, exist_ok=True)
+
 engine = create_engine(
-    os.getenv("HABITAT_DATABASE_URL", f"sqlite:///{ROOT/'habitat.db'}"),
+    os.getenv("HABITAT_DATABASE_URL", f"sqlite:///{sandbox_folder/'sandbox.db'}"),
     connect_args={"check_same_thread": False, "timeout": 15},
 )
 Session = sessionmaker(bind=engine)

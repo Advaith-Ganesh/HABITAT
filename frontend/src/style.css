@@ -2771,13 +2771,15 @@ summary {
     display: none;
   }
   .v4-app .main-nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
-    overflow: auto;
+    overflow: visible;
     padding-bottom: 4px;
   }
   .v4-app .main-nav button {
-    white-space: nowrap;
+    white-space: normal;
+    min-width: 0;
     padding: 10px;
     margin: 0;
     flex-shrink: 0;

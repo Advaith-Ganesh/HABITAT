@@ -324,11 +324,11 @@ function App() {
     setBusy(true);
     setError("");
     try {
-      await api(`/api/applications/${current.id}/assess`, {});
+      const result = await api(`/api/applications/${current.id}/assess`, {});
       announceChange();
       await loadCase(current.id);
       setRefresh((v) => v + 1);
-      setNotice("Assessment saved using the trained model.");
+      setNotice(result.score == null ? "Model inference unavailable. Human review fallback saved." : "Assessment saved using the trained model.");
     } catch (e) {
       setError(String(e));
     } finally {
@@ -641,7 +641,7 @@ function App() {
             <div className="stats metric-grid">
               {[
                 [
-                  "Total submitted applications",
+                  "Total saved applications",
                   overview.applications,
                   "Saved in this workspace",
                 ],
@@ -685,10 +685,7 @@ function App() {
                 £999/month. Pricing hypotheses, not sales.
               </p>
               <p>
-                Example: 1,000 cases/month, 20 review minutes, £25/hour, 60%
-                human workload, £100 infrastructure and £299 software. Estimated
-                per-case cost = (1000 × 20/60 × 25 × 0.6 + 100 + 299) / 1000 =
-                £5.40. Assumptions, not observed savings.
+                Example assumptions: 1,000 cases/month, 20 routine minutes for every case plus 10 additional minutes for 60% of cases, £25/hour, £100 infrastructure and £299 software. Estimated per-case cost = (1000 × (20 + 10 × 0.6)/60 × 25 + 100 + 299) / 1000 = £11.23. No measured savings or customers are claimed.
               </p>
               <p>
                 International expansion needs validated country/programme policy

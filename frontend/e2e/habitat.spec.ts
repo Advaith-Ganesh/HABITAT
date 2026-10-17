@@ -262,7 +262,7 @@ for (const width of [375, 768, 1280])
     await page.setViewportSize({ width, height: 900 });
     await page.goto("/#admin/Overview");
     await expect(
-      page.getByText("Total submitted applications", { exact: true }),
+      page.getByText("Total saved applications", { exact: true }),
     ).toBeVisible();
     const buttons = page
       .getByRole("navigation", { name: "Administrator tabs" })
@@ -274,6 +274,11 @@ for (const width of [375, 768, 1280])
       "Fairness & Sandbox",
       "Human Review",
     ]);
+    for (const button of await buttons.all()) {
+      await expect(button).toBeInViewport({ratio:0.95});
+      const box = await button.boundingBox();
+      expect(box?.height).toBeGreaterThanOrEqual(44);
+    }
     expect(
       await page.evaluate(
         () =>
@@ -283,6 +288,7 @@ for (const width of [375, 768, 1280])
     ).toBeTruthy();
     await page.getByRole("link", { name: "Skip to main content" }).focus();
     await page.keyboard.press("Enter");
+    await expect(page.locator("#main-content")).toBeFocused();
     await expect(
       page.getByRole("heading", { name: "Overview", exact: true }),
     ).toBeVisible();
@@ -321,6 +327,11 @@ for (const width of [375, 768, 1280])
         await page.getByRole("button",{name:"Continue",exact:true}).click();
         await expect(page.getByRole("alert")).toContainText("Household members");
         await page.getByRole("spinbutton",{name:"Household members",exact:true}).fill("2");
+        for (let step=0;step<4;step++) {
+          await page.getByRole("button",{name:"Continue",exact:true}).click();
+          expect(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth)).toBeTruthy();
+        }
+        await expect(page.getByRole("checkbox",{name:"I confirm all values are synthetic.",exact:true})).toBeVisible();
         await page.screenshot({path:`../docs/screenshots/v7-runner-applicant-${width}.png`,fullPage:true});
       }
       expect(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth)).toBeTruthy();

@@ -131,3 +131,20 @@ def test_local_only_security_boundaries(client):
     # Deliberately unauthenticated local actions remain a disclosed limitation.
     assert client.get('/api/applications').status_code==200
     assert '127.0.0.1' in (ROOT/'scripts/start_backend.sh').read_text()
+
+
+def test_validation_policy_investigation_never_reads_final_test(monkeypatch):
+    from ml.validation_policy import investigate_validation
+    original = pd.read_csv
+    read_paths = []
+    def validation_only(path, *args, **kwargs):
+        read_paths.append(str(path))
+        assert str(path).endswith('data/splits/validation.csv')
+        return original(path,*args,**kwargs)
+    monkeypatch.setattr(pd,'read_csv',validation_only)
+    result = investigate_validation()
+    assert len(read_paths)==1 and not result['active_policy_changed']
+    assert result['feasible_within_ceiling']==[]
+    assert result['minimum_workload_target_policy']['routing_recall']==pytest.approx(89/98)
+    assert result['minimum_workload_target_policy']['extra_review_count']==221
+    assert 'NOT PERFORMED' in result['candidate_test_evaluation']
