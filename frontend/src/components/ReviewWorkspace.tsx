@@ -152,7 +152,7 @@ export function ApplicationTable({
       </div>
       {rows.length ? (
         <>
-          <div className="table-scroll">
+          <div className="table-scroll" tabIndex={0} role="region" aria-label="Submitted applications table">
             <table>
               <caption className="sr-only">Submitted applications</caption>
               <thead>
@@ -304,7 +304,7 @@ export function Assessment({
               </p>
               <details>
                 <summary>All measured contributions</summary>
-                <div className="table-scroll">
+                <div className="table-scroll" tabIndex={0} role="region" aria-label="SHAP contribution values table">
                   <table>
                     <thead>
                       <tr>

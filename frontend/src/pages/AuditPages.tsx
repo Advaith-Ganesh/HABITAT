@@ -105,7 +105,7 @@ export default function AuditPages({
             </Card>
           </div>
           <Card title="Group-level findings" tag="DESCRIPTIVE · NOT CAUSAL">
-            <div className="table-scroll">
+            <div className="table-scroll" tabIndex={0} role="region" aria-label="Group-level findings table">
               <table>
                 <thead>
                   <tr>
@@ -273,7 +273,7 @@ export default function AuditPages({
               <Download size={17} />
               Download 2,000-record CSV
             </a>
-            <div className="table-scroll">
+            <div className="table-scroll" tabIndex={0} role="region" aria-label="Dataset preview table">
               <table>
                 <thead>
                   <tr>

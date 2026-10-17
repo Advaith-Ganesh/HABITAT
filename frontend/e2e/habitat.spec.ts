@@ -303,6 +303,10 @@ for (const width of [375, 768, 1280])
       }
       if (name === "Fairness & Sandbox") {
         await expect(page.getByRole("heading",{name:"Group routing and case-mix investigation",exact:true})).toBeVisible();
+        const tableRegion = page.getByRole("region",{name:"Group routing table",exact:true});
+        await tableRegion.focus();
+        await page.keyboard.press("ArrowRight");
+        await expect(tableRegion).toBeFocused();
         await page.screenshot({path:`../docs/screenshots/v7-runner-fairness-${width}.png`,fullPage:true});
       }
       expect(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth)).toBeTruthy();

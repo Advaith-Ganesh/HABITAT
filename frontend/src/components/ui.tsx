@@ -462,7 +462,7 @@ export function DataTable({
   ];
   return (
     <div className="data-table">
-      <div className="table-scroll">
+      <div className="table-scroll" tabIndex={0} role="region" aria-label="Cases table">
         <table>
           <caption className="sr-only">
             Synthetic application register. Sort with column headings.

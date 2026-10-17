@@ -848,7 +848,7 @@ function App() {
                 ). The table measures errors only among cases remaining in the
                 routine route.
               </p>
-              <div className="table-scroll">
+              <div className="table-scroll" tabIndex={0} role="region" aria-label="Uncertainty safeguard table">
                 <table>
                   <thead>
                     <tr>
@@ -903,10 +903,10 @@ function App() {
             {audit.investigation && <Card title="Group routing and case-mix investigation" tag="DESCRIPTIVE · UNCHANGED POLICY">
               <p className="warning">{audit.investigation.warning}</p>
               <p><b>{audit.investigation.paired_warning}</b></p>
-              <div className="table-scroll"><table><caption>Classification misses and uncertainty escalation</caption><thead><tr><th>Group</th><th>Positive labels / cases</th><th>False negatives</th><th>Uncertain cases</th><th>Extra-review route</th><th>Misses after routing</th></tr></thead><tbody>
+              <div className="table-scroll" tabIndex={0} role="region" aria-label="Group routing table"><table><caption>Classification misses and uncertainty escalation</caption><thead><tr><th>Group</th><th>Positive labels / cases</th><th>False negatives</th><th>Uncertain cases</th><th>Extra-review route</th><th>Misses after routing</th></tr></thead><tbody>
                 {audit.investigation.groups.map((g: Json) => <tr key={g.group}><td>{g.group}</td><td>{g.positive_count} / {g.count}</td><td>{g.false_negative_count} / {g.positive_count}</td><td>{g.uncertain_count} ({pct(g.uncertain_rate)})</td><td>{g.extra_review_count} ({pct(g.extra_review_rate)})</td><td>{g.routing_missed_positive_count}</td></tr>)}
               </tbody></table></div>
-              <details><summary>Inspect differences in case characteristics</summary><div className="table-scroll"><table><thead><tr><th>Group</th><th>Mean missing categories</th><th>Mean information completeness</th><th>Unclear housing</th><th>Conflicting details</th><th>Specialist request</th></tr></thead><tbody>
+              <details><summary>Inspect differences in case characteristics</summary><div className="table-scroll" tabIndex={0} role="region" aria-label="Group case characteristics table"><table><thead><tr><th>Group</th><th>Mean missing categories</th><th>Mean information completeness</th><th>Unclear housing</th><th>Conflicting details</th><th>Specialist request</th></tr></thead><tbody>
                 {audit.investigation.groups.map((g: Json) => <tr key={g.group}><td>{g.group}</td><td>{g.characteristics.mean_missing_categories.toFixed(2)}</td><td>{g.characteristics.mean_information_completeness.toFixed(1)}</td><td>{pct(g.characteristics.unclear_housing_rate)}</td><td>{pct(g.characteristics.conflicting_information_rate)}</td><td>{pct(g.characteristics.specialist_requested_rate)}</td></tr>)}
               </tbody></table></div><p>Observed case mix is not a causal explanation for the error gaps. These routing measurements use the original benchmark policy; live input-range escalation is an additional safeguard.</p></details>
             </Card>}

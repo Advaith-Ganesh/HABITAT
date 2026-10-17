@@ -1081,7 +1081,7 @@ main {
   width: 100%;
   padding: 10px 0;
   border-bottom: 2px solid var(--border);
-  min-height: 42px;
+  min-height: 44px;
 }
 .stepper button > span {
   width: 23px;
@@ -2438,6 +2438,7 @@ footer > span:last-child {
 
 /* V4 portal layouts preserve full text navigation at every desktop width. */
 .v4-app .sidebar {
+  visibility: visible;
   width: 248px;
   background: #101b30;
   transform: none;
@@ -3099,7 +3100,7 @@ summary {
     font-size: 34px;
   }
   .v5-app .main-nav button {
-    min-height: 42px;
+    min-height: 44px;
   }
   .v5-app .sandbox {
     padding: 10px 16px;
