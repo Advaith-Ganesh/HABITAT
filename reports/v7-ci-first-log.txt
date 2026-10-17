@@ -1,0 +1,445 @@
+﻿2026-10-17T22:22:32.8985189Z Current runner version: '2.337.0'
+2026-10-17T22:22:32.9015914Z ##[group]Runner Image Provisioner
+2026-10-17T22:22:32.9017056Z Hosted Compute Agent
+2026-10-17T22:22:32.9017764Z Version: 20261012.601
+2026-10-17T22:22:32.9018508Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-17T22:22:32.9019455Z Build Date: 2026-10-12T17:48:21Z
+2026-10-17T22:22:32.9020314Z Worker ID: {54827523-e623-4f59-b797-5dfb22562125}
+2026-10-17T22:22:32.9021267Z Region: eastus
+2026-10-17T22:22:32.9021927Z Cloud: Azure
+2026-10-17T22:22:32.9023092Z ##[endgroup]
+2026-10-17T22:22:32.9025112Z ##[group]Operating System
+2026-10-17T22:22:32.9025879Z Ubuntu
+2026-10-17T22:22:32.9026626Z 24.04.5
+2026-10-17T22:22:32.9027250Z LTS
+2026-10-17T22:22:32.9027941Z ##[endgroup]
+2026-10-17T22:22:32.9028752Z ##[group]Runner Image
+2026-10-17T22:22:32.9029526Z Image: ubuntu-24.04
+2026-10-17T22:22:32.9030296Z Version: 20261012.334.1
+2026-10-17T22:22:32.9031886Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-17T22:22:32.9034074Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-17T22:22:32.9035409Z ##[endgroup]
+2026-10-17T22:22:32.9036765Z ##[group]GITHUB_TOKEN Permissions
+2026-10-17T22:22:32.9039461Z Contents: read
+2026-10-17T22:22:32.9040184Z Metadata: read
+2026-10-17T22:22:32.9040825Z ##[endgroup]
+2026-10-17T22:22:32.9043469Z Secret source: Actions
+2026-10-17T22:22:32.9044832Z Cache mode: write
+2026-10-17T22:22:32.9046008Z Prepare workflow directory
+2026-10-17T22:22:33.0169842Z Prepare all required actions
+2026-10-17T22:22:33.0207679Z Getting action download info
+2026-10-17T22:22:33.1777065Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-17T22:22:33.5609305Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-17T22:22:33.8818278Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-17T22:22:33.9989874Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-17T22:22:34.2475678Z Complete job name: verify
+2026-10-17T22:22:34.3283189Z ##[group]Run actions/checkout@v4
+2026-10-17T22:22:34.3284953Z with:
+2026-10-17T22:22:34.3285816Z   repository: Advaith-Ganesh/HABITAT
+2026-10-17T22:22:34.3295483Z   token: ***
+2026-10-17T22:22:34.3296341Z   ssh-strict: true
+2026-10-17T22:22:34.3297302Z   ssh-user: git
+2026-10-17T22:22:34.3298228Z   persist-credentials: true
+2026-10-17T22:22:34.3299208Z   clean: true
+2026-10-17T22:22:34.3300156Z   sparse-checkout-cone-mode: true
+2026-10-17T22:22:34.3301252Z   fetch-depth: 1
+2026-10-17T22:22:34.3302115Z   fetch-tags: false
+2026-10-17T22:22:34.3303176Z   show-progress: true
+2026-10-17T22:22:34.3304198Z   lfs: false
+2026-10-17T22:22:34.3305137Z   submodules: false
+2026-10-17T22:22:34.3306016Z   set-safe-directory: true
+2026-10-17T22:22:34.3307087Z   allow-unsafe-pr-checkout: false
+2026-10-17T22:22:34.3308632Z env:
+2026-10-17T22:22:34.3309674Z   MPLCONFIGDIR: /tmp/habitat-matplotlib
+2026-10-17T22:22:34.3310707Z ##[endgroup]
+2026-10-17T22:22:34.4192343Z Syncing repository: Advaith-Ganesh/HABITAT
+2026-10-17T22:22:34.4195948Z ##[group]Getting Git version info
+2026-10-17T22:22:34.4197542Z Working directory is '$CI_PROJECT_ROOT'
+2026-10-17T22:22:34.4199930Z [command]/usr/bin/git version
+2026-10-17T22:22:34.4320568Z git version 2.55.0
+2026-10-17T22:22:34.4344081Z ##[endgroup]
+2026-10-17T22:22:34.4353536Z Temporarily overriding HOME='/home/runner/work/_temp/06abdd5a-acfd-4372-b51e-517d11316148' before making global git config changes
+2026-10-17T22:22:34.4357113Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-17T22:22:34.4359870Z [command]/usr/bin/git config --global --add safe.directory $CI_PROJECT_ROOT
+2026-10-17T22:22:34.4407954Z Deleting the contents of '$CI_PROJECT_ROOT'
+2026-10-17T22:22:34.4410958Z ##[group]Initializing the repository
+2026-10-17T22:22:34.4415356Z [command]/usr/bin/git init $CI_PROJECT_ROOT
+2026-10-17T22:22:34.4592172Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-17T22:22:34.4601891Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-17T22:22:34.4611217Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-17T22:22:34.4613110Z hint: call:
+2026-10-17T22:22:34.4614188Z hint:
+2026-10-17T22:22:34.4615398Z hint: 	git config --global init.defaultBranch <name>
+2026-10-17T22:22:34.4616844Z hint:
+2026-10-17T22:22:34.4618189Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-17T22:22:34.4620429Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-17T22:22:34.4622192Z hint:
+2026-10-17T22:22:34.4623154Z hint: 	git branch -m <name>
+2026-10-17T22:22:34.4624377Z hint:
+2026-10-17T22:22:34.4625844Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-17T22:22:34.4628239Z Initialized empty Git repository in $CI_PROJECT_ROOT/.git/
+2026-10-17T22:22:34.4632272Z [command]/usr/bin/git remote add origin https://github.com/Advaith-Ganesh/HABITAT
+2026-10-17T22:22:34.4660718Z ##[endgroup]
+2026-10-17T22:22:34.4663075Z ##[group]Disabling automatic garbage collection
+2026-10-17T22:22:34.4667334Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-17T22:22:34.4721528Z ##[endgroup]
+2026-10-17T22:22:34.4722739Z ##[group]Setting up auth
+2026-10-17T22:22:34.4724122Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T22:22:34.4764588Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-17T22:22:34.5084314Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T22:22:34.5117847Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-17T22:22:34.5314035Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T22:22:34.5345500Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-17T22:22:34.5544716Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-17T22:22:34.5583378Z ##[endgroup]
+2026-10-17T22:22:34.5585325Z ##[group]Fetching the repository
+2026-10-17T22:22:34.5592501Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +33fb67a4e2425bb29bbaa73f3d7f473a983f94a2:refs/remotes/origin/habitat-v7-remediation
+2026-10-17T22:22:35.1253238Z From https://github.com/Advaith-Ganesh/HABITAT
+2026-10-17T22:22:35.1253994Z  * [new ref]         33fb67a4e2425bb29bbaa73f3d7f473a983f94a2 -> origin/habitat-v7-remediation
+2026-10-17T22:22:35.1257186Z ##[endgroup]
+2026-10-17T22:22:35.1257687Z ##[group]Determining the checkout info
+2026-10-17T22:22:35.1259629Z ##[endgroup]
+2026-10-17T22:22:35.1264855Z [command]/usr/bin/git sparse-checkout disable
+2026-10-17T22:22:35.1318299Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-17T22:22:35.1347863Z ##[group]Checking out the ref
+2026-10-17T22:22:35.1351854Z [command]/usr/bin/git checkout --progress --force -B habitat-v7-remediation refs/remotes/origin/habitat-v7-remediation
+2026-10-17T22:22:35.1632341Z Switched to a new branch 'habitat-v7-remediation'
+2026-10-17T22:22:35.1634718Z branch 'habitat-v7-remediation' set up to track 'origin/habitat-v7-remediation'.
+2026-10-17T22:22:35.1641333Z ##[endgroup]
+2026-10-17T22:22:35.1685007Z [command]/usr/bin/git log -1 --format=%H
+2026-10-17T22:22:35.1709442Z 33fb67a4e2425bb29bbaa73f3d7f473a983f94a2
+2026-10-17T22:22:35.1997108Z ##[group]Run actions/setup-python@v5
+2026-10-17T22:22:35.1997369Z with:
+2026-10-17T22:22:35.1997540Z   python-version: 3.12
+2026-10-17T22:22:35.1997736Z   check-latest: false
+2026-10-17T22:22:35.1999749Z   token: ***
+2026-10-17T22:22:35.1999947Z   update-environment: true
+2026-10-17T22:22:35.2000161Z   allow-prereleases: false
+2026-10-17T22:22:35.2000366Z   freethreaded: false
+2026-10-17T22:22:35.2000548Z env:
+2026-10-17T22:22:35.2000736Z   MPLCONFIGDIR: /tmp/habitat-matplotlib
+2026-10-17T22:22:35.2000972Z ##[endgroup]
+2026-10-17T22:22:35.3091126Z ##[group]Installed versions
+2026-10-17T22:22:35.3213343Z (node:2083) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-17T22:22:35.3214509Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-17T22:22:35.3214954Z Successfully set up CPython (3.12.15)
+2026-10-17T22:22:35.3215439Z ##[endgroup]
+2026-10-17T22:22:35.3387908Z ##[group]Run actions/setup-node@v4
+2026-10-17T22:22:35.3388179Z with:
+2026-10-17T22:22:35.3388356Z   node-version: 22
+2026-10-17T22:22:35.3388539Z   cache: npm
+2026-10-17T22:22:35.3388765Z   cache-dependency-path: frontend/package-lock.json
+2026-10-17T22:22:35.3389035Z   always-auth: false
+2026-10-17T22:22:35.3389230Z   check-latest: false
+2026-10-17T22:22:35.3391290Z   token: ***
+2026-10-17T22:22:35.3391465Z env:
+2026-10-17T22:22:35.3391658Z   MPLCONFIGDIR: /tmp/habitat-matplotlib
+2026-10-17T22:22:35.3391958Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:22:35.3392336Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-17T22:22:35.3392692Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:22:35.3393016Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:22:35.3393343Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:22:35.3393715Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-17T22:22:35.3394104Z ##[endgroup]
+2026-10-17T22:22:35.4665041Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+2026-10-17T22:22:35.4665992Z (node:2091) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-17T22:22:35.4666734Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-17T22:22:35.4668617Z ##[group]Environment details
+2026-10-17T22:22:35.8016902Z node: v22.23.3
+2026-10-17T22:22:35.8017505Z npm: 10.9.9
+2026-10-17T22:22:35.8017798Z yarn: 1.22.22
+2026-10-17T22:22:35.8018679Z ##[endgroup]
+2026-10-17T22:22:35.8033590Z [command]/opt/hostedtoolcache/node/22.23.3/x64/bin/npm config get cache
+2026-10-17T22:22:35.8933157Z /home/runner/.npm
+2026-10-17T22:22:35.9722723Z npm cache is not found
+2026-10-17T22:22:35.9853010Z ##[group]Run python -m venv .venv
+2026-10-17T22:22:35.9853391Z [36;1mpython -m venv .venv[0m
+2026-10-17T22:22:35.9853705Z [36;1m.venv/bin/python -m pip install -r requirements-lock.txt[0m
+2026-10-17T22:22:35.9854570Z [36;1mnpm --prefix frontend ci[0m
+2026-10-17T22:22:36.0077289Z shell: /usr/bin/bash -e {0}
+2026-10-17T22:22:36.0077566Z env:
+2026-10-17T22:22:36.0077768Z   MPLCONFIGDIR: /tmp/habitat-matplotlib
+2026-10-17T22:22:36.0078088Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:22:36.0078462Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-17T22:22:36.0078819Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:22:36.0079129Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:22:36.0079441Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:22:36.0079765Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-17T22:22:36.0080093Z ##[endgroup]
+2026-10-17T22:22:38.9030536Z Collecting annotated-types==0.8.0 (from -r requirements-lock.txt (line 1))
+2026-10-17T22:22:38.9465805Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-10-17T22:22:38.9795671Z Collecting anyio==4.15.1 (from -r requirements-lock.txt (line 2))
+2026-10-17T22:22:38.9883263Z   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+2026-10-17T22:22:39.0251990Z Collecting certifi==2026.7.22 (from -r requirements-lock.txt (line 3))
+2026-10-17T22:22:39.0340497Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+2026-10-17T22:22:39.0640097Z Collecting click==8.5.0 (from -r requirements-lock.txt (line 4))
+2026-10-17T22:22:39.0727706Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-10-17T22:22:39.0993453Z Collecting cloudpickle==3.1.2 (from -r requirements-lock.txt (line 5))
+2026-10-17T22:22:39.1087343Z   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+2026-10-17T22:22:39.1908317Z Collecting contourpy==1.4.0 (from -r requirements-lock.txt (line 6))
+2026-10-17T22:22:39.2004764Z   Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-10-17T22:22:39.2239702Z Collecting cycler==0.12.1 (from -r requirements-lock.txt (line 7))
+2026-10-17T22:22:39.2407903Z   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+2026-10-17T22:22:39.3026524Z Collecting fairlearn==0.12.0 (from -r requirements-lock.txt (line 8))
+2026-10-17T22:22:39.3114735Z   Downloading fairlearn-0.12.0-py3-none-any.whl.metadata (7.0 kB)
+2026-10-17T22:22:39.3649972Z Collecting fastapi==0.115.12 (from -r requirements-lock.txt (line 9))
+2026-10-17T22:22:39.3741863Z   Downloading fastapi-0.115.12-py3-none-any.whl.metadata (27 kB)
+2026-10-17T22:22:39.5347741Z Collecting fonttools==4.67.0 (from -r requirements-lock.txt (line 10))
+2026-10-17T22:22:39.5437881Z   Downloading fonttools-4.67.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (137 kB)
+2026-10-17T22:22:39.5849036Z Collecting h11==0.16.0 (from -r requirements-lock.txt (line 11))
+2026-10-17T22:22:39.5936971Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-10-17T22:22:39.6202345Z Collecting httpcore==1.0.9 (from -r requirements-lock.txt (line 12))
+2026-10-17T22:22:39.6291935Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-10-17T22:22:39.6609395Z Collecting httpx==0.28.1 (from -r requirements-lock.txt (line 13))
+2026-10-17T22:22:39.6698195Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-10-17T22:22:39.6955943Z Collecting idna==3.20 (from -r requirements-lock.txt (line 14))
+2026-10-17T22:22:39.7167869Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-17T22:22:39.7437840Z Collecting iniconfig==2.3.1 (from -r requirements-lock.txt (line 15))
+2026-10-17T22:22:39.7529020Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-10-17T22:22:39.7827723Z Collecting joblib==1.4.2 (from -r requirements-lock.txt (line 16))
+2026-10-17T22:22:39.7918783Z   Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+2026-10-17T22:22:39.8994012Z Collecting kiwisolver==1.5.1 (from -r requirements-lock.txt (line 17))
+2026-10-17T22:22:39.9086736Z   Downloading kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+2026-10-17T22:22:39.9709193Z Collecting llvmlite==0.50.0 (from -r requirements-lock.txt (line 18))
+2026-10-17T22:22:39.9803344Z   Downloading llvmlite-0.50.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.1 kB)
+2026-10-17T22:22:40.1592656Z Collecting matplotlib==3.10.1 (from -r requirements-lock.txt (line 19))
+2026-10-17T22:22:40.1766405Z   Downloading matplotlib-3.10.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+2026-10-17T22:22:40.4146848Z Collecting numba==0.68.0 (from -r requirements-lock.txt (line 20))
+2026-10-17T22:22:40.4235312Z   Downloading numba-0.68.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (2.8 kB)
+2026-10-17T22:22:40.6832546Z Collecting numpy==2.2.5 (from -r requirements-lock.txt (line 21))
+2026-10-17T22:22:40.6927072Z   Downloading numpy-2.2.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+2026-10-17T22:22:40.7261361Z Collecting packaging==26.3 (from -r requirements-lock.txt (line 22))
+2026-10-17T22:22:40.7346921Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-17T22:22:40.8466755Z Collecting pandas==2.2.3 (from -r requirements-lock.txt (line 23))
+2026-10-17T22:22:40.8556569Z   Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+2026-10-17T22:22:41.0111500Z Collecting pillow==13.0.0 (from -r requirements-lock.txt (line 24))
+2026-10-17T22:22:41.0201989Z   Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-10-17T22:22:41.0458898Z Collecting pluggy==1.7.0 (from -r requirements-lock.txt (line 25))
+2026-10-17T22:22:41.0545403Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+2026-10-17T22:22:41.1447402Z Collecting pydantic==2.11.4 (from -r requirements-lock.txt (line 26))
+2026-10-17T22:22:41.1536768Z   Downloading pydantic-2.11.4-py3-none-any.whl.metadata (66 kB)
+2026-10-17T22:22:41.6712262Z Collecting pydantic_core==2.33.2 (from -r requirements-lock.txt (line 27))
+2026-10-17T22:22:41.6803047Z   Downloading pydantic_core-2.33.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+2026-10-17T22:22:41.7127329Z Collecting pyparsing==3.3.3 (from -r requirements-lock.txt (line 28))
+2026-10-17T22:22:41.7215457Z   Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+2026-10-17T22:22:41.7591404Z Collecting pytest==8.3.5 (from -r requirements-lock.txt (line 29))
+2026-10-17T22:22:41.7680878Z   Downloading pytest-8.3.5-py3-none-any.whl.metadata (7.6 kB)
+2026-10-17T22:22:41.7932773Z Collecting python-dateutil==2.9.0.post0 (from -r requirements-lock.txt (line 30))
+2026-10-17T22:22:41.8022523Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-10-17T22:22:41.8444724Z Collecting pytz==2026.5 (from -r requirements-lock.txt (line 31))
+2026-10-17T22:22:41.8534054Z   Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+2026-10-17T22:22:41.9581024Z Collecting scikit-learn==1.6.1 (from -r requirements-lock.txt (line 32))
+2026-10-17T22:22:41.9670251Z   Downloading scikit_learn-1.6.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+2026-10-17T22:22:42.0711437Z Collecting scipy==1.18.1 (from -r requirements-lock.txt (line 33))
+2026-10-17T22:22:42.0802785Z   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-10-17T22:22:42.1573351Z Collecting shap==0.47.2 (from -r requirements-lock.txt (line 34))
+2026-10-17T22:22:42.1664145Z   Downloading shap-0.47.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (25 kB)
+2026-10-17T22:22:42.2109903Z Collecting six==1.17.0 (from -r requirements-lock.txt (line 35))
+2026-10-17T22:22:42.2198966Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-10-17T22:22:42.2414546Z Collecting slicer==0.0.8 (from -r requirements-lock.txt (line 36))
+2026-10-17T22:22:42.2502064Z   Downloading slicer-0.0.8-py3-none-any.whl.metadata (4.0 kB)
+2026-10-17T22:22:42.4759733Z Collecting SQLAlchemy==2.0.40 (from -r requirements-lock.txt (line 37))
+2026-10-17T22:22:42.4856124Z   Downloading sqlalchemy-2.0.40-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+2026-10-17T22:22:42.5279329Z Collecting starlette==0.46.2 (from -r requirements-lock.txt (line 38))
+2026-10-17T22:22:42.5368916Z   Downloading starlette-0.46.2-py3-none-any.whl.metadata (6.2 kB)
+2026-10-17T22:22:42.6080762Z Collecting threadpoolctl==3.7.0 (from -r requirements-lock.txt (line 39))
+2026-10-17T22:22:42.6172222Z   Downloading threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+2026-10-17T22:22:42.6627743Z Collecting tqdm==4.70.1 (from -r requirements-lock.txt (line 40))
+2026-10-17T22:22:42.6719756Z   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+2026-10-17T22:22:42.6987313Z Collecting typing-inspection==0.4.4 (from -r requirements-lock.txt (line 41))
+2026-10-17T22:22:42.7077146Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-10-17T22:22:42.7377438Z Collecting typing_extensions==4.16.0 (from -r requirements-lock.txt (line 42))
+2026-10-17T22:22:42.7466511Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-17T22:22:42.8089977Z Collecting tzdata==2026.5 (from -r requirements-lock.txt (line 43))
+2026-10-17T22:22:42.8180899Z   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-10-17T22:22:42.8565471Z Collecting uvicorn==0.34.2 (from -r requirements-lock.txt (line 44))
+2026-10-17T22:22:42.8664961Z   Downloading uvicorn-0.34.2-py3-none-any.whl.metadata (6.5 kB)
+2026-10-17T22:22:43.2438075Z Collecting greenlet>=1 (from SQLAlchemy==2.0.40->-r requirements-lock.txt (line 37))
+2026-10-17T22:22:43.2528148Z   Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-10-17T22:22:43.2860287Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-10-17T22:22:43.2965612Z Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-17T22:22:43.3084232Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+2026-10-17T22:22:43.3195951Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-17T22:22:43.3304077Z Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+2026-10-17T22:22:43.3409696Z Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (383 kB)
+2026-10-17T22:22:43.3688618Z Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+2026-10-17T22:22:43.4689569Z Downloading fairlearn-0.12.0-py3-none-any.whl (240 kB)
+2026-10-17T22:22:43.4796943Z Downloading fastapi-0.115.12-py3-none-any.whl (95 kB)
+2026-10-17T22:22:43.4906875Z Downloading fonttools-4.67.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+2026-10-17T22:22:43.5583737Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 79.2 MB/s eta 0:00:00
+2026-10-17T22:22:43.5671854Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-17T22:22:43.5781715Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-10-17T22:22:43.5886171Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-10-17T22:22:43.5988173Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-10-17T22:22:43.6091032Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-10-17T22:22:43.6192190Z Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+2026-10-17T22:22:43.6303926Z Downloading kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+2026-10-17T22:22:43.6752261Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 28.6 MB/s eta 0:00:00
+2026-10-17T22:22:43.6842649Z Downloading llvmlite-0.50.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (59.7 MB)
+2026-10-17T22:22:44.1063661Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.7/59.7 MB 141.7 MB/s eta 0:00:00
+2026-10-17T22:22:44.1184188Z Downloading matplotlib-3.10.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.6 MB)
+2026-10-17T22:22:44.1940239Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 113.4 MB/s eta 0:00:00
+2026-10-17T22:22:44.2030941Z Downloading numba-0.68.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (3.9 MB)
+2026-10-17T22:22:44.2222087Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 222.3 MB/s eta 0:00:00
+2026-10-17T22:22:44.2312146Z Downloading numpy-2.2.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.1 MB)
+2026-10-17T22:22:44.3766434Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.1/16.1 MB 111.4 MB/s eta 0:00:00
+2026-10-17T22:22:44.3861337Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-17T22:22:44.3969729Z Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+2026-10-17T22:22:44.4859682Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 143.7 MB/s eta 0:00:00
+2026-10-17T22:22:44.4953287Z Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+2026-10-17T22:22:44.5343358Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 186.7 MB/s eta 0:00:00
+2026-10-17T22:22:44.5434237Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+2026-10-17T22:22:44.5537395Z Downloading pydantic-2.11.4-py3-none-any.whl (443 kB)
+2026-10-17T22:22:44.5678132Z Downloading pydantic_core-2.33.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+2026-10-17T22:22:44.5828639Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 133.4 MB/s eta 0:00:00
+2026-10-17T22:22:44.5918216Z Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+2026-10-17T22:22:44.6024951Z Downloading pytest-8.3.5-py3-none-any.whl (343 kB)
+2026-10-17T22:22:44.6393687Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-10-17T22:22:44.6500516Z Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+2026-10-17T22:22:44.6612380Z Downloading scikit_learn-1.6.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+2026-10-17T22:22:44.7760721Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 115.0 MB/s eta 0:00:00
+2026-10-17T22:22:44.7941712Z Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-10-17T22:22:45.0611089Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 132.6 MB/s eta 0:00:00
+2026-10-17T22:22:45.0722851Z Downloading shap-0.47.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
+2026-10-17T22:22:45.0789366Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 168.8 MB/s eta 0:00:00
+2026-10-17T22:22:45.0877401Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-10-17T22:22:45.1374691Z Downloading slicer-0.0.8-py3-none-any.whl (15 kB)
+2026-10-17T22:22:45.1488026Z Downloading sqlalchemy-2.0.40-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+2026-10-17T22:22:45.1654037Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 207.7 MB/s eta 0:00:00
+2026-10-17T22:22:45.1742598Z Downloading starlette-0.46.2-py3-none-any.whl (72 kB)
+2026-10-17T22:22:45.1845858Z Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+2026-10-17T22:22:45.1951656Z Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+2026-10-17T22:22:45.2054628Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-10-17T22:22:45.2155565Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-17T22:22:45.2264634Z Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+2026-10-17T22:22:45.2373704Z Downloading uvicorn-0.34.2-py3-none-any.whl (62 kB)
+2026-10-17T22:22:45.2479226Z Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (621 kB)
+2026-10-17T22:22:45.2523296Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 621.4/621.4 kB 153.0 MB/s eta 0:00:00
+2026-10-17T22:22:45.5290146Z Installing collected packages: pytz, tzdata, typing_extensions, tqdm, threadpoolctl, slicer, six, pyparsing, pluggy, pillow, packaging, numpy, llvmlite, kiwisolver, joblib, iniconfig, idna, h11, greenlet, fonttools, cycler, cloudpickle, click, certifi, annotated-types, uvicorn, typing-inspection, SQLAlchemy, scipy, python-dateutil, pytest, pydantic_core, numba, httpcore, contourpy, anyio, starlette, scikit-learn, pydantic, pandas, matplotlib, httpx, shap, fastapi, fairlearn
+2026-10-17T22:23:06.3357170Z Successfully installed SQLAlchemy-2.0.40 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 click-8.5.0 cloudpickle-3.1.2 contourpy-1.4.0 cycler-0.12.1 fairlearn-0.12.0 fastapi-0.115.12 fonttools-4.67.0 greenlet-3.5.6 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 joblib-1.4.2 kiwisolver-1.5.1 llvmlite-0.50.0 matplotlib-3.10.1 numba-0.68.0 numpy-2.2.5 packaging-26.3 pandas-2.2.3 pillow-13.0.0 pluggy-1.7.0 pydantic-2.11.4 pydantic_core-2.33.2 pyparsing-3.3.3 pytest-8.3.5 python-dateutil-2.9.0.post0 pytz-2026.5 scikit-learn-1.6.1 scipy-1.18.1 shap-0.47.2 six-1.17.0 slicer-0.0.8 starlette-0.46.2 threadpoolctl-3.7.0 tqdm-4.70.1 typing-inspection-0.4.4 typing_extensions-4.16.0 tzdata-2026.5 uvicorn-0.34.2
+2026-10-17T22:23:06.4261160Z 
+2026-10-17T22:23:06.4261755Z [notice] A new release of pip is available: 25.0.1 -> 26.2.1
+2026-10-17T22:23:06.4262351Z [notice] To update, run: python -m pip install --upgrade pip
+2026-10-17T22:23:11.5784244Z 
+2026-10-17T22:23:11.5787164Z added 225 packages, and audited 226 packages in 5s
+2026-10-17T22:23:11.5787406Z 
+2026-10-17T22:23:11.5787547Z 52 packages are looking for funding
+2026-10-17T22:23:11.5787805Z   run `npm fund` for details
+2026-10-17T22:23:11.5792896Z 
+2026-10-17T22:23:11.5793205Z found 0 vulnerabilities
+2026-10-17T22:23:11.6251938Z ##[group]Run .venv/bin/python -m pytest -q
+2026-10-17T22:23:11.6252249Z [36;1m.venv/bin/python -m pytest -q[0m
+2026-10-17T22:23:11.6329533Z shell: /usr/bin/bash -e {0}
+2026-10-17T22:23:11.6329750Z env:
+2026-10-17T22:23:11.6329936Z   MPLCONFIGDIR: /tmp/habitat-matplotlib
+2026-10-17T22:23:11.6330231Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:23:11.6330572Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-17T22:23:11.6330896Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:23:11.6331204Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:23:11.6331500Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:23:11.6331796Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-17T22:23:11.6332052Z ##[endgroup]
+2026-10-17T22:23:17.4402364Z .......................................................F................ [ 65%]
+2026-10-17T22:23:20.2128037Z ......................................                                   [100%]
+2026-10-17T22:23:20.2128674Z =================================== FAILURES ===================================
+2026-10-17T22:23:20.2129311Z __________________ test_frontend_entrypoint_security_headers ___________________
+2026-10-17T22:23:20.2129649Z 
+2026-10-17T22:23:20.2129980Z client = <starlette.testclient.TestClient object at 0x7fcb70b32030>
+2026-10-17T22:23:20.2130313Z 
+2026-10-17T22:23:20.2130549Z     def test_frontend_entrypoint_security_headers(client):
+2026-10-17T22:23:20.2131005Z         for path in ["/", "/index.html"]:
+2026-10-17T22:23:20.2131354Z             response = client.get(path)
+2026-10-17T22:23:20.2131637Z >           assert response.status_code == 200
+2026-10-17T22:23:20.2131883Z E           assert 404 == 200
+2026-10-17T22:23:20.2132186Z E            +  where 404 = <Response [404 Not Found]>.status_code
+2026-10-17T22:23:20.2132375Z 
+2026-10-17T22:23:20.2132530Z tests/test_v2_audit.py:215: AssertionError
+2026-10-17T22:23:20.2132881Z =============================== warnings summary ===============================
+2026-10-17T22:23:20.2133311Z .venv/lib/python3.12/site-packages/starlette/testclient.py:37
+2026-10-17T22:23:20.2134401Z   $CI_PROJECT_ROOT/.venv/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+2026-10-17T22:23:20.2135253Z     _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+2026-10-17T22:23:20.2135768Z 
+2026-10-17T22:23:20.2136010Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:64
+2026-10-17T22:23:20.2136736Z   $CI_PROJECT_ROOT/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+2026-10-17T22:23:20.2137426Z     prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+2026-10-17T22:23:20.2137664Z 
+2026-10-17T22:23:20.2137885Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+2026-10-17T22:23:20.2138304Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+2026-10-17T22:23:20.2138706Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+2026-10-17T22:23:20.2139110Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+2026-10-17T22:23:20.2139513Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+2026-10-17T22:23:20.2139913Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+2026-10-17T22:23:20.2140638Z   $CI_PROJECT_ROOT/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+2026-10-17T22:23:20.2141247Z     parse = parser.parseString(pattern)
+2026-10-17T22:23:20.2141397Z 
+2026-10-17T22:23:20.2141792Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+2026-10-17T22:23:20.2142215Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+2026-10-17T22:23:20.2142619Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+2026-10-17T22:23:20.2143015Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+2026-10-17T22:23:20.2143415Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+2026-10-17T22:23:20.2144099Z .venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+2026-10-17T22:23:20.2144861Z   $CI_PROJECT_ROOT/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+2026-10-17T22:23:20.2145447Z     parser.resetCache()
+2026-10-17T22:23:20.2145570Z 
+2026-10-17T22:23:20.2145756Z .venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45
+2026-10-17T22:23:20.2146453Z   $CI_PROJECT_ROOT/.venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+2026-10-17T22:23:20.2147055Z     ParserElement.enablePackrat()
+2026-10-17T22:23:20.2147197Z 
+2026-10-17T22:23:20.2147431Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-10-17T22:23:20.2147864Z =========================== short test summary info ============================
+2026-10-17T22:23:20.2148449Z FAILED tests/test_v2_audit.py::test_frontend_entrypoint_security_headers - assert 404 == 200
+2026-10-17T22:23:20.2148853Z  +  where 404 = <Response [404 Not Found]>.status_code
+2026-10-17T22:23:20.2149155Z 1 failed, 109 passed, 15 warnings in 5.87s
+2026-10-17T22:23:20.7362471Z ##[error]Process completed with exit code 1.
+2026-10-17T22:23:20.7481703Z ##[group]Run actions/upload-artifact@v4
+2026-10-17T22:23:20.7481941Z with:
+2026-10-17T22:23:20.7482120Z   name: habitat-v7-browser-evidence
+2026-10-17T22:23:20.7482466Z   path: reports/v7-e2e.json
+docs/screenshots/v7-runner-*.png
+frontend/test-results/
+
+2026-10-17T22:23:20.7482794Z   if-no-files-found: warn
+2026-10-17T22:23:20.7482987Z   compression-level: 6
+2026-10-17T22:23:20.7483168Z   overwrite: false
+2026-10-17T22:23:20.7483348Z   include-hidden-files: false
+2026-10-17T22:23:20.7483538Z env:
+2026-10-17T22:23:20.7483711Z   MPLCONFIGDIR: /tmp/habitat-matplotlib
+2026-10-17T22:23:20.7484240Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:23:20.7484574Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-17T22:23:20.7484908Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:23:20.7485356Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:23:20.7485682Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T22:23:20.7485974Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-17T22:23:20.7486229Z ##[endgroup]
+2026-10-17T22:23:20.8874199Z (node:2254) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-17T22:23:20.8874872Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-17T22:23:20.8945471Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-17T22:23:20.8947402Z The least common ancestor is $CI_PROJECT_ROOT. This will be the root directory of the artifact
+2026-10-17T22:23:20.8948325Z With the provided path, there will be 1 file uploaded
+2026-10-17T22:23:20.8951859Z Artifact name is valid!
+2026-10-17T22:23:20.8952725Z Root directory input is valid!
+2026-10-17T22:23:21.1268136Z Beginning upload of artifact content to blob storage
+2026-10-17T22:23:21.1424660Z (node:2254) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-17T22:23:21.1920724Z Uploaded bytes 5547
+2026-10-17T22:23:21.2084084Z Finished uploading artifact content to blob storage!
+2026-10-17T22:23:21.2085067Z SHA256 digest of uploaded artifact zip is 315bc2d89c8e8253bb9eb731282264f52a44e59850ff5b0cf7c9a61fac99b264
+2026-10-17T22:23:21.2086144Z Finalizing artifact upload
+2026-10-17T22:23:21.6095946Z Artifact habitat-v7-browser-evidence.zip successfully finalized. Artifact ID 12116209109
+2026-10-17T22:23:21.6096806Z Artifact habitat-v7-browser-evidence has been successfully uploaded! Final size is 5547 bytes. Artifact ID is 12116209109
+2026-10-17T22:23:21.6102277Z Artifact download URL: https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39074803548/artifacts/12116209109
+2026-10-17T22:23:21.6272356Z Post job cleanup.
+2026-10-17T22:23:21.7032086Z [command]/usr/bin/git version
+2026-10-17T22:23:21.7072044Z git version 2.55.0
+2026-10-17T22:23:21.7106502Z Temporarily overriding HOME='/home/runner/work/_temp/f81ca24e-6581-40bf-8575-1f0123c95e14' before making global git config changes
+2026-10-17T22:23:21.7107568Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-17T22:23:21.7111522Z [command]/usr/bin/git config --global --add safe.directory $CI_PROJECT_ROOT
+2026-10-17T22:23:21.7145873Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T22:23:21.7176335Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-17T22:23:21.7399960Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T22:23:21.7425197Z http.https://github.com/.extraheader
+2026-10-17T22:23:21.7434512Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-17T22:23:21.7464462Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-17T22:23:21.7704882Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T22:23:21.7739830Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-17T22:23:21.8082857Z Cleaning up orphan processes
+2026-10-17T22:23:21.8325667Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

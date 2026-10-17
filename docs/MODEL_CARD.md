@@ -40,3 +40,14 @@ At existing validation-selected threshold≈0.50/margin0.16, additional-class-on
 ## V5 verification provenance
 
 No retraining occurred. Read-only verification binds the current model/config, public data, splits and evaluation/baseline/fairness reports to a recorded recomputation timestamp. The original evaluation creation timestamp is not embedded in the old JSON. See reports/evaluation_verification.json and reports/v5-ml-audit.json. Model metrics stay fixed until artifacts change. Before any human escalation the test classifier has67/300 routing errors(22.33%); remaining-route errors are26/189 without extra uncertainty and12/128 with it. Reassessment cannot clear an open human follow-up.
+
+
+## V7 independent audit addendum
+
+No classifier, training split, saved config or held-out report changed. A complete validation-score frontier shows that the smallest workload reaching 90% routing recall is 221/300 (73.67%), at cutoff 0.2622583782022477 / margin 0.23774162179775254: recall 89/98 (90.82%). No cutoff meets both 90% recall and the provisional 70% extra-review ceiling declared before analysis. This ceiling is an unvalidated operating assumption, not measured buyer capacity. The original 84.69% policy remains active; the candidate was not evaluated on final test. [Reproducible validation-only analysis](../ml/validation_policy.py).
+
+V6 conflated document percentage with a broader noisy training feature. Generator completeness is `clip(100 - 18*missing - Normal(8,12), 5,100)`, rounded to one decimal; observed training range is 21.1–100. V7 separately declares information completeness and calculates document completeness from three evidence flags. A real measurement protocol remains unvalidated. Training-only range/category checks flag unknown values or imputation and force human handling while retaining genuine model probabilities and SHAP. These are bounded safeguards, not a complete OOD detector. The preserved held-out routing rates describe the original uncertainty policy; they do not incorporate this new live-input check.
+
+Independent UI scenarios carry no ground-truth labels and do not duplicate benchmark/paired-test feature rows. They are not extra evaluation data. Group FNs remain A14/41, B3/32 and C9/23; original uncertainty routing leaves 9,1,2 missed positives respectively. Label balance and case characteristics are descriptive and do not prove why gaps occur. Identical paired predictions do not establish absence of proxy discrimination.
+
+Full evidence: [V7 remediation report](V7_FINAL_REMEDIATION_REPORT.md).

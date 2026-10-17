@@ -1,0 +1,499 @@
+{
+  "config": {
+    "argv": [
+      "/opt/hostedtoolcache/node/22.23.3/x64/bin/node",
+      "$CI_PROJECT_ROOT/frontend/node_modules/playwright/cli.js",
+      "test"
+    ],
+    "configFile": "$CI_PROJECT_ROOT/frontend/playwright.config.ts",
+    "rootDir": "$CI_PROJECT_ROOT/frontend/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/Advaith-Ganesh/HABITAT/commit/bcc1833a9a9e5e772f7d4098441299cd5457a894",
+        "commitHash": "bcc1833a9a9e5e772f7d4098441299cd5457a894",
+        "buildHref": "https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39076409671"
+      },
+      "gitCommit": {
+        "shortHash": "bcc1833",
+        "hash": "bcc1833a9a9e5e772f7d4098441299cd5457a894",
+        "subject": "Give completed mobile progress controls explicit accessible names",
+        "body": "Give completed mobile progress controls explicit accessible names",
+        "author": {
+          "name": "Advaith-Ganesh",
+          "email": "advaithganesh.2@gmail.com",
+          "time": 1792277179000
+        },
+        "committer": {
+          "name": "Advaith-Ganesh",
+          "email": "advaithganesh.2@gmail.com",
+          "time": 1792277179000
+        },
+        "branch": "habitat-v7-remediation"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "$CI_PROJECT_ROOT/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/Advaith-Ganesh/HABITAT/commit/bcc1833a9a9e5e772f7d4098441299cd5457a894",
+            "commitHash": "bcc1833a9a9e5e772f7d4098441299cd5457a894",
+            "buildHref": "https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39076409671"
+          },
+          "gitCommit": {
+            "shortHash": "bcc1833",
+            "hash": "bcc1833a9a9e5e772f7d4098441299cd5457a894",
+            "subject": "Give completed mobile progress controls explicit accessible names",
+            "body": "Give completed mobile progress controls explicit accessible names",
+            "author": {
+              "name": "Advaith-Ganesh",
+              "email": "advaithganesh.2@gmail.com",
+              "time": 1792277179000
+            },
+            "committer": {
+              "name": "Advaith-Ganesh",
+              "email": "advaithganesh.2@gmail.com",
+              "time": 1792277179000
+            },
+            "branch": "habitat-v7-remediation"
+          },
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "$CI_PROJECT_ROOT/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "$CI_PROJECT_ROOT/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/Advaith-Ganesh/HABITAT/commit/bcc1833a9a9e5e772f7d4098441299cd5457a894",
+            "commitHash": "bcc1833a9a9e5e772f7d4098441299cd5457a894",
+            "buildHref": "https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39076409671"
+          },
+          "gitCommit": {
+            "shortHash": "bcc1833",
+            "hash": "bcc1833a9a9e5e772f7d4098441299cd5457a894",
+            "subject": "Give completed mobile progress controls explicit accessible names",
+            "body": "Give completed mobile progress controls explicit accessible names",
+            "author": {
+              "name": "Advaith-Ganesh",
+              "email": "advaithganesh.2@gmail.com",
+              "time": 1792277179000
+            },
+            "committer": {
+              "name": "Advaith-Ganesh",
+              "email": "advaithganesh.2@gmail.com",
+              "time": 1792277179000
+            },
+            "branch": "habitat-v7-remediation"
+          },
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "$CI_PROJECT_ROOT/frontend/e2e",
+        "snapshotDir": "$CI_PROJECT_ROOT/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8001",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "headless": true,
+          "browserName": "chromium",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../reports/v7-e2e.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": ".venv/bin/python -m scripts.prepare_e2e && .venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8001",
+      "cwd": "$CI_PROJECT_ROOT/",
+      "url": "http://127.0.0.1:8001/health",
+      "reuseExistingServer": false,
+      "env": {
+        "HABITAT_DATABASE_URL": "sqlite:///$CI_PROJECT_ROOT/.test-runtime/browser.db",
+        "MPLCONFIGDIR": "$CI_PROJECT_ROOT/.test-runtime/matplotlib"
+      },
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "habitat.spec.ts",
+      "file": "habitat.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Applicant to administrator to applicant: persistent review",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4267,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T22:47:51.497Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6bb327b7a2beed86840-50538e6de386593b95c1",
+          "file": "habitat.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "Merged audit and real sandbox comparisons",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2839,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T22:47:56.366Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6bb327b7a2beed86840-5b1fff14bc3d47b32f42",
+          "file": "habitat.spec.ts",
+          "line": 153,
+          "column": 1
+        },
+        {
+          "title": "CSV and saved reports available",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T22:47:59.219Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6bb327b7a2beed86840-c70222df74f93b2deda3",
+          "file": "habitat.spec.ts",
+          "line": 191,
+          "column": 1
+        },
+        {
+          "title": "Idempotent API retries and simultaneous requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 70,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T22:47:59.245Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6bb327b7a2beed86840-9fccf3386c5226041374",
+          "file": "habitat.spec.ts",
+          "line": 201,
+          "column": 1
+        },
+        {
+          "title": "Lost successful response can be retried after reload without duplication",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1567,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T22:47:59.324Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6bb327b7a2beed86840-0daf40b4d320bb1a71b5",
+          "file": "habitat.spec.ts",
+          "line": 212,
+          "column": 1
+        },
+        {
+          "title": "Out-of-training inputs and explanation failure stay human-led",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 600,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T22:48:00.903Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6bb327b7a2beed86840-e107bebac79488e86d73",
+          "file": "habitat.spec.ts",
+          "line": 246,
+          "column": 1
+        },
+        {
+          "title": "Viewport 375, full labels and accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7765,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T22:48:01.516Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6bb327b7a2beed86840-fec5d52f6a2633a3e999",
+          "file": "habitat.spec.ts",
+          "line": 261,
+          "column": 3
+        },
+        {
+          "title": "Viewport 768, full labels and accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8123,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T22:48:09.296Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6bb327b7a2beed86840-955671df5a2f4e4d156a",
+          "file": "habitat.spec.ts",
+          "line": 261,
+          "column": 3
+        },
+        {
+          "title": "Viewport 1280, full labels and accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8728,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T22:48:17.432Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e6bb327b7a2beed86840-e5b7a0bea5027fe56c82",
+          "file": "habitat.spec.ts",
+          "line": 261,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-17T22:47:47.865Z",
+    "duration": 38381.999,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

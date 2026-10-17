@@ -1,0 +1,11 @@
+{
+  "protected_10_artifacts_unchanged": true,
+  "credential_pattern_scan": {
+    "checked": 237,
+    "matches": [],
+    "scope": "Common credential signatures; not an adversarial security audit"
+  },
+  "documentation_links_checked": 95,
+  "verified_source_commit": "bcc1833a9a9e5e772f7d4098441299cd5457a894",
+  "all_76_source_files_match_green_CI": true
+}

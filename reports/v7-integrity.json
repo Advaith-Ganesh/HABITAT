@@ -1,0 +1,185 @@
+{
+  "audited_commit": "7fdc928d9c23a14d7222c0797a2cbb304f0d8982",
+  "retrained": false,
+  "protected_sha256": {
+    "models/habitat_review_model.joblib": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+    "models/config.json": "8d9b47559e5debdc02083cab4fa5747db73437497804ab5b56a385d93d59dc0d",
+    "data/public/habitat_synthetic_2000.csv": "196d2f715cbc959dac5c27e77d3db2edd31b6cafab1a0a296a9f445a8444f255",
+    "data/public/counterfactual_400.csv": "e070599bfb6b2e8bacc5253dd8e50039d146fed92755c5451b6dc7242647a483",
+    "data/splits/train.csv": "d1f2446c579bad6acc11561dec9bb1a63fc6484629f2c2dfc135a5ef85f36f08",
+    "data/splits/validation.csv": "6bb28fee10d43cc589ee334f37f5bf878264e193ebb89e1dc83ced694eccab67",
+    "data/splits/test.csv": "0a93a2a447bf418e4db4430e868ac0a25a56f201d063dac7d682d27a4d26c80a",
+    "reports/evaluation.json": "59743690a0f51b0c7be0e7239f45127e504ec84542926af2a17a620a1752e4ef",
+    "reports/model_comparison.json": "66344350fb1dc1400a7b3e5e1a65018bcbe4c06e1fe07f69e1ad32ea8da0f670",
+    "reports/fairness.json": "ff0fd65ca25b79c42f4b2083b76dd2e73aa894433fbccdab6b41f5659f0d93bb"
+  },
+  "all_10_artifacts_unchanged": true,
+  "original_database_unchanged": true,
+  "original_database_counts": {
+    "applications": 13,
+    "events": 27
+  },
+  "original_source_paths_present": 217,
+  "live_browser_case": {
+    "id": "DEMO-b38e22c9",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 4,
+      "monthly_income": 1800.0,
+      "monthly_housing_cost": 600.0,
+      "current_bedrooms": 1,
+      "housing_situation": "stable",
+      "housing_insecurity_reported": 0,
+      "missing_document_count": 1,
+      "income_document_available": 0,
+      "identity_document_available": 1,
+      "housing_evidence_available": 1,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 0,
+      "application_completeness_score": 80.0
+    },
+    "assessment": {
+      "score": 0.46126532203493115,
+      "classification": 0,
+      "category": "Routine human review workflow",
+      "uncertain": true,
+      "requires_review": true,
+      "input_validation": {
+        "warnings": [],
+        "imputed_features": [],
+        "out_of_distribution": false,
+        "scope": "Training-range/category checks only. Novel combinations, measurement mismatch and real-world distribution shift may pass these checks."
+      },
+      "threshold": 0.5000000000000002,
+      "failure": null,
+      "limitations": "Synthetic-label agreement only. Neither approval nor rejection; score is not a guarantee.",
+      "model_version": "rf-1.0",
+      "assessed_at": "2026-10-17T22:23:31.153038+00:00",
+      "model_sha256": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+      "policy_evidence": {
+        "pack_id": "england-demo",
+        "version": "1.0.0",
+        "prompts": [
+          "Ask a human to clarify missing evidence under the fictional intake protocol."
+        ],
+        "source_url": "https://www.gov.uk/guidance/allocation-of-accommodation-guidance-for-local-authorities",
+        "applicability": "Fictional intake routing only; not an allocation scheme or eligibility determination.",
+        "warning": "Local authorities operate their own allocation schemes. A qualified human must verify applicable local policy.",
+        "origin": "Fictional demo assumptions; these prompts are not extracted statutory rules."
+      }
+    },
+    "status": "resolved",
+    "provenance": "Entirely synthetic; not real housing applicants",
+    "history": [
+      {
+        "timestamp": "2026-10-17T22:23:10.915781+00:00",
+        "action": "submitted",
+        "detail": {
+          "synthetic_only": true
+        }
+      },
+      {
+        "timestamp": "2026-10-17T22:23:31.158825+00:00",
+        "action": "assessed",
+        "detail": {
+          "score": 0.46126532203493115,
+          "classification": 0,
+          "category": "Routine human review workflow",
+          "uncertain": true,
+          "requires_review": true,
+          "input_validation": {
+            "warnings": [],
+            "imputed_features": [],
+            "out_of_distribution": false,
+            "scope": "Training-range/category checks only. Novel combinations, measurement mismatch and real-world distribution shift may pass these checks."
+          },
+          "threshold": 0.5000000000000002,
+          "failure": null,
+          "limitations": "Synthetic-label agreement only. Neither approval nor rejection; score is not a guarantee.",
+          "model_version": "rf-1.0",
+          "assessed_at": "2026-10-17T22:23:31.153038+00:00",
+          "model_sha256": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+          "policy_evidence": {
+            "pack_id": "england-demo",
+            "version": "1.0.0",
+            "prompts": [
+              "Ask a human to clarify missing evidence under the fictional intake protocol."
+            ],
+            "source_url": "https://www.gov.uk/guidance/allocation-of-accommodation-guidance-for-local-authorities",
+            "applicability": "Fictional intake routing only; not an allocation scheme or eligibility determination.",
+            "warning": "Local authorities operate their own allocation schemes. A qualified human must verify applicable local policy.",
+            "origin": "Fictional demo assumptions; these prompts are not extracted statutory rules."
+          }
+        }
+      },
+      {
+        "timestamp": "2026-10-17T22:23:40.620842+00:00",
+        "action": "human_override",
+        "detail": {
+          "outcome": "request_evidence",
+          "reason": "Please clarify the missing income evidence and confirm the declared intake information.",
+          "workflow_status": "pending"
+        }
+      },
+      {
+        "timestamp": "2026-10-17T22:24:45.432142+00:00",
+        "action": "human_override",
+        "detail": {
+          "outcome": "routine",
+          "reason": "Administrative intake review completed after checking the synthetic declarations. No housing decision is made.",
+          "workflow_status": "resolved"
+        }
+      }
+    ],
+    "documents": {
+      "required": 3,
+      "present_count": 2,
+      "percentage": 66.66666666666667,
+      "present": [
+        "Identity evidence",
+        "Current housing evidence"
+      ],
+      "missing": [
+        "Income evidence"
+      ],
+      "basis": "Three document categories in the demo intake protocol; declarations only, no uploads or legal sufficiency checks."
+    },
+    "latest_review": {
+      "outcome": "routine",
+      "reason": "Administrative intake review completed after checking the synthetic declarations. No housing decision is made.",
+      "workflow_status": "resolved",
+      "timestamp": "2026-10-17T22:24:45.432142+00:00"
+    }
+  },
+  "actual_model_score_matches_api": true,
+  "shap_additivity_error": 4.773959005888173e-15,
+  "process_restart_idempotency": {
+    "application_id": "DEMO-e25bcedd",
+    "same_reference_after_full_process_restart": true,
+    "replayed_header": true,
+    "duplicate_prevented": true
+  },
+  "get_endpoints_passed": 20,
+  "http_dataset_records": 2000,
+  "sandbox_reset_backup_verified": true,
+  "database_mode": "0o600",
+  "model_failure_scenario": {
+    "method": "Isolated port8002 server replaces artifact loader with controlled OSError; no model file edited",
+    "score": null,
+    "human_escalation_recorded": true,
+    "misleading_toast_fixed_and_browser_verified": true
+  },
+  "health": {
+    "status": "ok",
+    "sandbox": true,
+    "model": {
+      "ready": true,
+      "version": "rf-1.0",
+      "trees": 180,
+      "training_records": 1400
+    },
+    "database": "available",
+    "application_version": "7.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "exact_script": "MPLCONFIGDIR=./.test-runtime/matplotlib bash scripts/start_backend.sh",
+  "database_override_unset": true,
+  "default_database": ".test-runtime/sandbox.db",
+  "cases": 12,
+  "independent_ui_scenarios_only": true,
+  "health": {
+    "status": "ok",
+    "sandbox": true,
+    "model": {
+      "ready": true,
+      "version": "rf-1.0",
+      "trees": 180,
+      "training_records": 1400
+    },
+    "database": "available",
+    "application_version": "7.0.0"
+  }
+}

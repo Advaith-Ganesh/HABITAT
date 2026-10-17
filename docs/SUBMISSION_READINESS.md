@@ -1,17 +1,11 @@
-# V6 submission readiness
+# V7 submission readiness
 
-The tested synthetic local workflow passes end to end. No critical core-workflow defect was observed. This is not an operational housing service, and the standalone browser suite is not green.
+See [V7_FINAL_REMEDIATION_REPORT.md](V7_FINAL_REMEDIATION_REPORT.md) for the final source run and complete PASS / FAIL / NOT TESTED evidence.
 
-| Check | Status | Evidence |
-|---|---|---|
-| Applicant submission → administrator → RF → SHAP → review → applicant | PASS | Actual browser refs DEMO-41a21175 / DEMO-cd4ec01f; screenshots and integration audit |
-| Multiple applications, refresh, backend restart | PASS | SQLite session associations and saved history; v6-integrity.json |
-| Backend/API suite | PASS | 101 tests, 15 dependency warnings |
-| Frontend lint/types/production build | PASS | reports/v6-*.txt |
-| Data/model/report preservation and no leakage | PASS | Read-only v6-ml-audit.json and v6-integrity.json |
-| Standalone Playwright browser execution | FAIL | Five Chrome launch failures before assertions; request-only test passes |
-| Mobile viewport matrix, axe, full accessibility audit | NOT TESTED | Browser-launch limitation |
-| Validation recall ≥90% target | FAIL | 84.7% validation routing recall; original model retained |
-| Real-world housing performance / production security / deployment | NOT TESTED | Synthetic local prototype; no auth/RBAC or legal allocation engine |
+The model, 2,000-record source, 1,400/300/300 split and separate fairness suite remain intact. Retry safety, independent sandbox fixtures, training-input checks, responsive navigation, accessible error recovery and keyboard table scrolling were remediated in the existing product.
 
-Full evidence, exact routes, modified files and commands: [FINAL_INTEGRATION_AUDIT.md](FINAL_INTEGRATION_AUDIT.md).
+The active 90% validation routing-recall target remains **FAIL** at84.69%. A validation-only alternative reaches90.82% at73.67% extra-review workload, above the provisional70% ceiling; no replacement was selected or tested on final test. Fairness gaps remain descriptive concerns.
+
+Local standalone browser launch remains blocked by macOS Mach-port permissions. Linux CI and real in-app browser results are reported separately; no tests were disabled. Physical devices, screen readers, other browser engines, production security and real-world housing performance are **NOT TESTED**.
+
+The final tested source passes111 Python tests and9 Linux Playwright tests with0 skipped; lint, types, build and the375/768/1280 axe/interaction matrix pass. The specifically tested synthetic local workflow is demonstration-ready within these bounds. No production deployment or actual housing allocation is authorized or implemented. Team names and a genuine video still require human input.

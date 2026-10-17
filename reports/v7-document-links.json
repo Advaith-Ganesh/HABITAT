@@ -1,0 +1,477 @@
+[
+  {
+    "document": "README.md",
+    "target": "docs/brand/synthetic.svg",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/brand/license.svg",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/DEMO_CHECKLIST.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/screenshots/v7-live-overview.png",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/DEMO_CHECKLIST.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/PITCH_V7.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/screenshots/v7-live-assessment.png",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "requirements-lock.txt",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "frontend/package-lock.json",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "data/public/habitat_synthetic_2000.csv",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "data/DATASET_CARD.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "data/DATA_DICTIONARY.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "data/generate_dataset.py",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "data/public/counterfactual_400.csv",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "ml/train.py",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/MODEL_CARD.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "reports/evaluation_verification.json",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "reports/evaluation.json",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "reports/model_comparison.json",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "reports/v7-ml-audit.json",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "ml/explain.py",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "reports/fairness.json",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/screenshots/v7-runner-sandbox.png",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "reports/v5-safeguard.json",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": ".env.example",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/PITCH_V7.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "policy_packs/schema.json",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "backend/policy.py",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "reports/v7-integrity.json",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/SUBMISSION_READINESS.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/DEMO_CHECKLIST.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/JUDGE_QA.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/MODEL_CARD.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "data/DATASET_CARD.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "LICENSE",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "data/LICENSE.md",
+    "valid": true
+  },
+  {
+    "document": "README.md",
+    "target": "docs/third_party/Inter-OFL.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-e2e-local-output.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-ci-final-evidence.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../.github/workflows/verification.yml",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../ml/validation_policy.py",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-validation-policy-investigation.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-fairness-input-investigation.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../ml/input_audit.py",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../data/demo/applications.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../scripts/reset_sandbox.py",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-integrity.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "PITCH_V7.md",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-pytest.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-source-verification.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-pytest.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-ci-final-log.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-lint.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-typecheck.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-frontend-build.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-e2e-linux.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-ci-final-evidence.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "screenshots/v7-runner-375.png",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "screenshots/v7-runner-applicant-375.png",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "screenshots/v7-runner-fairness-768.png",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-contrast-output.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-ml-audit.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-fairness-input-investigation.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-endpoints.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-integrity.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-restart-idempotency.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-default-startup.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-readme-validation.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-ci-first-log.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-ci-second-log.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-ci-fourth-log.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-ci-fifth-log.txt",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "../reports/v7-protected-artifacts.json",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "screenshots/v7-live-overview.png",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "screenshots/v7-live-assessment.png",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "screenshots/v7-live-applicant.png",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "screenshots/v7-live-fairness.png",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "screenshots/v7-live-outage.png",
+    "valid": true
+  },
+  {
+    "document": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+    "target": "screenshots/v7-live-model-fallback.png",
+    "valid": true
+  },
+  {
+    "document": "docs/PITCH_V7.md",
+    "target": "../README.md",
+    "valid": true
+  },
+  {
+    "document": "docs/PITCH_V7.md",
+    "target": "DEMO_CHECKLIST.md",
+    "valid": true
+  },
+  {
+    "document": "docs/PITCH_V7.md",
+    "target": "MODEL_CARD.md",
+    "valid": true
+  },
+  {
+    "document": "docs/PITCH_V7.md",
+    "target": "V7_FINAL_REMEDIATION_REPORT.md",
+    "valid": true
+  },
+  {
+    "document": "docs/PITCH_V7.md",
+    "target": "../reports/v7-validation-policy-investigation.json",
+    "valid": true
+  },
+  {
+    "document": "docs/PITCH_V7.md",
+    "target": "../reports/v7-fairness-input-investigation.json",
+    "valid": true
+  },
+  {
+    "document": "docs/DEMO_CHECKLIST.md",
+    "target": "V7_FINAL_REMEDIATION_REPORT.md",
+    "valid": true
+  },
+  {
+    "document": "docs/DEMO_CHECKLIST.md",
+    "target": "PITCH_V7.md",
+    "valid": true
+  },
+  {
+    "document": "docs/MODEL_CARD.md",
+    "target": "../ml/validation_policy.py",
+    "valid": true
+  },
+  {
+    "document": "docs/MODEL_CARD.md",
+    "target": "V7_FINAL_REMEDIATION_REPORT.md",
+    "valid": true
+  },
+  {
+    "document": "docs/SUBMISSION_READINESS.md",
+    "target": "V7_FINAL_REMEDIATION_REPORT.md",
+    "valid": true
+  }
+]

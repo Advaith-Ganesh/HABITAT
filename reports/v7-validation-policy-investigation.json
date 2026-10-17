@@ -1,9 +1,13 @@
 {
   "selection_data": "validation only; final test not loaded by this analysis",
   "model_retrained": false,
-  "provisional_workload_ceiling": 0.7,
+  "active_policy_changed": false,
   "target": 0.9,
+  "provisional_workload_ceiling": 0.7,
+  "ceiling_status": "Operating assumption declared before exploration; not a validated buyer capacity or universal definition of reasonable workload.",
   "original": {
+    "threshold": 0.5000000000000002,
+    "uncertainty_margin": 0.16,
     "routing_recall": 0.8469387755102041,
     "extra_review_rate": 0.6366666666666667
   },
@@ -16,6 +20,11 @@
     "missed_positive_count": 9
   },
   "feasible_within_ceiling": [],
+  "decision": "Retain original policy. No monotone score cutoff meets both the recall target and provisional capacity ceiling. A larger review budget could support the documented validation candidate; this requires an operating decision, not a claim that 90% was achieved by the active policy.",
+  "candidate_test_evaluation": "NOT PERFORMED: no replacement policy selected; candidate was not evaluated on final test.",
+  "validation_sha256": "6bb28fee10d43cc589ee334f37f5bf878264e193ebb89e1dc83ced694eccab67",
+  "model_sha256": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+  "active_config_sha256": "8d9b47559e5debdc02083cab4fa5747db73437497804ab5b56a385d93d59dc0d",
   "frontier": [
     {
       "cutoff": 0.9217428850960229,
@@ -2025,6 +2034,5 @@
       "extra_review_count": 300,
       "missed_positive_count": 0
     }
-  ],
-  "validation_sha256": "6bb28fee10d43cc589ee334f37f5bf878264e193ebb89e1dc83ced694eccab67"
+  ]
 }

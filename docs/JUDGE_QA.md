@@ -122,7 +122,7 @@ Expert-labelled and lawfully governed data, subgroup outcomes, caseworker usabil
 
 ## 31. What testing really ran?
 
-78 backend/API tests passed; lint, TypeScript and Vite build passed. In-app browser journey succeeded. One standalone request-only test passed; five browser cases could not launch Chrome, so their assertions and axe/mobile checks are not tested.
+V7 has111 passing backend/API tests plus lint, TypeScript, production build and real in-app browser checks. The complete Linux Playwright suite covers9 tests and375/768/1280 viewport/axe checks; see V7_FINAL_REMEDIATION_REPORT.md for the exact final source run. Restricted local macOS still has2 request passes and7 browser-launch failures before assertions. These environments are reported separately.
 
 ## 32. What would you show judges?
 
@@ -134,7 +134,7 @@ Codex assisted implementation, tests, synthetic generation and documentation. Ru
 
 ## 34. Can this be submitted as production-ready?
 
-No. It is ready only for the tested local synthetic desktop demonstration. Missed validation target, subgroup disparities and incomplete mobile/accessibility testing remain explicit.
+No. Only the verified local synthetic demonstration is in scope. The active validation target is missed and subgroup disparities remain. Linux browser viewport/axe checks do not establish production security, physical-device/screen-reader accessibility or real-world housing fairness.
 
 
 ## 35. What changed in V4?
@@ -143,7 +143,7 @@ Three applicant links and exactly five administrator tabs. Submission saves befo
 
 ## 36. How is document completeness calculated?
 
-Three declared demo categories: income, identity and current-housing evidence. Present/3×100, so two present is66.7%. It is separate from model probability and not a statutory requirement. All eight flag combinations are tested.
+Three declared demo categories: income, identity and current-housing evidence. Present/3×100, so two present is66.7%. It is separate from model probability and not a statutory requirement. V7 also separately declares the broader intake-information completeness input; its real-world measurement remains unvalidated. All eight document-flag combinations are tested.
 
 ## 37. What measurable safeguard did you evaluate?
 
@@ -156,7 +156,7 @@ No. It is a demo-only role switch with openly loadable synthetic references. Pro
 
 ## 39. Why do some dashboard values stay constant?
 
-Held-out evaluation values intentionally stay constant for fixed model/data artifacts and are labelled accordingly. Live application/status counters query SQLite and refetch after mutation events. Their sources are mapped in DATA_VALUE_AUDIT_V5.md.
+Held-out evaluation values intentionally stay constant for fixed model/data artifacts and are labelled accordingly. Live application/status counters query SQLite and refetch after mutation events. V7_FINAL_REMEDIATION_REPORT.md documents current sources, changed input mapping and preserved historical evidence.
 
 ## 40. What does the evaluation date mean?
 

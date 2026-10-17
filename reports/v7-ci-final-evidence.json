@@ -1,0 +1,35 @@
+{
+  "source_commit": "bcc1833a9a9e5e772f7d4098441299cd5457a894",
+  "run_id": 39076409671,
+  "url": "https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39076409671",
+  "platform": "Ubuntu Linux, managed Playwright Chromium",
+  "conclusion": "success",
+  "backend_tests_passed": 111,
+  "backend_warnings": 15,
+  "lint": "PASS",
+  "typescript": "PASS",
+  "production_build": "PASS",
+  "browser_stats": {
+    "startTime": "2026-10-17T22:47:47.865Z",
+    "duration": 38381.999,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "artifact_id": 12117137696,
+  "artifact_sha256": "ff4f0fc54e8668cea82831b1fb5fbe65f91cd12bf7337f30bc76d0da8d2aaf8e",
+  "artifact_crc_and_sha_verified": true,
+  "screenshots": [
+    "docs/screenshots/v7-runner-375.png",
+    "docs/screenshots/v7-runner-1280.png",
+    "docs/screenshots/v7-runner-768.png",
+    "docs/screenshots/v7-runner-applicant-1280.png",
+    "docs/screenshots/v7-runner-applicant-768.png",
+    "docs/screenshots/v7-runner-applicant-375.png",
+    "docs/screenshots/v7-runner-fairness-1280.png",
+    "docs/screenshots/v7-runner-fairness-375.png",
+    "docs/screenshots/v7-runner-fairness-768.png",
+    "docs/screenshots/v7-runner-sandbox.png"
+  ]
+}

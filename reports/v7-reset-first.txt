@@ -1,0 +1,2 @@
+Independent UI scenarios restored: $PROJECT_ROOT/.test-runtime/sandbox.db
+Start backend with HABITAT_DATABASE_URL=sqlite:///./.test-runtime/sandbox.db

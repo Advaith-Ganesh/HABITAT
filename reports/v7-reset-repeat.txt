@@ -1,0 +1,3 @@
+Recoverable backup: $PROJECT_ROOT/.test-runtime/backups/sandbox-20261017T222231-38807ec2.db
+Independent UI scenarios restored: $PROJECT_ROOT/.test-runtime/sandbox.db
+Start backend with HABITAT_DATABASE_URL=sqlite:///./.test-runtime/sandbox.db

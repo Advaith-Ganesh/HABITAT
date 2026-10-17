@@ -1,5 +1,5 @@
-........................................................................ [ 65%]
-......................................                                   [100%]
+........................................................................ [ 64%]
+.......................................                                  [100%]
 =============================== warnings summary ===============================
 .venv/lib/python3.12/site-packages/starlette/testclient.py:37
   $PROJECT_ROOT/.venv/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
@@ -32,4 +32,4 @@
     ParserElement.enablePackrat()
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-110 passed, 15 warnings in 1.62s
+111 passed, 15 warnings in 1.65s

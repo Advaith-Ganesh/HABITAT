@@ -1,0 +1,29 @@
+{
+  "run_id": 39075258803,
+  "commit": "90f2bcce5c52bc3e220410ac0841fbcbfef9350e",
+  "url": "https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39075258803",
+  "artifact_id": 12116608190,
+  "artifact_sha256": "94b37d407e6140e0410aa35d526684e4084004a1d53238d45c52f232dd722b3f",
+  "download_crc_verified": true,
+  "screenshots": [
+    "docs/screenshots/v7-runner-375.png",
+    "docs/screenshots/v7-runner-1280.png",
+    "docs/screenshots/v7-runner-768.png",
+    "docs/screenshots/v7-runner-applicant-1280.png",
+    "docs/screenshots/v7-runner-applicant-768.png",
+    "docs/screenshots/v7-runner-applicant-375.png",
+    "docs/screenshots/v7-runner-fairness-1280.png",
+    "docs/screenshots/v7-runner-fairness-375.png",
+    "docs/screenshots/v7-runner-fairness-768.png",
+    "docs/screenshots/v7-runner-sandbox.png"
+  ],
+  "stats": {
+    "startTime": "2026-10-17T22:30:53.778Z",
+    "duration": 40280.460999999996,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "scope": "Historical first green CI run. Screenshot paths describe that immutable artifact ZIP; current repository screenshots come from the final run in v7-ci-final-evidence.json."
+}

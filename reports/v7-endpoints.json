@@ -1,0 +1,82 @@
+[
+  {
+    "path": "/api/applicant/applications",
+    "status": 200
+  },
+  {
+    "path": "/api/applications",
+    "status": 200
+  },
+  {
+    "path": "/api/applications/DEMO-b38e22c9",
+    "status": 200
+  },
+  {
+    "path": "/api/applications/DEMO-b38e22c9/explanation",
+    "status": 200
+  },
+  {
+    "path": "/api/audit/investigation",
+    "status": 200
+  },
+  {
+    "path": "/api/dashboard",
+    "status": 200
+  },
+  {
+    "path": "/api/dataset/card",
+    "status": 200
+  },
+  {
+    "path": "/api/dataset/dictionary",
+    "status": 200
+  },
+  {
+    "path": "/api/dataset/download",
+    "status": 200
+  },
+  {
+    "path": "/api/dataset/metadata",
+    "status": 200
+  },
+  {
+    "path": "/api/fairness/metrics",
+    "status": 200
+  },
+  {
+    "path": "/api/model/baseline",
+    "status": 200
+  },
+  {
+    "path": "/api/model/metadata",
+    "status": 200
+  },
+  {
+    "path": "/api/model/metrics",
+    "status": 200
+  },
+  {
+    "path": "/api/model/safeguard",
+    "status": 200
+  },
+  {
+    "path": "/api/policies",
+    "status": 200
+  },
+  {
+    "path": "/api/reviews",
+    "status": 200
+  },
+  {
+    "path": "/docs",
+    "status": 200
+  },
+  {
+    "path": "/health",
+    "status": 200
+  },
+  {
+    "path": "/openapi.json",
+    "status": 200
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "all_10_unchanged": true,
+  "sha256": {
+    "models/habitat_review_model.joblib": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+    "models/config.json": "8d9b47559e5debdc02083cab4fa5747db73437497804ab5b56a385d93d59dc0d",
+    "data/public/habitat_synthetic_2000.csv": "196d2f715cbc959dac5c27e77d3db2edd31b6cafab1a0a296a9f445a8444f255",
+    "data/public/counterfactual_400.csv": "e070599bfb6b2e8bacc5253dd8e50039d146fed92755c5451b6dc7242647a483",
+    "data/splits/train.csv": "d1f2446c579bad6acc11561dec9bb1a63fc6484629f2c2dfc135a5ef85f36f08",
+    "data/splits/validation.csv": "6bb28fee10d43cc589ee334f37f5bf878264e193ebb89e1dc83ced694eccab67",
+    "data/splits/test.csv": "0a93a2a447bf418e4db4430e868ac0a25a56f201d063dac7d682d27a4d26c80a",
+    "reports/evaluation.json": "59743690a0f51b0c7be0e7239f45127e504ec84542926af2a17a620a1752e4ef",
+    "reports/model_comparison.json": "66344350fb1dc1400a7b3e5e1a65018bcbe4c06e1fe07f69e1ad32ea8da0f670",
+    "reports/fairness.json": "ff0fd65ca25b79c42f4b2083b76dd2e73aa894433fbccdab6b41f5659f0d93bb"
+  }
+}
