@@ -676,7 +676,7 @@ export function HumanReviewPanel({
           <p key={p}>{p}</p>
         ))}
         <p>
-          Demo intake prompts are fictional assumptions. They are not statutory
+          Intake prompts use project-defined assumptions. They are not statutory
           eligibility rules.
         </p>
         <button className="text-button" onClick={onPolicy}>
@@ -706,7 +706,7 @@ export function PolicyReferenceCard({ pack }: { pack: Json }) {
           <h3>{pack.name}</h3>
           <p className="muted">
             {pack.functional
-              ? "Source linked · demo rules only"
+              ? "Source linked · project-defined intake prompts"
               : "No verified country-specific rules"}
           </p>
         </div>
@@ -716,7 +716,7 @@ export function PolicyReferenceCard({ pack }: { pack: Json }) {
         <>
           <dl>
             <dt>Programme / version</dt>
-            <dd>Fictional intake protocol · {pack.version}</dd>
+            <dd>Project-defined intake framework · {pack.version}</dd>
             <dt>Reference checked</dt>
             <dd>
               {pack.reference_date} · source update {pack.source_updated}

@@ -1,4 +1,4 @@
-# V7 two-minute applicant-to-caseworker demonstration
+# Two-minute applicant-to-caseworker product walkthrough
 
 Start `bash scripts/start_backend.sh` and `bash scripts/start_frontend.sh` from the repository root. Open http://127.0.0.1:5173. This is a local synthetic sandbox; portal switching is not authentication.
 
@@ -8,8 +8,8 @@ Start `bash scripts/start_backend.sh` and `bash scripts/start_frontend.sh` from 
 4. **1:15–1:45 — Fairness & Sandbox:** show RF versus checklist, the unmet validation target and workload trade-off. Run group analysis; inspect false-negative counts and case mix. Rerun 200 paired comparisons. Say: “Identical paired predictions do not establish absence of proxy discrimination.”
 5. **1:45–2:00 — Honest failure and value:** explain that missing artifacts produce a no-score human fallback, SHAP failures show errors rather than invented reasons, and out-of-training inputs require human handling. The automated browser suite fault-injects explanation failure and lost submission responses. A real backend outage/recovery and process restart were also tested.
 
-Optional extended demo: submit the same unconfirmed request again after a lost response; its stable UUID key returns the same reference. Start another application after confirmed success to create a genuinely new request. Native invalid-input errors are announced, mobile labels remain visible and scrollable audit tables accept keyboard focus.
+Optional extended walkthrough: submit the same unconfirmed request again after a lost response; its stable UUID key returns the same reference. Start another application after confirmed success to create a genuinely new request. Native invalid-input errors are announced, mobile labels remain visible and scrollable audit tables accept keyboard focus.
 
-Fresh/reset demo cases use DEMO-SEED-001 through DEMO-SEED-012 and are independent of held-out data. To reset, stop the backend and run `.venv/bin/python -m scripts.reset_sandbox`; an existing sandbox is backed up first. Do not reset historical evidence.
+The independent sandbox scenarios use DEMO-SEED-001 through DEMO-SEED-012 and are independent of held-out data. To reset, stop the backend and run `.venv/bin/python -m scripts.reset_sandbox`; an existing sandbox is backed up first. Do not reset historical evidence.
 
 [Final verified results and exact limitations](V7_FINAL_REMEDIATION_REPORT.md) · [Judging pitch](PITCH_V7.md).

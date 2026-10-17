@@ -1,0 +1,465 @@
+{
+  "status": "PASS",
+  "scope": "Exact-case local links, Markdown fragments, shell syntax, safe self-contained SVG, chart source/output hashes, and ten protected artifacts.",
+  "link_count": 91,
+  "links": [
+    {
+      "document": "README.md",
+      "target": "docs/brand/synthetic.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/brand/license.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "#quick-start-for-mac",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "#live-workflow",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "#model-evidence",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "#responsible-ai",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "#meet-the-team",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/screenshots/v7-live-overview.png",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/DEMO_CHECKLIST.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/JUDGE_QA.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/screenshots/v7-live-applicant.png",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/screenshots/v7-live-assessment.png",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/screenshots/v7-live-fairness.png",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/screenshots/v7-showcase-human-review.png",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/DEMO_CHECKLIST.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/V7_FINAL_REMEDIATION_REPORT.md#actual-browser-journey-and-failure-demonstration",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/MODEL_CARD.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "ml/train.py",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/charts/model-comparison.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "reports/model_comparison.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "reports/evaluation.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/charts/confusion-matrix.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "reports/evaluation.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/charts/uncertainty-workload.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "reports/v5-safeguard.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/charts/validation-tradeoff.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "reports/v7-validation-policy-investigation.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/charts/fairness-fnr.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "reports/fairness.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "reports/v7-fairness-input-investigation.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "requirements-lock.txt",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "frontend/package-lock.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/charts/dataset-split.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "data/public/habitat_synthetic_2000.csv",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "data/splits/train.csv",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "data/splits/validation.csv",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "data/splits/test.csv",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "data/public/counterfactual_400.csv",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "reports/splits.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "data/generate_dataset.py",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "data/DATASET_CARD.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "data/DATA_DICTIONARY.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/MODEL_CARD.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "reports/v7-protected-artifacts.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/charts/generate.py",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/charts/sources.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": ".env.example",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/V7_FINAL_REMEDIATION_REPORT.md#database-reset-and-local-security-boundary",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "reports/v7-ci-final-evidence.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/V7_FINAL_REMEDIATION_REPORT.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/PITCH_V7.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "policy_packs/schema.json",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/charts/team-contributions.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/DEMO_CHECKLIST.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/MODEL_CARD.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "data/DATASET_CARD.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "LICENSE",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "data/LICENSE.md",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/third_party/Inter-OFL.txt",
+      "status": "PASS"
+    },
+    {
+      "document": "README.md",
+      "target": "frontend/public/habitat-logo.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "../README.md",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "charts/generate.py",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "charts/model-comparison.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "charts/confusion-matrix.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "charts/uncertainty-workload.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "charts/validation-tradeoff.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "charts/fairness-fnr.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "charts/dataset-split.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "charts/team-contributions.svg",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "charts/sources.json",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "screenshots/v7-showcase-human-review.png",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "validate_showcase.py",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "showcase-validation.json",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "showcase-existing-readme-validation.json",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "../reports/model_comparison.json",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "../reports/evaluation.json",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "../reports/v5-safeguard.json",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "../reports/fairness.json",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "../reports/splits.json",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "../data/splits/train.csv",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_README_SHOWCASE_REPORT.md",
+      "target": "../reports/v7-validation-policy-investigation.json",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_PRODUCT_POLISH_REPORT.md",
+      "target": "final-polish-wording.json",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_PRODUCT_POLISH_REPORT.md",
+      "target": "../reports/final-polish-verification.json",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_PRODUCT_POLISH_REPORT.md",
+      "target": "screenshots/final-polish-assessment.png",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_PRODUCT_POLISH_REPORT.md",
+      "target": "screenshots/final-polish-applicant.png",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_PRODUCT_POLISH_REPORT.md",
+      "target": "screenshots/final-polish-history.png",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_PRODUCT_POLISH_REPORT.md",
+      "target": "screenshots/final-polish-transparency.png",
+      "status": "PASS"
+    },
+    {
+      "document": "docs/FINAL_PRODUCT_POLISH_REPORT.md",
+      "target": "final-polish-readme-validation.json",
+      "status": "PASS"
+    }
+  ],
+  "svg_count": 7,
+  "protected_artifact_count": 10,
+  "limitations": "Remote-link uptime and full accessibility conformance are not established by this script. GitHub rendering is checked separately in the actual browser."
+}

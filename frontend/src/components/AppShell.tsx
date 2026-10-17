@@ -148,7 +148,7 @@ export function AppShell({
           <ShieldCheck size={14} />
           <b>Sandbox · Synthetic Data</b>
           <span>
-            No real housing decisions. Portal switching is a demo, not access
+            No real housing decisions. Portal switching does not provide access
             control.
           </span>
         </div>
@@ -156,7 +156,7 @@ export function AppShell({
           {children}
           <footer>
             HABITAT AI <span>Fairer Housing. Clearer Decisions.</span>
-            <span>SotonShip 2026 · Synthetic demonstration</span>
+            <span>SotonShip 2026 · Synthetic data sandbox</span>
           </footer>
         </main>
       </div>

@@ -145,7 +145,7 @@ export default function OverviewPage({
         <Card title="Recorded workspace activity" tag="APPEND-ONLY EVENTS">
           <Chart kind="activity" data={o.activity_distribution} />
           <p className="muted">
-            Actual event counts by UTC calendar date. A single-day demo may show
+            Actual event counts by UTC calendar date. A single-day workspace may show
             one point.
           </p>
         </Card>

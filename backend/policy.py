@@ -17,7 +17,7 @@ class EnglandDemoPack:
         prompts = []
         if record.get("missing_document_count", 0) > 0:
             prompts.append(
-                "Ask a human to clarify missing evidence under the fictional intake protocol."
+                "Ask a human to clarify missing evidence under the project-defined intake framework."
             )
         if record.get("conflicting_information"):
             prompts.append("Ask a human to reconcile contradictory information.")
@@ -30,11 +30,11 @@ class EnglandDemoPack:
             "source_url": self.metadata["source_url"],
             "applicability": self.metadata["applicability"],
             "warning": self.metadata["human_review_warning"],
-            "origin": "Fictional demo assumptions; these prompts are not extracted statutory rules.",
+            "origin": "Project-defined intake assumptions; these prompts are not extracted statutory rules.",
         }
 
 
 def load_policy(pack_id="england-demo") -> PolicyPack:
     if pack_id != "england-demo":
-        raise ValueError("Jurisdiction placeholder is not implemented")
+        raise ValueError("Jurisdiction integration is not implemented")
     return EnglandDemoPack()

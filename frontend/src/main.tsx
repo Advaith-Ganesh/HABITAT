@@ -442,7 +442,7 @@ function App() {
                 </h2>
                 <p>
                   A clearer application process. Accountable human review. This
-                  is a synthetic demonstration, not a live housing service.
+                  is a synthetic-data sandbox, not a live housing service.
                 </p>
               </div>
             </section>
@@ -519,7 +519,7 @@ function App() {
                 <input
                   aria-label="Application reference"
                   value={reference}
-                  placeholder={sessionId || "DEMO-…"}
+                  placeholder={sessionId || "HAB-XXXXXXXX"}
                   onChange={(e) => setReference(e.target.value)}
                 />
               </label>
@@ -594,7 +594,9 @@ function App() {
               </p>
               <p>
                 Our aim is a clearer, inspectable application-review process,
-                with people responsible for every housing decision.
+                with people responsible for every housing decision. This project generated
+                the original, reproducible dataset of 2,000 synthetic housing
+                application records, published openly on GitHub.
               </p>
             </Card>
             <Card title="How it works">
@@ -616,8 +618,9 @@ function App() {
                 override the routing recommendation.
               </p>
               <p>
-                Synthetic-label tests do not establish real-world usefulness or
-                fairness.
+                Evaluations use generated housing scenarios. Synthetic-label tests
+                do not establish real-world usefulness or fairness. Real-world
+                validation is not implemented.
               </p>
             </Card>
             <Card title="Documents & privacy">
@@ -628,9 +631,9 @@ function App() {
               </p>
               <p>
                 This browser stores a sandbox session key and your selected reference. Applications and session associations are saved in SQLite. Clearing browser storage removes access to the session list; keep references to reload cases. References and
-                portal switching are not authentication. Production requires
-                authentication, role-based access control and privacy
-                safeguards.
+                portal switching are not authentication. Production authentication
+                is not implemented. Operational use requires authentication,
+                role-based access control and privacy safeguards.
               </p>
               <a href="/api/dataset/card">Read the synthetic dataset card</a>
             </Card>
@@ -796,7 +799,7 @@ function App() {
                 {policyOpen && view.page === "Human Review" && (
                   <Card title="Policy reference">
                     <p>
-                      Functional demo prompts are fictional. General English
+                      Intake prompts are project-defined. General English
                       guidance is not a universal local allocation scheme.
                     </p>
                     <a

@@ -46,6 +46,7 @@ test("Applicant to administrator to applicant: persistent review", async ({
     page.getByRole("heading", { name: "Your application" }),
   ).toBeVisible();
   const id = await page.locator(".reference").innerText();
+  expect(id).toMatch(/^HAB-[0-9A-F]{8}$/);
   let record = await (await request.get(`/api/applications/${id}`)).json();
   expect(record.status).toBe("unassessed");
   expect(record.assessment).toBeUndefined();
@@ -83,7 +84,7 @@ test("Applicant to administrator to applicant: persistent review", async ({
       name: "Reviewer notes & mandatory reason",
       exact: true,
     })
-    .fill("Please clarify the missing current housing evidence for this demo.");
+    .fill("Please clarify the missing current housing evidence for this application.");
   await page
     .getByRole("button", { name: "Record review action", exact: true })
     .click();

@@ -208,7 +208,7 @@ export default function AuditPages({
       {page === "Policy Packs" && (
         <>
           <div className="callout">
-            One fictional intake protocol is functional. The reference guidance
+            One project-defined intake framework is functional. The reference guidance
             does not provide a universal local allocation scheme.
           </div>
           <div className="policy-grid">
@@ -266,7 +266,7 @@ export default function AuditPages({
             <p>{dataset.provenance}</p>
             <p className="muted">
               Entirely synthetic; not real housing applicants. Labels come from
-              a fictional probabilistic intake protocol. This is a circular
+              a project-defined probabilistic intake protocol. This is a circular
               synthetic benchmark, not external validation.
             </p>
             <a className="primary inline-flex" href="/api/dataset/download">
@@ -321,7 +321,7 @@ export default function AuditPages({
           <Card title="Generator, provenance & reproduction">
             <p>
               Version {dataset.version}, seed {dataset.seed}. Labels use a
-              published probabilistic fictional intake protocol with latent
+              published project-defined probabilistic intake protocol with latent
               ambiguity and limited noise. Related scenario families stay
               together across partitions. Agreement with these labels is partly
               circular and does not validate housing decisions.
