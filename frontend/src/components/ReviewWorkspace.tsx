@@ -1,3 +1,4 @@
+import { EvidenceWorkspace } from "./EvidenceWorkspace";
 import { HousingSupport } from "./HousingSupport";
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, FileQuestion } from "lucide-react";
@@ -71,12 +72,12 @@ export function Documents({ record }: { record: CaseRecord }) {
       <p className="field-hint">
         Human verification required for all declared evidence. This sandbox does
         not verify identity, documents or legal sufficiency. Missing documents do
-        not prevent submission. No personal documents are uploaded.
+        not prevent submission. Only marked synthetic PDFs may be analysed separately; no personal documents.
       </p>
     </div>
   );
 }
-export function ApplicationDetails({ record }: { record: CaseRecord }) {
+export function ApplicationDetails({ record, allowEvidenceReview = false }: { record: CaseRecord; allowEvidenceReview?: boolean }) {
   return (
     <>
       <div className="detail-heading">
@@ -104,6 +105,7 @@ export function ApplicationDetails({ record }: { record: CaseRecord }) {
         : `Historical completeness input: ${Number(record.payload.application_completeness_score).toFixed(1)}%. Previously recorded, not recalculated or validated by this update. Separate from document completeness.`}</p>
       <HousingSupport answer={record.payload.safe_to_stay_tonight} />
       <Documents record={record} />
+      <EvidenceWorkspace applicationId={record.id} allowReview={allowEvidenceReview} />
     </>
   );
 }
@@ -372,6 +374,7 @@ export function Assessment({
           )}
         </Card>
       </div>
+      <Card title="PDF evidence inspection"><EvidenceWorkspace applicationId={record.id} allowReview /></Card>
     </>
   );
 }

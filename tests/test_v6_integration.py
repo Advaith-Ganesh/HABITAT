@@ -55,7 +55,7 @@ def test_multiple_applications_shared_workflow_survives_connection_restart(clien
         assert db.get(ApplicantSessionApplication, aid).session_id == headers['X-Sandbox-Session']
 
 
-@pytest.mark.parametrize('missing', [k for k in Case.model_fields if k not in {'application_completeness_score', 'safe_to_stay_tonight', 'evidence_help_needed'}])
+@pytest.mark.parametrize('missing', [k for k in Case.model_fields if k not in {'application_completeness_score', 'safe_to_stay_tonight', 'evidence_help_needed', 'evidence_ids'}])
 def test_every_submission_field_required(client, missing):
     payload = Case().model_dump()
     del payload[missing]

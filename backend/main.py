@@ -2,6 +2,8 @@ import json
 import os
 import uuid
 import hashlib
+from starlette.requests import Request
+from starlette.concurrency import run_in_threadpool
 from functools import lru_cache
 from datetime import datetime, timezone
 from typing import Any, Literal
@@ -51,6 +53,16 @@ class SubmissionRequest(Base):
     key_hash = Column(String, primary_key=True)
     payload_hash = Column(String, nullable=False)
     application_id = Column(String, ForeignKey("applications.id"), nullable=False)
+
+
+class EvidenceDocument(Base):
+    __tablename__ = "evidence_documents"
+    id = Column(String, primary_key=True)
+    session_id = Column(String, nullable=False, index=True)
+    application_id = Column(String, ForeignKey("applications.id"), nullable=True, index=True)
+    analysis = Column(Text, nullable=False)
+    sha256 = Column(String, nullable=False)
+    created_at = Column(String, nullable=False)
 
 
 class Event(Base):
@@ -157,7 +169,7 @@ async def database_failure(request, exc):
     )
 
 
-SAFEGUARD_FIELDS = {"safe_to_stay_tonight", "evidence_help_needed"}
+SAFEGUARD_FIELDS = {"safe_to_stay_tonight", "evidence_help_needed", "evidence_ids"}
 EVIDENCE_KEYS = {"income": "income_document_available", "identity": "identity_document_available", "housing": "housing_evidence_available"}
 
 
@@ -179,6 +191,8 @@ class Case(BaseModel):
     conflicting_information: Literal[0, 1] = 0
     application_completeness_score: float | None = Field(default=None, ge=0, le=100, description="Historical model input. Ignored on new submissions; cannot be derived compatibly from applicant declarations.")
 
+    evidence_ids: list[str] = Field(default_factory=list, max_length=3)
+
     # Non-model declarations: never inferred from the Random Forest score.
     safe_to_stay_tonight: Literal["yes", "no", "unsure"] | None = None
     evidence_help_needed: list[Literal["income", "identity", "housing"]] = Field(default_factory=list)
@@ -195,6 +209,8 @@ class Case(BaseModel):
             raise ValueError(
                 "Missing-document count must agree with the three evidence flags"
             )
+        if len(set(self.evidence_ids)) != len(self.evidence_ids):
+            raise ValueError("Evidence document IDs must be unique")
         if len(set(self.evidence_help_needed)) != len(self.evidence_help_needed):
             raise ValueError("Evidence help requests must be unique")
         if any(getattr(self, EVIDENCE_KEYS[k]) != 0 for k in self.evidence_help_needed):
@@ -633,10 +649,15 @@ def create(body: Submission, response: Response, x_sandbox_session: str | None =
                 raise HTTPException(409, "Idempotency key was already used with different application data")
             response.headers["Idempotency-Replayed"] = "true"
             return serialize(require(db, previous.application_id), latest_reviews(db).get(previous.application_id))
+        documents = [db.get(EvidenceDocument, eid) for eid in body.evidence_ids]
+        if any(d is None or d.session_id != session_id or d.application_id is not None for d in documents):
+            raise HTTPException(409, "Evidence must belong to this sandbox session and be unattached")
         aid = "HAB-" + uuid.uuid4().hex[:8].upper()
         a = Application(id=aid, payload=json.dumps(payload), status="unassessed")
         db.add(a)
         db.flush()
+        for document in documents:
+            document.application_id = aid
         if session_id:
             db.add(ApplicantSessionApplication(application_id=aid, session_id=session_id))
         if key_hash:
@@ -885,6 +906,91 @@ def download():
         media_type="text/csv",
         filename="habitat_synthetic_2000.csv",
     )
+
+
+# Evidence analysis never changes Case availability flags or the nine RF inputs.
+@app.post("/api/evidence/analyse", status_code=201)
+async def analyse_evidence(request: Request, category: Literal["income", "identity", "housing"],
+                           x_sandbox_session: str = Header(), x_synthetic_only: Literal["true"] = Header()):
+    from backend.document_analysis import MAX_BYTES
+    from backend.document_service import process_pdf
+    session_id = sandbox_session(x_sandbox_session)
+    if request.headers.get("content-type", "").split(";")[0] != "application/pdf":
+        raise HTTPException(415, "Only application/pdf is accepted")
+    data = bytearray()
+    async for chunk in request.stream():
+        data.extend(chunk)
+        if len(data) > MAX_BYTES:
+            raise HTTPException(413, "PDF exceeds 2 MiB limit")
+    try:
+        result = await run_in_threadpool(process_pdf, bytes(data), category)
+    except ValueError as exc:
+        raise HTTPException(422, str(exc))
+    except RuntimeError:
+        raise HTTPException(429, "Document processing busy; retry later")
+    eid = str(uuid.uuid4())
+    created = datetime.now(timezone.utc).isoformat()
+    with Session() as db:
+        db.add(EvidenceDocument(id=eid, session_id=session_id, analysis=json.dumps(result),
+                               sha256=hashlib.sha256(data).hexdigest(), created_at=created))
+        db.commit()
+    return {"id": eid, "created_at": created, "analysis": result, "reviews": [], "raw_pdf_retained": False}
+
+
+def evidence_record(db, document):
+    reviews = []
+    if document.application_id:
+        reviews = [{"timestamp": e.timestamp, **json.loads(e.detail)} for e in db.query(Event).filter_by(application_id=document.application_id, action="evidence_review").order_by(Event.timestamp, Event.id) if json.loads(e.detail).get("evidence_id") == document.id]
+    return {"id": document.id, "created_at": document.created_at, "analysis": json.loads(document.analysis), "reviews": reviews, "raw_pdf_retained": False}
+
+
+@app.get("/api/applications/{aid}/evidence")
+def application_evidence(aid: str):
+    with Session() as db:
+        require(db, aid)
+        return [evidence_record(db, d) for d in db.query(EvidenceDocument).filter_by(application_id=aid).order_by(EvidenceDocument.created_at)]
+
+
+@app.get("/api/evidence/{eid}")
+def get_evidence(eid: str, x_sandbox_session: str = Header()):
+    sid = sandbox_session(x_sandbox_session)
+    with Session() as db:
+        document = db.get(EvidenceDocument, eid)
+        if document is None or (document.application_id is None and document.session_id != sid):
+            raise HTTPException(404, "Evidence not found in this sandbox session")
+        return evidence_record(db, document)
+
+
+class EvidenceReview(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    action: Literal["confirm", "correct", "insufficient", "request_clarification", "escalate"]
+    observation_id: str | None = None
+    corrected_value: str | None = Field(default=None, max_length=300)
+    reason: str = Field(min_length=8, max_length=1000)
+
+    @model_validator(mode="after")
+    def reason_and_observation(self):
+        if len(self.reason.strip()) < 8: raise ValueError("Provide a meaningful synthetic review reason")
+        if self.action in ["confirm", "correct"] and not self.observation_id: raise ValueError("Select a specific observation")
+        if self.action == "correct" and not (self.corrected_value or "").strip(): raise ValueError("Provide the corrected observation")
+        return self
+
+
+@app.post("/api/evidence/{eid}/review")
+def review_evidence(eid: str, body: EvidenceReview):
+    with Session() as db:
+        document = db.get(EvidenceDocument, eid)
+        if document is None or not document.application_id: raise HTTPException(404, "Attach evidence to an application before review")
+        observations = json.loads(document.analysis)["observations"]
+        if body.observation_id and body.observation_id not in [o["id"] for o in observations]: raise HTTPException(422, "Observation does not exist")
+        log(db, document.application_id, "evidence_review", {"evidence_id": eid, **body.model_dump(), "reviewer_identity": "Unverified sandbox caseworker", "scope": "Review of extracted text only; not document authentication or statutory determination"})
+        db.commit()
+        return evidence_record(db, document)
+
+
+@app.get("/api/evidence-fixtures/{name}")
+def evidence_fixture(name: Literal["dev-income", "dev-identity", "dev-housing"]):
+    return FileResponse(ROOT / "evidence_benchmark/dev" / (name + ".pdf"), media_type="application/pdf", filename=name + ".pdf")
 
 
 # Optional same-origin serving of the verified production bundle.

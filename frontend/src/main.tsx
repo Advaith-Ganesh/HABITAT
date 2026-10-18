@@ -76,6 +76,7 @@ const initial: Json = {
   conflicting_information: 0,
   safe_to_stay_tonight: null,
   evidence_help_needed: [],
+  evidence_ids: [],
 };
 function factualForm(value: Json): Json {
   return Object.fromEntries(Object.keys(initial).filter((key) => Object.prototype.hasOwnProperty.call(value, key)).map((key) => [key, value[key]]));
@@ -535,7 +536,7 @@ function App() {
             {current ? (
               <>
                 <Card title="Your application">
-                  <ApplicationDetails record={current} />
+                  <ApplicationDetails record={current} allowEvidenceReview={admin} />
                   <p className="status-callout" role="status">
                     {statusText(current)}
                   </p>
@@ -708,7 +709,7 @@ function App() {
             )}
             {current && (
               <div className="selected-details">
-                <ApplicationDetails record={current} />
+                <ApplicationDetails record={current} allowEvidenceReview={admin} />
                 <button
                   className="primary"
                   onClick={() => navigate("AI Assessment")}
