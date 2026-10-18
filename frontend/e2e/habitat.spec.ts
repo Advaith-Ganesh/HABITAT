@@ -26,6 +26,7 @@ test("Applicant to administrator to applicant: persistent review", async ({
     page.getByText(/Documentation completeness: 66.7/),
   ).toBeVisible();
   await page.getByRole("button", { name: "Continue", exact: true }).click();
+  await expect(page.getByRole("spinbutton", {name:"Intake information completeness",exact:true})).toHaveCount(0);
   await page
     .getByRole("checkbox", {
       name: "Information needs clarification",
@@ -68,11 +69,9 @@ test("Applicant to administrator to applicant: persistent review", async ({
   await page
     .getByRole("button", { name: "Run AI Assessment", exact: true })
     .click();
-  await expect(
-    page.getByRole("img", {
-      name: "Actual SHAP feature contributions; numeric values follow in the input summary",
-    }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", {name:"Assessment unavailable",exact:true})).toBeVisible();
+  await expect(page.getByText(/Calculated intake completeness is unavailable/)).toBeVisible();
+  await expect(page.getByRole("img",{name:"Actual SHAP feature contributions; numeric values follow in the input summary"})).toHaveCount(0);
   await page
     .getByRole("button", { name: "Continue to human review", exact: true })
     .click();
@@ -137,8 +136,9 @@ test("Applicant to administrator to applicant: persistent review", async ({
   expect(record.assessment.model_version).toBe("rf-1.0");
   expect(Number.isNaN(Date.parse(record.assessment.assessed_at))).toBe(false);
   const explanation = await (await request.get(`/api/applications/${id}/explanation`)).json();
-  expect(explanation.score).toBeCloseTo(record.assessment.score, 12);
-  expect(explanation.additivity_error).toBeLessThan(1e-6);
+  expect(record.assessment.score).toBeNull();
+  expect(record.assessment.failure).toBe("InputCompatibilityUnavailable");
+  expect(explanation.detail).toContain("human review");
   await page.getByRole("button", {name:"Start another application",exact:true}).click();
   for (let step = 0; step < 4; step++)
     await page.getByRole("button", {name:"Continue",exact:true}).click();
@@ -244,13 +244,13 @@ test("Lost successful response can be retried after reload without duplication",
   expect(list).toHaveLength(1);
 });
 
-test("Out-of-training inputs and explanation failure stay human-led", async ({page,request}) => {
+test("Historical genuine inference and explanation failure stay human-led", async ({page,request}) => {
   const source = await (await request.get("/api/applications/DEMO-SEED-001")).json();
-  const record = await (await request.post("/api/applications",{data:{...source.payload,application_completeness_score:0}})).json();
+  const record = source; // existing stored numeric feature; new submissions are covered by the fallback journey
   await page.goto("/#admin/AI%20Assessment");
   await page.getByRole("combobox",{name:"Select application",exact:true}).selectOption(record.id);
   await page.getByRole("button",{name:"Run AI Assessment",exact:true}).click();
-  await expect(page.getByText("Input checks require human handling",{exact:true})).toBeVisible();
+  await expect(page.getByRole("img",{name:"Actual SHAP feature contributions; numeric values follow in the input summary"})).toBeVisible();
   await page.route("**/explanation",route=>route.fulfill({status:503,contentType:"application/json",body:JSON.stringify({detail:"Controlled explanation outage. Use human review."})}));
   await page.reload();
   await expect(page.getByText(/Controlled explanation outage/)).toBeVisible();
@@ -342,3 +342,20 @@ for (const width of [375, 768, 1280])
     }
 
   });
+
+test("Client completeness injection is ignored and retries remain one application", async ({request}) => {
+  const source = await (await request.get('/api/applications/DEMO-SEED-001')).json();
+  const headers = {'Idempotency-Key':crypto.randomUUID(),'X-Sandbox-Session':crypto.randomUUID()};
+  const first = await (await request.post('/api/applications',{headers,data:{...source.payload,application_completeness_score:1}})).json();
+  for (const value of [95,100,null]) {
+    const response = await request.post('/api/applications',{headers,data:{...source.payload,application_completeness_score:value}});
+    const row = await response.json();
+    expect(row.id).toBe(first.id);
+    expect(row.payload.application_completeness_score ?? null).toBeNull();
+    expect(response.headers()['idempotency-replayed']).toBe('true');
+  }
+  const assessment = await (await request.post(`/api/applications/${first.id}/assess`)).json();
+  expect(assessment.score).toBeNull();
+  expect(assessment.failure).toBe('InputCompatibilityUnavailable');
+  expect((await request.get(`/api/applications/${first.id}/explanation`)).status()).toBe(409);
+});

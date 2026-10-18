@@ -24,7 +24,6 @@ const labels: Record<string, string> = {
   accessibility_support_requested: "Accessibility support requested",
   specialist_support_requested: "Specialist review requested",
   conflicting_information: "Information needs clarification",
-  application_completeness_score: "Intake information completeness",
 };
 const steps = [
   "Household",
@@ -217,9 +216,6 @@ export default function NewCaseForm({
             )}
             {step === 3 && (
               <>
-                {number("application_completeness_score", "Intake information completeness", 0, 100,
-                  "Synthetic estimate of completeness and clarity across all intake information. Separate from the document percentage. A real service needs a validated caseworker measurement protocol.")}
-
                 {checkbox(
                   "conflicting_information",
                   "Information needs clarification",
@@ -243,20 +239,18 @@ export default function NewCaseForm({
                   <ShieldCheck size={17} />
                   <b>Ready for human-led assessment</b>
                   <p>
-                    The model recommends an intake workflow. It cannot approve
+                    Unavailable model inputs require human review. The system cannot approve
                     housing, reject an applicant or decide eligibility.
                   </p>
                 </div>
                 <div className="key-values">
                   {Object.entries(form)
-                    .filter(([key]) => key !== "synthetic_only")
+                    .filter(([key]) => key !== "synthetic_only" && key !== "application_completeness_score")
                     .map(([key, value]) => (
                       <div key={key}>
                         <span>{labels[key] ?? key}</span>
                         <b>
-                          {key === "application_completeness_score"
-                            ? `${Number(value).toFixed(1)}%`
-                            : key.endsWith("_available") ||
+                          {key.endsWith("_available") ||
                                 key.endsWith("_requested") ||
                                 [
                                   "conflicting_information",

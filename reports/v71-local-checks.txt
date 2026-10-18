@@ -1,0 +1,75 @@
+CHECK pytest
+........................................................................ [ 60%]
+...............................................                          [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/starlette/testclient.py:37
+  /Users/advaithganesh/Documents/Codex/2026-10-17/files-pasted-by-the-user-you/outputs/habitat-ai/.venv/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:64
+  /Users/advaithganesh/Documents/Codex/2026-10-17/files-pasted-by-the-user-you/outputs/habitat-ai/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85
+  /Users/advaithganesh/Documents/Codex/2026-10-17/files-pasted-by-the-user-you/outputs/habitat-ai/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89
+  /Users/advaithganesh/Documents/Codex/2026-10-17/files-pasted-by-the-user-you/outputs/habitat-ai/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+.venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45
+  /Users/advaithganesh/Documents/Codex/2026-10-17/files-pasted-by-the-user-you/outputs/habitat-ai/.venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+119 passed, 15 warnings in 1.59s
+
+CHECK lint
+
+> habitat-ai@7.0.0 lint
+> eslint src --max-warnings 0
+
+
+CHECK typecheck
+
+> habitat-ai@7.0.0 typecheck
+> tsc --noEmit
+
+
+CHECK build
+
+> habitat-ai@7.0.0 build
+> tsc -b && vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 2199 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                              0.70 kB │ gzip:   0.41 kB
+dist/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2     10.25 kB
+dist/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2      11.23 kB
+dist/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2       18.74 kB
+dist/assets/inter-greek-wght-normal-CkhJZR-_.woff2          18.99 kB
+dist/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2   25.96 kB
+dist/assets/inter-latin-wght-normal-Dx4kXJAl.woff2          48.25 kB
+dist/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2      85.06 kB
+dist/assets/index-oEqAlp1k.css                              51.02 kB │ gzip:  11.30 kB
+dist/assets/NewCaseForm-oiUMAcO-.js                          7.85 kB │ gzip:   2.92 kB
+dist/assets/types-D8q4dNKd.js                                8.59 kB │ gzip:   3.28 kB
+dist/assets/AuditPages-DRWCvToS.js                          12.48 kB │ gzip:   4.07 kB
+dist/assets/index-RYFIJ4rR.js                              229.53 kB │ gzip:  71.90 kB
+dist/assets/Charts-zOjJ_tMu.js                             411.11 kB │ gzip: 116.50 kB
+
+✓ built in 323ms

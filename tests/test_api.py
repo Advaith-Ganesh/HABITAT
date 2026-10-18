@@ -32,11 +32,9 @@ def test_complete_review_flow(client):
     assert client.get(f"/api/applications/{aid}/explanation").status_code == 409
     result = client.post(f"/api/applications/{aid}/assess", json={})
     assert result.status_code == 200
-    assert 0 <= result.json()["score"] <= 1
-    assert (
-        client.get(f"/api/applications/{aid}/explanation").json()["additivity_error"]
-        < 1e-6
-    )
+    assert result.json()["score"] is None
+    assert result.json()["failure"] == "InputCompatibilityUnavailable"
+    assert client.get(f"/api/applications/{aid}/explanation").status_code == 409
     assert (
         client.post(
             f"/api/reviews/{aid}/resolve",
