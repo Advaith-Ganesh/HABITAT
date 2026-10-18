@@ -76,7 +76,7 @@ const initial: Json = {
   conflicting_information: 0,
 };
 function factualForm(value: Json): Json {
-  return Object.fromEntries(Object.keys(initial).map((key) => [key, value[key] ?? initial[key]]));
+  return Object.fromEntries(Object.keys(initial).filter((key) => Object.prototype.hasOwnProperty.call(value, key)).map((key) => [key, value[key]]));
 }
 function pendingSubmission(): { key: string; payload: Json } | undefined {
   try {
