@@ -42,6 +42,8 @@ The [Local Government and Social Care Ombudsman’s housing-applications fact sh
 
 > **V7.1 input safety:** Applicants provide factual declarations only. The training-time intake-completeness feature cannot be reconstructed compatibly from those declarations. New applications therefore use human review **without a model score or SHAP**. Historical numeric-input assessments and the saved model, benchmark results and fairness evidence remain unchanged. [Targeted fix report](docs/V71_COMPLETENESS_FIX_REPORT.md).
 
+> **Applicant safeguarding:** Self-declared tonight safety and document-help requests are stored separately from model inputs. Applicants without supporting documents can submit; no evidence is verified by this sandbox. No/Unsure answers show [official homelessness help](https://www.gov.uk/if-youre-homeless-at-risk-of-homelessness) without waiting for an assessment. HABITAT makes no referral, emergency response or entitlement decision. [Safeguarding verification report](docs/SAFEGUARDING_EVIDENCE_REPORT.md).
+
 ## Live workflow
 
 A connected journey in the local application; “live” describes the working workflow, not a public deployment.

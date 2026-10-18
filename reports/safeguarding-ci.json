@@ -1,0 +1,40 @@
+{
+  "source_commit": "cf40c4e8252a447177f6634ab04e6ee9fb6a6f78",
+  "run_id": 39110903935,
+  "url": "https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39110903935",
+  "conclusion": "success",
+  "python": {
+    "passed": 127,
+    "dependency_warnings": 15
+  },
+  "frontend": {
+    "lint": "PASS",
+    "typescript": "PASS",
+    "production_build": "PASS"
+  },
+  "playwright": {
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "supported_runner": "Ubuntu / Chromium",
+    "log_excerpt": [
+      "2026-10-18T08:18:50.3663869Z 127 passed, 15 warnings in 3.38s",
+      "2026-10-18T08:19:18.7863025Z   ✓   1 e2e/habitat.spec.ts:4:1 › Applicant to administrator to applicant: persistent review (3.5s)",
+      "2026-10-18T08:19:20.7893371Z   ✓   2 e2e/habitat.spec.ts:167:1 › Merged audit and real sandbox comparisons (2.0s)",
+      "2026-10-18T08:19:20.8094536Z   ✓   3 e2e/habitat.spec.ts:205:1 › CSV and saved reports available (12ms)",
+      "2026-10-18T08:19:20.8604034Z   ✓   4 e2e/habitat.spec.ts:215:1 › Idempotent API retries and simultaneous requests (45ms)",
+      "2026-10-18T08:19:22.2229244Z   ✓   5 e2e/habitat.spec.ts:226:1 › Lost successful response can be retried after reload without duplication (1.4s)",
+      "2026-10-18T08:19:22.7348240Z   ✓   6 e2e/habitat.spec.ts:263:1 › Historical genuine inference and explanation failure stay human-led (504ms)",
+      "2026-10-18T08:19:29.7358156Z   ✓   7 e2e/habitat.spec.ts:278:3 › Viewport 375, full labels and accessibility (7.0s)",
+      "2026-10-18T08:19:37.0591674Z   ✓   8 e2e/habitat.spec.ts:278:3 › Viewport 768, full labels and accessibility (7.3s)",
+      "2026-10-18T08:19:44.5858319Z   ✓   9 e2e/habitat.spec.ts:278:3 › Viewport 1280, full labels and accessibility (7.5s)",
+      "2026-10-18T08:19:44.6336152Z   ✓  10 e2e/habitat.spec.ts:363:1 › Client completeness injection is ignored and retries remain one application (41ms)",
+      "2026-10-18T08:19:45.1767654Z   ✓  11 e2e/habitat.spec.ts:381:1 › Urgent guidance is available when API and model health are unavailable (536ms)",
+      "2026-10-18T08:19:45.2595571Z   11 passed (34.9s)"
+    ]
+  },
+  "artifact": {
+    "id": 12130651502,
+    "digest": "sha256:9dc0bbcb396fcd8e78c81dce9bb22fe01c4f593c8322fed17b1064863443ed89"
+  }
+}

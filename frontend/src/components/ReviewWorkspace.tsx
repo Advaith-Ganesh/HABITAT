@@ -1,3 +1,4 @@
+import { HousingSupport } from "./HousingSupport";
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, FileQuestion } from "lucide-react";
 import { AuditHistory, Card, EmptyState, SearchInput } from "./ui";
@@ -49,28 +50,28 @@ export function Documents({ record }: { record: CaseRecord }) {
         aria-label="Documentation completeness"
       />
       <p>
-        {d.present_count} of {d.required} required categories declared present.
+        {d.present_count} of {d.required} categories self-declared available; none verified.
       </p>
       <div className="document-list">
         {d.present.map((name: string) => (
           <div key={name}>
             <CheckCircle2 size={16} />
             <span>{name}</span>
-            <small>Present</small>
+            <small>Declared available · needs human verification</small>
           </div>
         ))}
         {d.missing.map((name: string) => (
           <div key={name}>
             <FileQuestion size={16} />
             <span>{name}</span>
-            <small>Missing</small>
+            <small>{d.help_needed?.includes(name) ? "Help obtaining evidence requested" : "Declared unavailable"}</small>
           </div>
         ))}
       </div>
       <p className="field-hint">
-        Document requirements: income evidence, identity evidence and current
-        housing evidence. Declarations only; no uploads or legal sufficiency
-        checks.
+        Human verification required for all declared evidence. This sandbox does
+        not verify identity, documents or legal sufficiency. Missing documents do
+        not prevent submission. No personal documents are uploaded.
       </p>
     </div>
   );
@@ -101,6 +102,7 @@ export function ApplicationDetails({ record }: { record: CaseRecord }) {
       <p className="field-hint">{record.payload.application_completeness_score == null
         ? "Calculated intake completeness: unavailable. Compatibility with the trained feature is not established; human review is required without a model score. Document completeness is separate."
         : `Historical completeness input: ${Number(record.payload.application_completeness_score).toFixed(1)}%. Previously recorded, not recalculated or validated by this update. Separate from document completeness.`}</p>
+      <HousingSupport answer={record.payload.safe_to_stay_tonight} />
       <Documents record={record} />
     </>
   );
@@ -192,7 +194,7 @@ export function ApplicationTable({
                     <td>
                       {r.documents?.present_count}/{r.documents?.required}
                       <small className="block">
-                        {r.documents?.percentage.toFixed(1)}% complete
+                        {r.documents?.percentage.toFixed(1)}% self-declared available
                       </small>
                     </td>
                     <td>{statusText(r)}</td>
@@ -343,6 +345,8 @@ export function Assessment({
           )}
         </Card>
         <Card title="Documents & next steps">
+          <HousingSupport answer={record.payload.safe_to_stay_tonight} />
+          <p>Caseworker status: {statusText(record)}</p>
           <Documents record={record} />
           {record.status === "pending" && record.latest_review && (
             <p className="warning">

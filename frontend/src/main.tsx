@@ -74,6 +74,8 @@ const initial: Json = {
   accessibility_support_requested: 0,
   specialist_support_requested: 0,
   conflicting_information: 0,
+  safe_to_stay_tonight: null,
+  evidence_help_needed: [],
 };
 function factualForm(value: Json): Json {
   return Object.fromEntries(Object.keys(initial).filter((key) => Object.prototype.hasOwnProperty.call(value, key)).map((key) => [key, value[key]]));

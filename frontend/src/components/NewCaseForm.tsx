@@ -8,9 +8,12 @@ import {
   Save,
   ShieldCheck,
 } from "lucide-react";
+import { HousingSupport } from "./HousingSupport";
 import { Card, ProgressIndicator, ConfirmationDialog } from "./ui";
 import { type Json } from "../lib/types";
 const labels: Record<string, string> = {
+  safe_to_stay_tonight: "Safe place to stay tonight",
+  evidence_help_needed: "Help obtaining evidence requested",
   household_size: "Household members",
   monthly_income: "Monthly household income (£)",
   monthly_housing_cost: "Monthly housing cost (£)",
@@ -177,6 +180,18 @@ export default function NewCaseForm({
                     <option value="unclear">Unclear</option>
                   </select>
                 </label>
+                <label>
+                  Do you have somewhere safe to stay tonight?
+                  <select required id="safe-to-stay" aria-label="Do you have somewhere safe to stay tonight?"
+                    value={form.safe_to_stay_tonight ?? ""}
+                    onChange={(e) => update("safe_to_stay_tonight", e.target.value || null)}>
+                    <option value="">Choose an answer</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="unsure">Unsure</option>
+                  </select>
+                </label>
+                <HousingSupport answer={form.safe_to_stay_tonight} />
                 {checkbox(
                   "housing_insecurity_reported",
                   "Housing insecurity reported",
@@ -186,21 +201,28 @@ export default function NewCaseForm({
             {step === 2 && (
               <>
                 <p className="muted">
-                  Evidence availability influences intake routing. Missing
-                  evidence never means an applicant is rejected.
+                  These are self-declarations, not verified documents. You can
+                  still submit without supporting documents and ask for help obtaining them.
+                  No personal documents are uploaded in this synthetic-only sandbox.
                 </p>
-                {checkbox(
-                  "income_document_available",
-                  "Income evidence available",
-                )}
-                {checkbox(
-                  "identity_document_available",
-                  "Identity evidence available",
-                )}
-                {checkbox(
-                  "housing_evidence_available",
-                  "Housing evidence available",
-                )}
+                {([
+                  ["income", "income_document_available", "Income evidence available"],
+                  ["identity", "identity_document_available", "Identity evidence available"],
+                  ["housing", "housing_evidence_available", "Housing evidence available"],
+                ] as const).map(([category, key, label]) => (
+                  <label key={key}>
+                    {label}
+                    <select aria-label={label} value={form.evidence_help_needed?.includes(category) ? "help" : form[key] === 1 ? "have" : "missing"}
+                      onChange={(e) => {
+                        update("evidence_help_needed", [...(form.evidence_help_needed ?? []).filter((v: string) => v !== category), ...(e.target.value === "help" ? [category] : [])]);
+                        update(key, e.target.value === "have" ? 1 : 0);
+                      }}>
+                      <option value="have">I have this evidence</option>
+                      <option value="missing">I do not have it</option>
+                      <option value="help">I need help obtaining it</option>
+                    </select>
+                  </label>
+                ))}
                 <div className="evidence-summary">
                   <CheckCircle2 size={18} />
                   {3 - form.missing_document_count} of 3 evidence types
@@ -243,6 +265,7 @@ export default function NewCaseForm({
                     housing, reject an applicant or decide eligibility.
                   </p>
                 </div>
+                <HousingSupport answer={form.safe_to_stay_tonight} />
                 <div className="key-values">
                   {Object.entries(form)
                     .filter(([key]) => key !== "synthetic_only" && key !== "application_completeness_score")
@@ -250,7 +273,7 @@ export default function NewCaseForm({
                       <div key={key}>
                         <span>{labels[key] ?? key}</span>
                         <b>
-                          {key.endsWith("_available") ||
+                          {key === "evidence_help_needed" ? (value.length ? value.join(", ") : "None requested") : key === "safe_to_stay_tonight" ? (value ?? "Not answered") : key.endsWith("_available") ||
                                 key.endsWith("_requested") ||
                                 [
                                   "conflicting_information",

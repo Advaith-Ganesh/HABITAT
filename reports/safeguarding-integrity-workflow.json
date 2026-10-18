@@ -1,0 +1,120 @@
+{
+  "base_commit": "97518890fc356a2e92c4e7caf709747e538c67ee",
+  "protected_files_unchanged": 156,
+  "model_sha256": "bd4add37db3308b56a51410d215b4012b37384b84a450f137ccfabb1e8174655",
+  "databases": {
+    "habitat.db": {
+      "original_payloads_retained": 13,
+      "original_events_retained": 27
+    },
+    "sandbox.db": {
+      "original_payloads_retained": 12,
+      "original_events_retained": 24
+    },
+    "v6-browser.db": {
+      "original_payloads_retained": 15,
+      "original_events_retained": 33
+    },
+    "v4-browser.db": {
+      "original_payloads_retained": 14,
+      "original_events_retained": 31
+    },
+    "final-smoke.db": {
+      "original_payloads_retained": 14,
+      "original_events_retained": 31
+    },
+    "v7-browser.db": {
+      "original_payloads_retained": 19,
+      "original_events_retained": 42
+    },
+    "isolated-control.db": {
+      "original_payloads_retained": 14,
+      "original_events_retained": 31
+    },
+    "v5-browser.db": {
+      "original_payloads_retained": 14,
+      "original_events_retained": 32
+    },
+    "v7-fault.db": {
+      "original_payloads_retained": 12,
+      "original_events_retained": 27
+    }
+  },
+  "database_scope": "All pre-existing workspaces and historical habitat.db retained. Existing prepare_e2e.py resets only disposable .test-runtime/browser.db for test fixtures.",
+  "live_workflow": {
+    "reference": "HAB-F6324038",
+    "payload": {
+      "synthetic_only": true,
+      "household_size": 3,
+      "monthly_income": 1500.0,
+      "monthly_housing_cost": 600.0,
+      "current_bedrooms": 0,
+      "housing_situation": "unclear",
+      "housing_insecurity_reported": 1,
+      "missing_document_count": 2,
+      "income_document_available": 0,
+      "identity_document_available": 0,
+      "housing_evidence_available": 1,
+      "accessibility_support_requested": 0,
+      "specialist_support_requested": 0,
+      "conflicting_information": 0,
+      "application_completeness_score": null,
+      "safe_to_stay_tonight": "no",
+      "evidence_help_needed": [
+        "income"
+      ]
+    },
+    "assessment": {
+      "score": null,
+      "classification": null,
+      "category": "Human review fallback",
+      "uncertain": true,
+      "requires_review": true,
+      "failure": "InputCompatibilityUnavailable",
+      "limitations": "Calculated intake completeness is unavailable: the training feature cannot be derived compatibly from submitted declarations. Human review is required; no model prediction or SHAP has been produced.",
+      "input_validation": {
+        "out_of_distribution": true,
+        "imputed_features": [],
+        "warnings": [
+          "Training-time intake completeness is unavailable; feature compatibility is not established."
+        ],
+        "scope": "No replacement value or model imputation is used for new applications."
+      },
+      "model_version": "rf-1.0",
+      "assessed_at": "2026-10-18T08:15:20.353722+00:00",
+      "policy_evidence": {
+        "pack_id": "england-demo",
+        "version": "1.0.0",
+        "prompts": [
+          "Ask a human to clarify missing evidence under the project-defined intake framework.",
+          "Ask a human to clarify reported housing circumstances."
+        ],
+        "source_url": "https://www.gov.uk/guidance/allocation-of-accommodation-guidance-for-local-authorities",
+        "applicability": "Project-defined intake routing only; not an allocation scheme or eligibility determination.",
+        "warning": "Local authorities operate their own allocation schemes. A qualified human must verify applicable local policy.",
+        "origin": "Project-defined intake assumptions; these prompts are not extracted statutory rules."
+      }
+    },
+    "status": "pending",
+    "history": [
+      [
+        "2026-10-18T08:14:48.818851+00:00",
+        "submitted",
+        "{\"synthetic_only\": true}"
+      ],
+      [
+        "2026-10-18T08:15:20.358025+00:00",
+        "assessed",
+        "{\"score\": null, \"classification\": null, \"category\": \"Human review fallback\", \"uncertain\": true, \"requires_review\": true, \"failure\": \"InputCompatibilityUnavailable\", \"limitations\": \"Calculated intake completeness is unavailable: the training feature cannot be derived compatibly from submitted declarations. Human review is required; no model prediction or SHAP has been produced.\", \"input_validation\": {\"out_of_distribution\": true, \"imputed_features\": [], \"warnings\": [\"Training-time intake completeness is unavailable; feature compatibility is not established.\"], \"scope\": \"No replacement value or model imputation is used for new applications.\"}, \"model_version\": \"rf-1.0\", \"assessed_at\": \"2026-10-18T08:15:20.353722+00:00\", \"policy_evidence\": {\"pack_id\": \"england-demo\", \"version\": \"1.0.0\", \"prompts\": [\"Ask a human to clarify missing evidence under the project-defined intake framework.\", \"Ask a human to clarify reported housing circumstances.\"], \"source_url\": \"https://www.gov.uk/guidance/allocation-of-accommodation-guidance-for-local-authorities\", \"applicability\": \"Project-defined intake routing only; not an allocation scheme or eligibility determination.\", \"warning\": \"Local authorities operate their own allocation schemes. A qualified human must verify applicable local policy.\", \"origin\": \"Project-defined intake assumptions; these prompts are not extracted statutory rules.\"}}"
+      ],
+      [
+        "2026-10-18T08:15:33.496683+00:00",
+        "human_override",
+        "{\"outcome\": \"escalate\", \"reason\": \"Follow up on the immediate housing concern and offer help obtaining income documents. Identity evidence is unavailable. No referral or housing decision is made by this sandbox.\", \"workflow_status\": \"pending\"}"
+      ]
+    ]
+  },
+  "backend_restart_persistence": "PASS",
+  "public_benchmark_records": 2000,
+  "original_10_protected_artifact_hashes_match": true
+}

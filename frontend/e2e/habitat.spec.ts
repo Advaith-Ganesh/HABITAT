@@ -18,12 +18,14 @@ test("Applicant to administrator to applicant: persistent review", async ({
   await page
     .getByRole("combobox", { name: "Housing situation", exact: true })
     .selectOption("unclear");
+  await page.getByRole("combobox", { name: "Do you have somewhere safe to stay tonight?", exact: true }).selectOption("no");
+  await expect(page.getByRole("status")).toContainText("Contact your local council");
+  await page.screenshot({path:"../docs/screenshots/safeguarding-urgent-guidance.png",fullPage:true});
   await page.getByRole("button", { name: "Continue", exact: true }).click();
-  await page
-    .getByRole("checkbox", { name: "Housing evidence available", exact: true })
-    .uncheck();
+  await page.getByRole("combobox", { name: "Income evidence available", exact: true }).selectOption("help");
+  await page.getByRole("combobox", { name: "Identity evidence available", exact: true }).selectOption("missing");
   await expect(
-    page.getByText(/Documentation completeness: 66.7/),
+    page.getByText(/Documentation completeness: 33.3/),
   ).toBeVisible();
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await expect(page.getByRole("spinbutton", {name:"Intake information completeness",exact:true})).toHaveCount(0);
@@ -49,6 +51,11 @@ test("Applicant to administrator to applicant: persistent review", async ({
   const id = await page.locator(".reference").innerText();
   expect(id).toMatch(/^HAB-[0-9A-F]{8}$/);
   let record = await (await request.get(`/api/applications/${id}`)).json();
+  expect(record.payload.safe_to_stay_tonight).toBe("no");
+  expect(record.payload.evidence_help_needed).toEqual(["income"]);
+  expect(record.payload.income_document_available).toBe(0);
+  expect(record.payload.identity_document_available).toBe(0);
+  expect(record.documents.help_needed).toEqual(["Income evidence"]);
   expect(record.status).toBe("unassessed");
   expect(record.assessment).toBeUndefined();
   await page
@@ -63,6 +70,10 @@ test("Applicant to administrator to applicant: persistent review", async ({
     .getByRole("textbox", { name: "Search cases", exact: true })
     .fill(id);
   await page.getByRole("button", { name: `Open ${id}`, exact: true }).click();
+  await expect(page.getByText("Safe place to stay tonight: No",{exact:true})).toBeVisible();
+  await expect(page.getByText("Help obtaining evidence requested",{exact:true})).toBeVisible();
+  await expect(page.getByText("Declared unavailable",{exact:true})).toBeVisible();
+  await page.screenshot({path:"../docs/screenshots/safeguarding-admin-declarations.png",fullPage:true});
   await page
     .getByRole("button", { name: "Open AI assessment", exact: true })
     .click();
@@ -83,7 +94,7 @@ test("Applicant to administrator to applicant: persistent review", async ({
       name: "Reviewer notes & mandatory reason",
       exact: true,
     })
-    .fill("Please clarify the missing current housing evidence for this application.");
+    .fill("Follow up on the immediate housing concern and help obtain income evidence; identity evidence is unavailable.");
   await page
     .getByRole("button", { name: "Record review action", exact: true })
     .click();
@@ -140,8 +151,10 @@ test("Applicant to administrator to applicant: persistent review", async ({
   expect(record.assessment.failure).toBe("InputCompatibilityUnavailable");
   expect(explanation.detail).toContain("human review");
   await page.getByRole("button", {name:"Start another application",exact:true}).click();
-  for (let step = 0; step < 4; step++)
+  for (let step = 0; step < 4; step++) {
+    if (step === 1) await page.getByRole("combobox",{name:"Do you have somewhere safe to stay tonight?",exact:true}).selectOption("yes");
     await page.getByRole("button", {name:"Continue",exact:true}).click();
+  }
   await page.getByRole("checkbox", {name:"I confirm all values are synthetic.",exact:true}).check();
   await page.getByRole("button", {name:"Submit application",exact:true}).click();
   await expect(page.locator(".session-application")).toHaveCount(2);
@@ -226,7 +239,10 @@ test("Lost successful response can be retried after reload without duplication",
     return route.continue();
   });
   async function fillAndSubmit() {
-    for (let i=0;i<4;i++) await page.getByRole("button",{name:"Continue",exact:true}).click();
+    for (let i=0;i<4;i++) {
+      if (i===1) await page.getByRole("combobox",{name:"Do you have somewhere safe to stay tonight?",exact:true}).selectOption("yes");
+      await page.getByRole("button",{name:"Continue",exact:true}).click();
+    }
     await page.getByRole("checkbox",{name:"I confirm all values are synthetic.",exact:true}).check();
     await page.getByRole("button",{name:"Submit application",exact:true}).click();
   }
@@ -332,6 +348,7 @@ for (const width of [375, 768, 1280])
         for (const title of ["Housing & income","Evidence","Support & clarification","Check & submit"]) {
           await page.getByRole("button",{name:"Continue",exact:true}).click();
           await expect(page.getByRole("heading",{name:title,exact:true,level:2})).toBeVisible();
+          if (title === "Housing & income") await page.getByRole("combobox",{name:"Do you have somewhere safe to stay tonight?",exact:true}).selectOption("unsure");
           expect(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth)).toBeTruthy();
         }
         await expect(page.getByRole("checkbox",{name:"I confirm all values are synthetic.",exact:true})).toBeVisible();
@@ -358,4 +375,18 @@ test("Client completeness injection is ignored and retries remain one applicatio
   expect(assessment.score).toBeNull();
   expect(assessment.failure).toBe('InputCompatibilityUnavailable');
   expect((await request.get(`/api/applications/${first.id}/explanation`)).status()).toBe(409);
+});
+
+
+test("Urgent guidance is available when API and model health are unavailable", async ({page}) => {
+  await page.route("**/api/**", route => route.abort("failed"));
+  await page.route("**/health", route => route.abort("failed"));
+  await page.goto("/#applicant/Apply%20for%20Housing");
+  await page.getByRole("button",{name:"Continue",exact:true}).click();
+  for (const answer of ["no","unsure"]) {
+    await page.getByRole("combobox",{name:"Do you have somewhere safe to stay tonight?",exact:true}).selectOption(answer);
+    await expect(page.getByText("Safe place to stay tonight: " + (answer === "no" ? "No" : "Unsure"),{exact:true})).toBeVisible();
+    await expect(page.getByRole("link",{name:"Get homelessness help on GOV.UK"})).toHaveAttribute("href","https://www.gov.uk/if-youre-homeless-at-risk-of-homelessness");
+    await expect(page.getByText(/HABITAT does not contact the council/)).toBeVisible();
+  }
 });

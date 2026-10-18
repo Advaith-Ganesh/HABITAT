@@ -157,6 +157,10 @@ async def database_failure(request, exc):
     )
 
 
+SAFEGUARD_FIELDS = {"safe_to_stay_tonight", "evidence_help_needed"}
+EVIDENCE_KEYS = {"income": "income_document_available", "identity": "identity_document_available", "housing": "housing_evidence_available"}
+
+
 class Case(BaseModel):
     model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
     synthetic_only: Literal[True] = True
@@ -175,6 +179,10 @@ class Case(BaseModel):
     conflicting_information: Literal[0, 1] = 0
     application_completeness_score: float | None = Field(default=None, ge=0, le=100, description="Historical model input. Ignored on new submissions; cannot be derived compatibly from applicant declarations.")
 
+    # Non-model declarations: never inferred from the Random Forest score.
+    safe_to_stay_tonight: Literal["yes", "no", "unsure"] | None = None
+    evidence_help_needed: list[Literal["income", "identity", "housing"]] = Field(default_factory=list)
+
     @model_validator(mode="after")
     def consistent_documents(self):
         if (
@@ -187,6 +195,10 @@ class Case(BaseModel):
             raise ValueError(
                 "Missing-document count must agree with the three evidence flags"
             )
+        if len(set(self.evidence_help_needed)) != len(self.evidence_help_needed):
+            raise ValueError("Evidence help requests must be unique")
+        if any(getattr(self, EVIDENCE_KEYS[k]) != 0 for k in self.evidence_help_needed):
+            raise ValueError("Evidence needing help must be declared unavailable")
         return self
 
 
@@ -194,7 +206,7 @@ class Submission(Case):
     @model_validator(mode="before")
     @classmethod
     def require_intake_fields(cls, values):
-        required = set(Case.model_fields) - {"application_completeness_score"}
+        required = set(Case.model_fields) - {"application_completeness_score"} - SAFEGUARD_FIELDS
         missing = required - set(values) if isinstance(values, dict) else required
         if missing:
             raise ValueError("Required submission fields missing: " + ", ".join(sorted(missing)))
@@ -280,6 +292,8 @@ def document_summary(payload):
         "percentage": 100 * len(present) / len(DOCUMENT_REQUIREMENTS),
         "present": present,
         "missing": missing,
+        "help_needed": [DOCUMENT_REQUIREMENTS[EVIDENCE_KEYS[k]] for k in payload.get("evidence_help_needed", [])],
+        "verification_status": "Not verified; human verification required for all declared evidence.",
         "basis": "Three document categories in the project-defined intake framework; declarations only, no uploads or legal sufficiency checks.",
     }
 
@@ -607,8 +621,14 @@ def create(body: Submission, response: Response, x_sandbox_session: str | None =
         if previous:
             # Replays of pre-V7.1 requests retain their saved records and hashes.
             historical_payload = json.loads(require(db, previous.application_id).payload)
-            legacy_hash = hashlib.sha256(json.dumps(legacy_payload, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
-            historical_replay = historical_payload.get("application_completeness_score") is not None and previous.payload_hash == legacy_hash
+            # Upgrades add optional non-model metadata. Match old hashes only
+            # when absent metadata remains empty; never ignore a changed concern/help request.
+            candidate = dict(legacy_payload if historical_payload.get("application_completeness_score") is not None else payload)
+            for field in SAFEGUARD_FIELDS:
+                if field not in historical_payload and not candidate[field]:
+                    candidate.pop(field)
+            legacy_hash = hashlib.sha256(json.dumps(candidate, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+            historical_replay = previous.payload_hash == legacy_hash
             if previous.payload_hash != payload_hash and not historical_replay:
                 raise HTTPException(409, "Idempotency key was already used with different application data")
             response.headers["Idempotency-Replayed"] = "true"
