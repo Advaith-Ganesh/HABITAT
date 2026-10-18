@@ -1,6 +1,6 @@
 # Safeguarding and evidence UX verification
 
-Scope: small addition on `fix/safeguarding-evidence-ux`, based on main `9751889` (merged V7.1 completeness fix, PR #2). No redesign, model retraining, dataset edits, metric replacement or database reset.
+Scope: small addition on `fix/safeguarding-evidence-ux`, based on main `9751889` (merged V7.1 completeness fix, PR #2). No redesign, model retraining, dataset edits, metric replacement or workspace/historical database reset. The existing Playwright runner resets only its disposable test database.
 
 ## Functional changes
 
@@ -24,6 +24,7 @@ Screenshots are actual application captures:
 ![Urgent guidance](screenshots/safeguarding-local-urgent.png)
 ![Self-declarations](screenshots/safeguarding-local-evidence.png)
 ![Administrator evidence and concern](screenshots/safeguarding-local-admin.png)
+![Applicant history after backend restart](screenshots/safeguarding-local-applicant-history.png)
 
 ## Verification status
 
@@ -34,7 +35,11 @@ Screenshots are actual application captures:
 | Local standalone Playwright launch | FAIL (environment) | Chromium launch restricted; 3 API tests passed, 8 browser tests could not launch. Not represented as a passing browser suite. |
 | Real local browser requested journey | PASS | Reference and screenshots above; genuine API/SQLite, no substituted success responses |
 | Backend restart, history persistence, integrity | PASS | 156 pre-existing ML/data/report files unchanged; historical/workspace payloads and events retained. Disposable runner DB excluded. [Evidence](../reports/safeguarding-integrity-workflow.json) |
-| Supported Linux Playwright / GitHub Actions | Pending | Must pass before merge |
+| README local links and shell examples | PASS | [Exact-case validation](../reports/safeguarding-readme-validation.json); official GOV.UK page opened separately |
+| Supported Linux Playwright / GitHub Actions | PASS | 11 browser tests, no failures/skips; 127 Python tests; lint/type/build green. [Run 39110903935](https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39110903935), [CI evidence](../reports/safeguarding-ci.json) |
+| Real-world housing services, eligibility or document verification | NOT TESTED / NOT IMPLEMENTED | Outside this synthetic sandbox; no claim of operational safeguarding or real-world validity |
+
+Success journeys use real API/SQLite responses. The offline-guidance test deliberately aborts API/health requests; it does not substitute successful responses. The CI source commit is `cf40c4e8252a447177f6634ab04e6ee9fb6a6f78`. The final evidence-only commit must also pass Actions before merge.
 
 ## Limitations
 

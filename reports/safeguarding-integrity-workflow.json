@@ -114,5 +114,7 @@
       ]
     ]
   },
-  "backend_restart_persistence": "PASS"
+  "backend_restart_persistence": "PASS",
+  "public_benchmark_records": 2000,
+  "original_10_protected_artifact_hashes_match": true
 }
