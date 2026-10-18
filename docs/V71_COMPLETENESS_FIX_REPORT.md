@@ -48,7 +48,9 @@ Documentation/evidence: this report, a brief README safety notice, updated produ
 | Client score injection and historical replay | **PASS**: bounded client values cannot change the saved feature; pre-upgrade exact retries remain compatible |
 | Original model/data/evaluation hashes and original DB rows | **PASS**, see integrity evidence |
 | README exact-case links and shell syntax | **PASS:59 exact-case targets and5 shell examples parsed**; historical validator evidence preserved |
-| Supported Linux Playwright / GitHub Actions | Pending PR verification; merge is conditional on success |
+| Supported Linux Playwright / GitHub Actions | **PASS:10 browser tests,0 failed,0 skipped** on [final source CI](https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39109263815), source `1a7329f`; clean install,119 Python tests, lint, types and build also passed |
+
+The first CI run had9 browser passes and1 ambiguous-selector failure: the fallback explanation is visible in two panels. The assertion now targets the assessment hero; no test was removed or skipped. [Initial failure excerpt](../reports/v71-ci-initial-failure.txt) · [Final CI metadata](../reports/v71-ci.json). The evidence-only follow-up preserves the verified runtime/test sources; merge remains gated on successful PR checks.
 
 ## Limits retained
 

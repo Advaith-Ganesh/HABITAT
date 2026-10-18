@@ -1,0 +1,26 @@
+Excerpt from genuine initial CI run 39109124284 (full logs remain in GitHub Actions).
+
+strict mode violation: getByText(/Calculated intake completeness is unavailable/) resolved to 2 elements:
+2026-10-18T07:51:57.5054673Z         1) <p>Calculated intake completeness is unavailable: th…</p> aka getByText('Calculated intake').first()
+2026-10-18T07:51:57.5056233Z         2) <p>Calculated intake completeness is unavailable: th…</p> aka getByText('Calculated intake').nth(1)
+2026-10-18T07:51:57.5056960Z
+2026-10-18T07:51:57.5057129Z     Call log:
+2026-10-18T07:51:57.5058033Z       - Expect "toBeVisible" getByText(/Calculated intake completeness is unavailable/) with timeout 12000ms
+2026-10-18T07:51:57.5059295Z       - waiting for getByText(/Calculated intake completeness is unavailable/)
+2026-10-18T07:51:57.5059847Z
+2026-10-18T07:51:57.5060613Z
+2026-10-18T07:51:57.5060824Z       71 |     .click();
+2026-10-18T07:51:57.5061771Z       72 |   await expect(page.getByRole("heading", {name:"Assessment unavailable",exact:true})).toBeVisible();
+2026-10-18T07:51:57.5063104Z     > 73 |   await expect(page.getByText(/Calculated intake completeness is unavailable/)).toBeVisible();
+2026-10-18T07:51:57.5064155Z          |                                                                                 ^
+2026-10-18T07:51:57.5065516Z       74 |   await expect(page.getByRole("img",{name:"Actual SHAP feature contributions; numeric values follow in the input summary"})).toHaveCount(0);
+2026-10-18T07:51:57.5066618Z       75 |   await page
+2026-10-18T07:51:57.5067285Z       76 |     .getByRole("button", { name: "Continue to human review", exact: true })
+2026-10-18T07:51:57.5068397Z         at /home/runner/work/HABITAT/HABITAT/frontend/e2e/habitat.spec.ts:73:81
+2026-10-18T07:51:57.5069014Z
+2026-10-18T07:51:57.5070195Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+2026-10-18T07:51:57.5071343Z     test-results/habitat-Applicant
+
+2026-10-18T07:50:50.0623648Z 119 passed, 15 warnings in 6.14s
+2026-10-18T07:51:57.5077046Z   1 failed
+2026-10-18T07:51:57.5078019Z   9 passed (40.8s)

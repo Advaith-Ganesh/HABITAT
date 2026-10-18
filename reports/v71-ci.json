@@ -1,0 +1,20 @@
+{
+  "source_commit": "1a7329f965cf2dc5a228dad5f858fee51368b490",
+  "run_id": 39109263815,
+  "url": "https://github.com/Advaith-Ganesh/HABITAT/actions/runs/39109263815",
+  "status": "PASS",
+  "python_tests": 119,
+  "playwright_tests": 10,
+  "playwright_failed": 0,
+  "playwright_skipped": 0,
+  "lint": "PASS",
+  "typecheck": "PASS",
+  "build": "PASS",
+  "initial_run": {
+    "run_id": 39109124284,
+    "python_passed": 119,
+    "playwright_passed": 9,
+    "playwright_failed": 1,
+    "cause": "Strict selector matched two identical fallback explanations; assertion scoped to assessment hero. No test skipped."
+  }
+}
