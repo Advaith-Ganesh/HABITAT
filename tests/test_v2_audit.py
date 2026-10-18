@@ -11,16 +11,14 @@ from ml.predict import predict
 from ml.evaluate import fairness_audit
 
 
-def new_case(client):
-    aid = client.post(
-        "/api/applications", json=Case(conflicting_information=1).model_dump()
-    ).json()["id"]
+def new_case(client, historical_case):
+    aid = historical_case(Case(conflicting_information=1).model_dump())
     assert client.post(f"/api/applications/{aid}/assess", json={}).status_code == 200
     return aid
 
 
-def test_review_follow_up_remains_in_queue(client):
-    aid = new_case(client)
+def test_review_follow_up_remains_in_queue(client, historical_case):
+    aid = new_case(client, historical_case)
     for outcome in ["request_evidence", "escalate", "additional_review"]:
         response = client.post(
             f"/api/reviews/{aid}/resolve",
@@ -71,8 +69,8 @@ def test_health_reflects_artifact_failure(client, monkeypatch, failure):
     assert client.get("/health").json()["model"]["ready"] is False
 
 
-def test_explanation_io_failure_returns_useful_error(client, monkeypatch):
-    aid = new_case(client)
+def test_explanation_io_failure_returns_useful_error(client, monkeypatch, historical_case):
+    aid = new_case(client, historical_case)
 
     def unavailable(_record):
         raise OSError("private filesystem diagnostic")
@@ -84,17 +82,17 @@ def test_explanation_io_failure_returns_useful_error(client, monkeypatch):
     assert "human review" in result.text
 
 
-def test_failed_assessment_has_no_misleading_explanation(client, monkeypatch):
+def test_failed_assessment_has_no_misleading_explanation(client, monkeypatch, historical_case):
     monkeypatch.setattr(backend, "predict", lambda _record: predict({}))
-    aid = new_case(client)
+    aid = new_case(client, historical_case)
     record = client.get(f"/api/applications/{aid}").json()
     assert record["assessment"]["score"] is None
     assert record["status"] == "pending"
     assert client.get(f"/api/applications/{aid}/explanation").status_code == 409
 
 
-def test_explanation_cannot_silently_change_recorded_score(client, monkeypatch):
-    aid = new_case(client)
+def test_explanation_cannot_silently_change_recorded_score(client, monkeypatch, historical_case):
+    aid = new_case(client, historical_case)
     score = client.get(f"/api/applications/{aid}").json()["assessment"]["score"]
     monkeypatch.setattr(backend, "explain", lambda _: {"score": score + 0.1})
     assert client.get(f"/api/applications/{aid}/explanation").status_code == 409

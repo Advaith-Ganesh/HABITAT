@@ -108,7 +108,7 @@ def test_training_input_audit_and_ood_handoff():
         assert result['input_validation']['out_of_distribution']
         assert result['input_validation']['warnings']
         np.testing.assert_allclose(result['score'],pipe.predict_proba(pd.DataFrame([body])[FEATURES])[0,1],rtol=0,atol=0)
-    assert predict(Case().model_dump())['input_validation']['warnings']==[]
+    assert predict(Case(application_completeness_score=95).model_dump())['input_validation']['warnings']==[]
     assert predict({})['score'] is None
 
 

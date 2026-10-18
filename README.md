@@ -40,6 +40,8 @@ The primary user is a **housing intake caseworker**. A **local authority or hous
 
 The [Local Government and Social Care Ombudsman’s housing-applications fact sheet](https://www.lgo.org.uk/make-a-complaint/fact-sheets/housing/housing-applications) documents application-handling and delay complaints. Related [English homelessness assessment guidance](https://www.gov.uk/guidance/homelessness-code-of-guidance-for-local-authorities/chapter-11-assessments-and-personalised-plans) motivates individual assessment and review when circumstances change. Homelessness assistance and housing allocation are distinct processes. These sources establish context, not this model’s validity or measured service improvements.
 
+> **V7.1 input safety:** Applicants provide factual declarations only. The training-time intake-completeness feature cannot be reconstructed compatibly from those declarations. New applications therefore use human review **without a model score or SHAP**. Historical numeric-input assessments and the saved model, benchmark results and fairness evidence remain unchanged. [Targeted fix report](docs/V71_COMPLETENESS_FIX_REPORT.md).
+
 ## Live workflow
 
 A connected journey in the local application; “live” describes the working workflow, not a public deployment.

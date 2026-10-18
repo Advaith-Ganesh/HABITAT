@@ -61,8 +61,8 @@ def test_live_counts_follow_real_persisted_mutations(client):
     assert completed["pending_reviews"] == before["pending_reviews"]
 
 
-def test_reassessment_preserves_caseworker_information_request(client):
-    aid = client.post("/api/applications", json=Case().model_dump()).json()["id"]
+def test_reassessment_preserves_caseworker_information_request(client, historical_case):
+    aid = historical_case(Case().model_dump())
     first = client.post(f"/api/applications/{aid}/assess", json={}).json()
     assert not first["requires_review"]
     client.post(
@@ -119,7 +119,7 @@ def test_changed_verification_is_not_presented_as_current(client, monkeypatch):
     assert metadata["evaluation_verified_at"] is None
 
 
-def test_real_input_mapping_changes_without_forced_difference(client):
+def test_real_input_mapping_changes_without_forced_difference(client, historical_case):
     base = Case(conflicting_information=0).model_dump()
     cases = [
         base,
@@ -128,7 +128,8 @@ def test_real_input_mapping_changes_without_forced_difference(client):
     ]
     scores = []
     for payload in cases:
-        aid = client.post("/api/applications", json=payload).json()["id"]
+        aid = historical_case(payload)
+        payload = client.get(f"/api/applications/{aid}").json()["payload"]
         result = client.post(f"/api/applications/{aid}/assess", json={}).json()
         assert result["score"] == predict(payload)["score"]
         explanation = client.get(f"/api/applications/{aid}/explanation").json()

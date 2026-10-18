@@ -173,7 +173,7 @@ class Case(BaseModel):
     accessibility_support_requested: Literal[0, 1] = 0
     specialist_support_requested: Literal[0, 1] = 0
     conflicting_information: Literal[0, 1] = 0
-    application_completeness_score: float = Field(default=95, ge=0, le=100)
+    application_completeness_score: float | None = Field(default=None, ge=0, le=100, description="Historical model input. Ignored on new submissions; cannot be derived compatibly from applicant declarations.")
 
     @model_validator(mode="after")
     def consistent_documents(self):
@@ -194,10 +194,27 @@ class Submission(Case):
     @model_validator(mode="before")
     @classmethod
     def require_intake_fields(cls, values):
-        missing = set(Case.model_fields) - set(values) if isinstance(values, dict) else set(Case.model_fields)
+        required = set(Case.model_fields) - {"application_completeness_score"}
+        missing = required - set(values) if isinstance(values, dict) else required
         if missing:
             raise ValueError("Required submission fields missing: " + ", ".join(sorted(missing)))
         return values
+
+
+def assess_record(payload):
+    # The trained feature contains unobserved generator noise. Never substitute
+    # document percentages, an applicant guess, or the fitted imputer for it.
+    if payload.get("application_completeness_score") is None:
+        return {
+            "score": None, "classification": None, "category": "Human review fallback",
+            "uncertain": True, "requires_review": True,
+            "failure": "InputCompatibilityUnavailable",
+            "limitations": "Calculated intake completeness is unavailable: the training feature cannot be derived compatibly from submitted declarations. Human review is required; no model prediction or SHAP has been produced.",
+            "input_validation": {"out_of_distribution": True, "imputed_features": [],
+                "warnings": ["Training-time intake completeness is unavailable; feature compatibility is not established."],
+                "scope": "No replacement value or model imputation is used for new applications."},
+        }
+    return predict(payload)
 
 
 def sandbox_session(value):
@@ -433,7 +450,7 @@ def sandbox_compare(body: SandboxComparison):
     )
     results = []
     for payload, validated in [(before, valid_before), (after, valid_after)]:
-        prediction = predict(payload)
+        prediction = assess_record(payload)
         explanation_result = None
         if prediction["score"] is not None:
             try:
@@ -579,7 +596,8 @@ def create(body: Submission, response: Response, x_sandbox_session: str | None =
     session_id = sandbox_session(x_sandbox_session)
     request_key = sandbox_session(idempotency_key)
     key_hash = hashlib.sha256(f"{session_id or 'anonymous'}:{request_key}".encode()).hexdigest() if request_key else None
-    payload = body.model_dump()
+    legacy_payload = body.model_dump()
+    payload = {**legacy_payload, "application_completeness_score": None}
     payload_hash = hashlib.sha256(json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
     with Session() as db:
         # Serialize the lookup + insert across SQLite connections, including simultaneous retries.
@@ -587,12 +605,16 @@ def create(body: Submission, response: Response, x_sandbox_session: str | None =
         db.connection().exec_driver_sql("BEGIN IMMEDIATE")
         previous = db.get(SubmissionRequest, key_hash) if key_hash else None
         if previous:
-            if previous.payload_hash != payload_hash:
+            # Replays of pre-V7.1 requests retain their saved records and hashes.
+            historical_payload = json.loads(require(db, previous.application_id).payload)
+            legacy_hash = hashlib.sha256(json.dumps(legacy_payload, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+            historical_replay = historical_payload.get("application_completeness_score") is not None and previous.payload_hash == legacy_hash
+            if previous.payload_hash != payload_hash and not historical_replay:
                 raise HTTPException(409, "Idempotency key was already used with different application data")
             response.headers["Idempotency-Replayed"] = "true"
             return serialize(require(db, previous.application_id), latest_reviews(db).get(previous.application_id))
         aid = "HAB-" + uuid.uuid4().hex[:8].upper()
-        a = Application(id=aid, payload=body.model_dump_json(), status="unassessed")
+        a = Application(id=aid, payload=json.dumps(payload), status="unassessed")
         db.add(a)
         db.flush()
         if session_id:
@@ -665,7 +687,7 @@ def assess(aid: str):
                 409,
                 "A completed human review cannot be silently reopened by reassessment",
             )
-        result = predict(json.loads(a.payload))
+        result = assess_record(json.loads(a.payload))
         result["model_version"] = "rf-1.0"
         result["assessed_at"] = datetime.now(timezone.utc).isoformat()
         if result["score"] is not None:

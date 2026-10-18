@@ -74,8 +74,10 @@ const initial: Json = {
   accessibility_support_requested: 0,
   specialist_support_requested: 0,
   conflicting_information: 0,
-  application_completeness_score: 95,
 };
+function factualForm(value: Json): Json {
+  return Object.fromEntries(Object.keys(initial).filter((key) => Object.prototype.hasOwnProperty.call(value, key)).map((key) => [key, value[key]]));
+}
 function pendingSubmission(): { key: string; payload: Json } | undefined {
   try {
     const saved = JSON.parse(stored("habitat.v7.pendingSubmission") || "null");
@@ -114,7 +116,7 @@ function App() {
     [outcome, setOutcome] = useState("routine"),
     [confirm, setConfirm] = useState(false),
     [policyOpen, setPolicyOpen] = useState(false);
-  const [form, setForm] = useState<Json>(() => restoredSubmission?.payload ?? { ...initial }),
+  const [form, setForm] = useState<Json>(() => restoredSubmission ? factualForm(restoredSubmission.payload) : { ...initial }),
     [draftExists, setDraftExists] = useState(
       () => !!stored("habitat.v4.draft"),
     );
@@ -291,10 +293,11 @@ function App() {
     setError("");
     try {
       const previous = pending.current;
-      const key = previous && JSON.stringify(previous.payload) === JSON.stringify(form) ? previous.key : crypto.randomUUID();
-      pending.current = { key, payload: form };
+      const key = previous && JSON.stringify(factualForm(previous.payload)) === JSON.stringify(factualForm(form)) ? previous.key : crypto.randomUUID();
+      const submissionPayload = previous?.key === key ? previous.payload : factualForm(form);
+      pending.current = { key, payload: submissionPayload };
       persist("habitat.v7.pendingSubmission", JSON.stringify(pending.current));
-      const saved = await api("/api/applications", form, { idempotencyKey: key });
+      const saved = await api("/api/applications", submissionPayload, { idempotencyKey: key });
       pending.current = undefined;
       try { localStorage.removeItem("habitat.v7.pendingSubmission"); } catch { /* Stored submission remains safe. */ }
       announceChange();
@@ -466,10 +469,7 @@ function App() {
               }}
               restore={() => {
                 try {
-                  setForm({
-                    ...initial,
-                    ...JSON.parse(stored("habitat.v4.draft")),
-                  });
+                  setForm(factualForm(JSON.parse(stored("habitat.v4.draft"))));
                   setNotice("Saved draft restored.");
                 } catch {
                   setError("Saved draft could not be read.");
@@ -626,7 +626,7 @@ function App() {
             <Card title="Documents & privacy">
               <p>
                 Document completeness uses three categories: income evidence, identity evidence and
-                current housing evidence. Information completeness is a separate synthetic estimate of the whole intake record; its real-world measurement is not validated. Declare availability only. Never enter
+                current housing evidence. The training-time intake completeness feature cannot be derived compatibly from these declarations. New applications require human review without a model score; document completeness remains separate. Declare availability only. Never enter
                 real names, government IDs or personal records.
               </p>
               <p>

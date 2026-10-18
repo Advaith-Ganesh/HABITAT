@@ -98,7 +98,9 @@ export function ApplicationDetails({ record }: { record: CaseRecord }) {
           <b>{humanize(record.payload.housing_situation)}</b>
         </div>
       </div>
-      <p className="field-hint">Declared intake information completeness: {Number(record.payload.application_completeness_score).toFixed(1)}%. A separate model input, not the document percentage.</p>
+      <p className="field-hint">{record.payload.application_completeness_score == null
+        ? "Calculated intake completeness: unavailable. Compatibility with the trained feature is not established; human review is required without a model score. Document completeness is separate."
+        : `Historical completeness input: ${Number(record.payload.application_completeness_score).toFixed(1)}%. Previously recorded, not recalculated or validated by this update. Separate from document completeness.`}</p>
       <Documents record={record} />
     </>
   );
@@ -268,9 +270,11 @@ export function Assessment({
                   : "Routine human review workflow recommended"}
           </h2>
           <p>
-            {a
+            {a?.failure === "InputCompatibilityUnavailable"
+              ? a.limitations
+              : a
               ? "A review-routing recommendation. It is not housing approval or eligibility."
-              : "Run the saved Random Forest to calculate a review recommendation."}
+              : "Check input compatibility before running the saved Random Forest."}
           </p>
         </div>
         <div>
@@ -279,8 +283,8 @@ export function Assessment({
         </div>
       </div>
       <div className="two-col">
-        <Card title="Why this recommendation?" tag="GENUINE TREE SHAP">
-          {explanation ? (
+        <Card title="Why this recommendation?" tag={a?.score != null ? "GENUINE TREE SHAP" : "SHAP UNAVAILABLE"}>
+          {explanation && a?.score != null ? (
             <>
               <div className="explanation-summary">
                 {explanation.attributions.slice(0, 3).map((x: Json) => (

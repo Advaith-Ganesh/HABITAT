@@ -45,12 +45,9 @@ def test_complete_applicant_admin_roundtrip(client):
         == start["awaiting_assessment"] + 1
     )
     assessed = client.post(f"/api/applications/{aid}/assess", json={}).json()
-    assert assessed["score"] == predict(payload)["score"]
-    explanation = client.get(f"/api/applications/{aid}/explanation").json()
-    assert (
-        abs(explanation["score"] - assessed["score"]) < 1e-12
-        and explanation["additivity_error"] < 1e-6
-    )
+    assert assessed["score"] is None
+    assert record["payload"].get("application_completeness_score") is None
+    assert client.get(f"/api/applications/{aid}/explanation").status_code == 409
     response = client.post(
         f"/api/reviews/{aid}/resolve",
         json={
@@ -90,11 +87,8 @@ def test_complete_applicant_admin_roundtrip(client):
     assert len(applicant["history"]) == 5
 
 
-def test_sandbox_real_predictions_explanations_and_no_writes(client):
-    record = client.post(
-        "/api/applications", json=Case(conflicting_information=0).model_dump()
-    ).json()
-    aid = record["id"]
+def test_sandbox_real_predictions_explanations_and_no_writes(client, historical_case):
+    aid = historical_case(Case(conflicting_information=0).model_dump())
     before = client.get(f"/api/applications/{aid}").json()
     audit = client.post(
         "/api/sandbox/compare",
