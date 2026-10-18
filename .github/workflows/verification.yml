@@ -36,6 +36,8 @@ jobs:
           npm --prefix frontend run build
       - name: Backend suite (built entrypoint required for security-header checks)
         run: .venv/bin/python -m pytest -q
+      - name: Reproduce document assurance benchmark without changing original ML artifacts
+        run: .venv/bin/python -m scripts.benchmark_evidence
       - name: Install supported Playwright Chromium and Linux dependencies
         run: npm --prefix frontend run browser:install -- --with-deps
       - name: Full browser suite and viewport/accessibility matrix
@@ -47,5 +49,7 @@ jobs:
           name: habitat-v7-browser-evidence
           path: |
             reports/v7-e2e.json
+            reports/document_assurance.json
+            docs/screenshots/responsible-*.png
             docs/screenshots/v7-runner-*.png
             frontend/test-results/

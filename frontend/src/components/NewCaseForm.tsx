@@ -8,6 +8,7 @@ import {
   Save,
   ShieldCheck,
 } from "lucide-react";
+import { EvidenceUpload } from "./EvidenceWorkspace";
 import { HousingSupport } from "./HousingSupport";
 import { Card, ProgressIndicator, ConfirmationDialog } from "./ui";
 import { type Json } from "../lib/types";
@@ -203,7 +204,7 @@ export default function NewCaseForm({
                 <p className="muted">
                   These are self-declarations, not verified documents. You can
                   still submit without supporting documents and ask for help obtaining them.
-                  No personal documents are uploaded in this synthetic-only sandbox.
+                  Only marked synthetic PDFs may be analysed below. No personal documents.
                 </p>
                 {([
                   ["income", "income_document_available", "Income evidence available"],
@@ -232,8 +233,9 @@ export default function NewCaseForm({
                   Documentation completeness:{" "}
                   {(((3 - form.missing_document_count) / 3) * 100).toFixed(1)}%.
                   Calculated from the three declarations above. No files are
-                  uploaded.
+                  uploaded by these declarations; the optional PDF tool below is separate.
                 </p>
+                <EvidenceUpload ids={form.evidence_ids ?? []} onChange={(ids) => update("evidence_ids", ids)} />
               </>
             )}
             {step === 3 && (
@@ -268,7 +270,7 @@ export default function NewCaseForm({
                 <HousingSupport answer={form.safe_to_stay_tonight} />
                 <div className="key-values">
                   {Object.entries(form)
-                    .filter(([key]) => key !== "synthetic_only" && key !== "application_completeness_score")
+                    .filter(([key]) => key !== "synthetic_only" && key !== "application_completeness_score" && key !== "evidence_ids")
                     .map(([key, value]) => (
                       <div key={key}>
                         <span>{labels[key] ?? key}</span>

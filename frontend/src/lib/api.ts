@@ -62,3 +62,13 @@ export function api(path: string, body?: unknown, options?: RequestOptions): Pro
   );
   return promise;
 }
+
+export async function analysePdf(data: Blob, category: string): Promise<any> {
+  const response = await fetch(`/api/evidence/analyse?category=${encodeURIComponent(category)}`, {
+    method: "POST", headers: {"Content-Type":"application/pdf", "X-Sandbox-Session":sandboxSession(), "X-Synthetic-Only":"true"},
+    body:data, signal:AbortSignal.timeout(15000),
+  });
+  const result = await response.json();
+  if (!response.ok) throw new Error(typeof result.detail === "string" ? result.detail : "PDF analysis failed. Continue without documents or ask for human assistance.");
+  return result;
+}
