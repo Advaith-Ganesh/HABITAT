@@ -70,7 +70,7 @@ test("Applicant to administrator to applicant: persistent review", async ({
     .getByRole("button", { name: "Run AI Assessment", exact: true })
     .click();
   await expect(page.getByRole("heading", {name:"Assessment unavailable",exact:true})).toBeVisible();
-  await expect(page.getByText(/Calculated intake completeness is unavailable/)).toBeVisible();
+  await expect(page.locator(".assessment-hero").getByText(/Calculated intake completeness is unavailable/)).toBeVisible();
   await expect(page.getByRole("img",{name:"Actual SHAP feature contributions; numeric values follow in the input summary"})).toHaveCount(0);
   await page
     .getByRole("button", { name: "Continue to human review", exact: true })
